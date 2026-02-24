@@ -1,6 +1,6 @@
 /* app/globals.css */
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 /* ============================= */
 /* Theme Variables               */
 /* ============================= */
@@ -40,7 +40,7 @@
   --glass-blur: 24px;
 }
 
-html.dark {
+.dark {
   /* Dark mode — Deep, rich gradient backgrounds */
   --bg-main: linear-gradient(
     135deg,

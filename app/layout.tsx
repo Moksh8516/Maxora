@@ -40,9 +40,8 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-bg-primary text-text-primary transition-colors duration-300">
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
           storageKey="theme-preference"
         >
           <div className="relative min-h-screen">
