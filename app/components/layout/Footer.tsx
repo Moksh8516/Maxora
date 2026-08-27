@@ -54,7 +54,7 @@ export default function Footer() {
   ];
 
   const contactInfo = [
-    { icon: Mail, text: "maxoratechnology@gmail.com" },
+    { icon: Mail, text: "info@maxoratechnology.com" },
     { icon: Phone, text: "(+91) 7814950023" },
     // { icon: MapPin, text: "123 Tech Boulevard, San Francisco, CA" },
   ];
