@@ -2,6 +2,7 @@
 import { ThemeProvider } from "./components/theme/ThemeProvider";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+import WhatsAppFloat from "./components/ui/WhatsAppFloat";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -49,6 +50,7 @@ export default function RootLayout({
               <Navbar />
               <main>{children}</main>
               <Footer />
+              <WhatsAppFloat />
             </div>
           </div>
         </ThemeProvider>

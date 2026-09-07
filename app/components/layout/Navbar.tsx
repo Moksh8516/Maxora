@@ -3,7 +3,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, ChevronDown, Zap } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { ThemeToggle } from "../ui/ThemeToggle";
 
 interface NavLink {
@@ -49,20 +50,22 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                <Zap className="w-6 h-6 text-white" fill="white" />
-              </div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold font-heading tracking-tight text-gray-900 dark:text-white">
-                Maxora
-              </span>
-              <span className="text-sm font-medium gradient-text">
-                Technology
-              </span>
-            </div>
+            <Image
+              src="/light logo.png"
+              alt="Maxora Technology"
+              width={220}
+              height={64}
+              priority
+              className="h-12 w-auto object-contain dark:hidden"
+            />
+            <Image
+              src="/dark logo.png"
+              alt="Maxora Technology"
+              width={220}
+              height={64}
+              priority
+              className="hidden h-12 w-auto object-contain dark:block"
+            />
           </Link>
 
           {/* Desktop Navigation */}

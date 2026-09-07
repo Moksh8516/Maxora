@@ -1,15 +1,7 @@
 // components/layout/Footer.tsx
 import Link from "next/link";
-import {
-  Zap,
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Github,
-} from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, Facebook, Twitter, Linkedin, Github } from "lucide-react";
 
 interface FooterLink {
   label: string;
@@ -65,17 +57,22 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <span className="text-xl font-bold font-heading">Maxora</span>
-                <span className="text-xl font-bold gradient-text">
-                  Technology
-                </span>
-              </div>
-            </div>
+            <Link href="/" className="inline-block mb-6">
+              <Image
+                src="/light logo.png"
+                alt="Maxora Technology"
+                width={220}
+                height={64}
+                className="h-12 w-auto object-contain dark:hidden"
+              />
+              <Image
+                src="/dark logo.png"
+                alt="Maxora Technology"
+                width={220}
+                height={64}
+                className="hidden h-12 w-auto object-contain dark:block"
+              />
+            </Link>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
               Transforming businesses with cutting-edge technology solutions
               since 2015.
