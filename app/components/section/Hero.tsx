@@ -102,7 +102,7 @@ export default function Hero() {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Link
-                href="/Contact"
+                href="/contact"
                 className="group inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover-lift shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
               >
                 Start Your Project

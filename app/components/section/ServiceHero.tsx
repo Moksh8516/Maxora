@@ -64,7 +64,7 @@ export default function ServicesHero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
             <Link
-              href="/Contact"
+              href="/contact"
               className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1"
             >
               <Zap className="w-5 h-5" />

@@ -306,7 +306,7 @@ export default function WordPressDevelopmentPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => router.push("/Contact")}
+                onClick={() => router.push("/contact")}
                 className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 hover-lift flex items-center justify-center gap-2"
               >
                 Start Your WordPress Project
@@ -820,7 +820,7 @@ export default function WordPressDevelopmentPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => router.push("/Contact")}
+                onClick={() => router.push("/contact")}
                 className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 hover-lift flex items-center justify-center gap-2"
               >
                 Schedule a Consultation

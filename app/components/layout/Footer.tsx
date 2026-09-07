@@ -28,7 +28,7 @@ export default function Footer() {
       { label: "Careers", href: "/careers" },
       { label: "Case Studies", href: "/case-studies" },
       { label: "Blog", href: "/blog" },
-      { label: "Contact", href: "/Contact" },
+      { label: "Contact", href: "/contact" },
     ],
     Legal: [
       { label: "Privacy Policy", href: "/privacy" },

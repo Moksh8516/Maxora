@@ -35,7 +35,7 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "Services", href: "/Services" },
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/Contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -100,7 +100,7 @@ export default function Navbar() {
               {/* Theme Toggle */}
               <ThemeToggle />
               <Link
-                href="/Contact"
+                href="/contact"
                 className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-xl font-semibold hover-lift shadow-lg hover:shadow-blue-500/25 transition-all"
               >
                 Get Started
@@ -153,7 +153,7 @@ export default function Navbar() {
                 </div>
               ))}
               <Link
-                href="/Contact"
+                href="/contact"
                 className="block mt-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-xl font-semibold text-center hover-lift"
                 onClick={() => setIsOpen(false)}
               >

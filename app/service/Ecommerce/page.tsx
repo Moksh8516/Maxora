@@ -345,7 +345,7 @@ export default function EcommerceDevelopmentPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => router.push("/Contact")}
+                onClick={() => router.push("/contact")}
                 className="group px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 hover-lift flex items-center justify-center gap-2"
               >
                 Launch Your Online Store
@@ -855,7 +855,7 @@ export default function EcommerceDevelopmentPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => router.push("/Contact")}
+                onClick={() => router.push("/contact")}
                 className="group px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 hover-lift flex items-center justify-center gap-2"
               >
                 Start Your E-commerce Journey
