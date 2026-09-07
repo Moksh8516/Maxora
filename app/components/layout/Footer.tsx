@@ -1,7 +1,13 @@
 // components/layout/Footer.tsx
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, Facebook, Twitter, Linkedin, Github } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 interface FooterLink {
   label: string;
@@ -39,10 +45,18 @@ export default function Footer() {
   };
 
   const socialLinks: SocialLink[] = [
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Github, href: "https://github.com", label: "GitHub" },
+    {
+      icon: FaFacebookF,
+      href: "https://facebook.com/maxora.technology",
+      label: "Facebook",
+    },
+    { icon: FaXTwitter, href: "https://x.com", label: "X" },
+    { icon: FaLinkedinIn, href: "https://linkedin.com", label: "LinkedIn" },
+    {
+      icon: FaInstagram,
+      href: "https://instagram.com/maxora.technology",
+      label: "Instagram",
+    },
   ];
 
   const contactInfo = [
