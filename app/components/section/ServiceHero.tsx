@@ -89,10 +89,10 @@ export default function ServicesHero() {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto"
           >
             {[
-              { value: "200+", label: "Successful Projects" },
-              { value: "98%", label: "Client Satisfaction" },
-              { value: "50+", label: "Expert Team" },
-              { value: "5+", label: "Years Experience" },
+              { value: "01", label: "Focused Digital Agency" },
+              { value: "Clear", label: "Communication" },
+              { value: "Built", label: "Around Your Goals" },
+              { value: "Growing", label: "With Every Project" },
             ].map((stat, index) => (
               <div key={index} className="text-center p-4">
                 <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">

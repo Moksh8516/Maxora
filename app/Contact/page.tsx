@@ -68,7 +68,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      details: ["maxoratechnology@gmail.com", "tmaxora@gmail.com"],
+      details: ["info@maxoratechnology.com"],
       color: "from-purple-500 to-pink-500",
     },
     // {

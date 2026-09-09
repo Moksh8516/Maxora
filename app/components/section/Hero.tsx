@@ -63,7 +63,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect mb-8">
               <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse-glow" />
               <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
-                Trusted by Fortune 500 Companies
+                Digital Solutions for Growing Businesses
               </span>
             </div>
 

@@ -259,23 +259,23 @@ export default function Services() {
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             {
-              value: "200+",
-              label: "Projects Delivered",
+              value: "01",
+              label: "Focused Digital Agency",
               icon: <Cpu className="w-5 h-5" />,
             },
             {
-              value: "98%",
-              label: "Client Satisfaction",
+              value: "100%",
+              label: "Dedicated to Your Goals",
               icon: <Sparkles className="w-5 h-5" />,
             },
             {
-              value: "50+",
-              label: "Expert Team",
+              value: "Direct",
+              label: "Clear Communication",
               icon: <Code className="w-5 h-5" />,
             },
             {
-              value: "24/7",
-              label: "Support",
+              value: "Built",
+              label: "Around Your Business",
               icon: <Shield className="w-5 h-5" />,
             },
           ].map((stat, idx) => (

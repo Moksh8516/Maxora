@@ -32,15 +32,12 @@ export default function Footer() {
     Company: [
       { label: "About Us", href: "/about" },
       { label: "Careers", href: "/careers" },
-      { label: "Case Studies", href: "/case-studies" },
       { label: "Blog", href: "/blog" },
       { label: "Contact", href: "/contact" },
     ],
     Legal: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
-      { label: "Cookie Policy", href: "/cookies" },
-      { label: "GDPR Compliance", href: "/gdpr" },
     ],
   };
 
@@ -88,8 +85,8 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Transforming businesses with cutting-edge technology solutions
-              since 2015.
+              Helping growing businesses turn practical ideas into thoughtful
+              digital products.
             </p>
             <div className="space-y-3">
               {contactInfo.map((info, index) => (

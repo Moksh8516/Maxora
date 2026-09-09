@@ -378,6 +378,16 @@ export default function CRMerpPage() {
               >
                 View AI Implementation Cases
               </button>
+              <a
+                href="https://realestate.maxoratechnology.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group px-8 py-4 border-2 border-cyan-500/50 text-cyan-700 dark:text-cyan-300 rounded-xl font-semibold hover:bg-cyan-50 dark:hover:bg-cyan-950/30 transition-colors hover-lift flex items-center justify-center gap-2"
+                aria-label="Open the Real Estate CRM demo in a new tab"
+              >
+                Real Estate CRM Demo
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </a>
             </div>
           </div>
         </div>
