@@ -11,7 +11,7 @@ declare global {
   }
 }
 
-const measurementId = process.env.NEXT_PUBLIC_GA_ID;
+const measurementId = process.env.GA_ID;
 
 export function trackEvent(
   eventName: string,

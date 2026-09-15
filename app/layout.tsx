@@ -3,6 +3,7 @@ import { ThemeProvider } from "./components/theme/ThemeProvider";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import WhatsAppFloat from "./components/ui/WhatsAppFloat";
+import GoogleAnalytics from "./components/analytics/GoogleAnalytics";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -47,6 +48,7 @@ export default function RootLayout({
         >
           <div className="relative min-h-screen">
             <div className="relative z-10">
+              <GoogleAnalytics />
               <Navbar />
               <main>{children}</main>
               <Footer />
