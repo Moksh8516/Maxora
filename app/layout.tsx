@@ -25,7 +25,11 @@ export const metadata = {
     "Transform your business with cutting-edge App Development, Web Solutions, eCommerce, and Custom CRM/ERP systems. Global IT services with enterprise-grade quality.",
   keywords:
     "IT solutions, app development, web development, WordPress, Shopify, Wix, CRM, ERP, digital transformation",
-  icons: {},
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
