@@ -26,9 +26,9 @@ export const metadata = {
   keywords:
     "IT solutions, app development, web development, WordPress, Shopify, Wix, CRM, ERP, digital transformation",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/oldfavicon.ico",
+    shortcut: "/oldfavicon.ico",
+    apple: "/oldfavicon.ico",
   },
 };
 
