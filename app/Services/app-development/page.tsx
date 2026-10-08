@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Mobile app development company in India building native and cross-platform apps using Flutter and React Native. Fast, secure, and user-centric mobile apps.",
   alternates: {
-    canonical: "/services/app-development",
+    canonical: "/Services/app-development",
   },
   openGraph: {
     title: "Mobile App Development Services | Maxora Technology",
     description:
       "Native and cross-platform mobile apps for iOS and Android. High-performance, App Store compliant, and built for scalable engagement.",
-    url: "/services/app-development",
+    url: "/Services/app-development",
     siteName: "Maxora Technology",
     images: [
       {
@@ -40,7 +40,7 @@ const serviceSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://maxoratechnology.com/services/app-development/#service",
+      "@id": "https://maxoratechnology.com/Services/app-development/#service",
       name: "Mobile App Development Services",
       serviceType: "Mobile Application Development",
       provider: {
@@ -48,7 +48,7 @@ const serviceSchema = {
         "@id": "https://maxoratechnology.com/#organization",
         name: "Maxora Technology",
       },
-      url: "https://maxoratechnology.com/services/app-development",
+      url: "https://maxoratechnology.com/Services/app-development",
       description:
         "End-to-end mobile application development for iOS and Android platforms using Swift, Kotlin, React Native, and Flutter, with offline capabilities and cloud integration.",
       areaServed: [
@@ -91,7 +91,7 @@ const serviceSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://maxoratechnology.com/services/app-development/#breadcrumb",
+      "@id": "https://maxoratechnology.com/Services/app-development/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -103,19 +103,19 @@ const serviceSchema = {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://maxoratechnology.com/services",
+          item: "https://maxoratechnology.com/Services",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "App Development",
-          item: "https://maxoratechnology.com/services/app-development",
+          item: "https://maxoratechnology.com/Services/app-development",
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://maxoratechnology.com/services/app-development/#faq",
+      "@id": "https://maxoratechnology.com/Services/app-development/#faq",
       mainEntity: [
         {
           "@type": "Question",

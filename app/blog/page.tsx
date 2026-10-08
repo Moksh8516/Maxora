@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Clock3, User, Sparkles } from "lucide-react";
 import { JsonLd } from "../components/seo/StructuredData";
+import { blogPosts } from "../lib/blog-data";
 
 export const metadata: Metadata = {
   title: "Engineering Insights & Software Development Guides",
@@ -35,78 +36,6 @@ export const metadata: Metadata = {
   },
 };
 
-const posts = [
-  {
-    category: "Web Development",
-    title: "What a growing business should expect from its first website",
-    excerpt:
-      "A useful first website should make your offer clear, earn trust, and create a simple path to enquiry. Here is how to prioritise the work before adding complexity.",
-    date: "September 9, 2026",
-    readTime: "5 min read",
-    author: "Maxora Engineering Team",
-    serviceLink: "/services/web-development",
-    serviceLabel: "Explore Web Development",
-  },
-  {
-    category: "Enterprise Software",
-    title: "When custom software is worth the investment",
-    excerpt:
-      "Custom software is not automatically the right answer. We look at the operational signals that make a tailored workflow more valuable than another disconnected tool.",
-    date: "September 9, 2026",
-    readTime: "6 min read",
-    author: "Maxora Engineering Team",
-    serviceLink: "/services/crm-erp",
-    serviceLabel: "Explore CRM & ERP Systems",
-  },
-  {
-    category: "Automation",
-    title: "Start small: a practical path to business automation",
-    excerpt:
-      "The best automation opportunities are often repetitive handoffs, follow-ups, and data entry. A focused first workflow can create learning without creating unnecessary risk.",
-    date: "September 9, 2026",
-    readTime: "4 min read",
-    author: "Maxora Engineering Team",
-    serviceLink: "/services/crm-erp",
-    serviceLabel: "Learn About Automation",
-  },
-  {
-    category: "CMS & Speed",
-    title: "WordPress vs Custom Next.js: Website Cost & ROI Comparison in India",
-    excerpt:
-      "Comparing total cost of ownership, PageSpeed scores, security maintenance, and lead conversion rates between custom Next.js builds and standard WordPress themes.",
-    date: "October 2026",
-    readTime: "7 min read",
-    author: "Maxora Engineering Team",
-    badge: "Buyer Guide",
-    serviceLink: "/services/wordpress",
-    serviceLabel: "Compare WordPress Options",
-  },
-  {
-    category: "Real Estate Tech",
-    title: "Custom CRM vs Commercial SaaS for Indian Real Estate Agencies",
-    excerpt:
-      "Why real estate brokers and property agencies lose leads on generic SaaS platforms and how custom lead pipelines with WhatsApp automation increase site visits.",
-    date: "October 2026",
-    readTime: "6 min read",
-    author: "Maxora Engineering Team",
-    badge: "Case Study",
-    serviceLink: "/portfolio",
-    serviceLabel: "View Real Estate CRM Demo",
-  },
-  {
-    category: "Mobile Architecture",
-    title: "Why Startups Choose Cross-Platform Apps (Flutter & React Native) in 2026",
-    excerpt:
-      "How early-stage companies cut development costs in half and reach iOS and Android users simultaneously without compromising on 60fps native performance.",
-    date: "October 2026",
-    readTime: "5 min read",
-    author: "Maxora Engineering Team",
-    badge: "Technical Guide",
-    serviceLink: "/services/app-development",
-    serviceLabel: "Explore Mobile App Services",
-  },
-];
-
 const blogSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -122,14 +51,15 @@ const blogSchema = {
         "@id": "https://maxoratechnology.com/#organization",
         name: "Maxora Technology",
       },
-      blogPost: posts.map((post) => ({
+      blogPost: blogPosts.map((post) => ({
         "@type": "BlogPosting",
         headline: post.title,
         description: post.excerpt,
-        datePublished: "2026-10-01",
+        datePublished: post.datePublished,
+        url: `https://maxoratechnology.com/blog/${post.slug}`,
         author: {
           "@type": "Organization",
-          name: post.author,
+          name: post.author.name,
         },
       })),
     },
@@ -177,10 +107,10 @@ export default function BlogPage() {
           </header>
 
           <div className="mx-auto mt-16 grid max-w-6xl gap-7 md:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
+            {blogPosts.map((post) => (
               <article
-                key={post.title}
-                className="surface-card flex h-full flex-col p-7 hover:border-blue-500/50 transition-colors"
+                key={post.slug}
+                className="surface-card flex h-full flex-col p-7 hover:border-blue-500/50 transition-all hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="mb-6 flex items-center justify-between gap-3 text-xs font-semibold uppercase tracking-[0.14em] text-blue-600 dark:text-blue-400">
                   <span>{post.category}</span>
@@ -194,27 +124,37 @@ export default function BlogPage() {
                     </span>
                   )}
                 </div>
-                <h2 className="mb-3 text-xl font-bold leading-snug text-gray-900 dark:text-white">
-                  {post.title}
+
+                <h2 className="mb-3 text-xl font-bold leading-snug text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <Link href={`/blog/${post.slug}`}>
+                    {post.title}
+                  </Link>
                 </h2>
+
                 <p className="mb-6 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
                   {post.excerpt}
                 </p>
 
-                <div className="mb-4">
+                <div className="mb-6 flex flex-col gap-2 border-t border-gray-100 dark:border-gray-800/80 pt-4">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    <span>Read Full Article</span>
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
                   <Link
                     href={post.serviceLink}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                    className="inline-flex items-center gap-1.5 text-xs font-medium text-blue-600 dark:text-blue-400 hover:underline"
                   >
                     <span>{post.serviceLabel}</span>
-                    <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
 
                 <div className="flex items-center justify-between border-t border-gray-200 pt-4 text-xs text-gray-500 dark:border-gray-800 dark:text-gray-400">
                   <span className="inline-flex items-center gap-1">
                     <User className="h-3.5 w-3.5" />
-                    {post.author}
+                    {post.author.name}
                   </span>
                   <span className="inline-flex items-center gap-1">
                     <Clock3 className="h-3.5 w-3.5" />
@@ -225,7 +165,7 @@ export default function BlogPage() {
             ))}
           </div>
 
-          <div className="mt-14 text-center">
+          <div className="mt-16 text-center">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 font-semibold text-blue-600 dark:text-blue-400 hover:underline"

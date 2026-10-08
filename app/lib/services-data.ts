@@ -520,4 +520,103 @@ export const servicesData: Record<string, ServiceData> = {
       },
     ],
   },
+  "seo-aeo": {
+    slug: "seo-aeo",
+    metaTitle: "Technical SEO & AEO (AI Engine Optimization) Services India",
+    metaDescription:
+      "Dominate Google Search and AI answer engines (ChatGPT, Perplexity, Google AI Overviews). Technical SEO, Schema markup, Core Web Vitals, and LLM citation optimization in India.",
+    h1: "Technical SEO & AI Answer Engine Optimization (AEO)",
+    subheading:
+      "Get ranked on Google and cited by ChatGPT, Perplexity, and Google AI Overviews with technical architecture, structured data, and extractable content.",
+    intro:
+      "Maxora Technology provides modern Technical SEO and Answer Engine Optimization (AEO/GEO) for ambitious businesses in India and worldwide. The search landscape has fundamentally evolved: traditional SEO ranks your pages on Google, while AEO optimizes your brand to be cited and recommended by AI engines like ChatGPT, Claude, Perplexity, and Google AI Overviews. We build rock-solid technical foundations, sub-second Core Web Vitals, semantic Schema.org JSON-LD, agent-readable files (llms.txt), and extractable content passages that ensure your business captures high-intent traffic across traditional and generative search.",
+    whoItsFor: [
+      "Companies experiencing traffic drops due to Google AI Overviews and zero-click search results.",
+      "SaaS, B2B, and high-ticket service companies wanting to be shortlisted and recommended by AI buying agents.",
+      "Businesses with slow websites, poor Core Web Vitals, or crawlability issues holding back organic rankings.",
+      "Brands wanting to establish undisputed topical authority and entity consensus across the web.",
+    ],
+    deliverables: [
+      {
+        title: "Technical SEO & Core Web Vitals Engineering",
+        description:
+          "Full codebase audits to eliminate render-blocking scripts, resolve layout shift (CLS), optimize Largest Contentful Paint (LCP) under 1.8s, and configure optimal server caching.",
+      },
+      {
+        title: "AEO & Generative Engine Optimization (GEO)",
+        description:
+          "Structuring content into extractable 40-60 word standalone answer blocks, natural-language definition lists, and comparison matrices engineered for LLM passage retrieval.",
+      },
+      {
+        title: "Advanced Schema.org & Entity Graph",
+        description:
+          "Custom JSON-LD implementation for Organization, ProfessionalService, FAQPage, HowTo, Product, and ItemList schema to feed search engines explicit entity relationships.",
+      },
+      {
+        title: "Agent Readiness & llms.txt Implementation",
+        description:
+          "Authoring and deploying llms.txt, machine-readable pricing specifications (pricing.md), and clean accessibility trees allowing autonomous AI agents to parse and recommend your services.",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Technical & AI Visibility Audit",
+        description:
+          "We benchmark your current Google rankings, crawl budget, Core Web Vitals scores, and test 20+ key prompts across ChatGPT, Perplexity, and Google AI Overviews.",
+      },
+      {
+        step: "02",
+        title: "Schema & Architecture Structuring",
+        description:
+          "We inject semantic JSON-LD structured data, fix indexation bottlenecks, and generate dynamic XML sitemaps and machine-readable context files.",
+      },
+      {
+        step: "03",
+        title: "Content Extractability Refactor",
+        description:
+          "We restructure high-value service and landing pages with clear answer summaries, factual statistics, comparison tables, and natural-language FAQs.",
+      },
+      {
+        step: "04",
+        title: "Entity Authority & Continuous Monitoring",
+        description:
+          "We harmonize your brand positioning across third-party entity sources and monitor both organic SERP performance and AI citation frequency.",
+      },
+    ],
+    techStack: [
+      "Google Search Console",
+      "Google AI Overviews",
+      "Perplexity AI",
+      "ChatGPT Search",
+      "Schema.org JSON-LD",
+      "llms.txt Standard",
+      "PageSpeed Insights",
+      "Core Web Vitals",
+      "Next.js Metadata",
+      "Semrush / Ahrefs",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between traditional SEO and AEO (Answer Engine Optimization)?",
+        answer:
+          "Traditional SEO focuses on ranking your web pages in search engine result lists. AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) format and position your content so AI assistants (ChatGPT, Perplexity, Google AI Overviews) extract and cite your brand as the direct, trusted answer to user queries.",
+      },
+      {
+        question: "How do we get our business cited in ChatGPT and Google AI Overviews?",
+        answer:
+          "AI models select sources that have concise direct answers (40-60 word summaries), cited statistics, valid Schema.org markup, fast page loads, and consistent entity consensus across authoritative third-party platforms.",
+      },
+      {
+        question: "Will technical SEO and AEO improve our existing website traffic?",
+        answer:
+          "Yes. By fixing technical crawl errors, optimizing Core Web Vitals under 2 seconds, and targeting high-intent search fan-out queries, you capture traditional search traffic while safeguarding against zero-click AI search cannibalization.",
+      },
+      {
+        question: "What is llms.txt and does our company website need it?",
+        answer:
+          "llms.txt is an emerging standard that provides a clean, Markdown-formatted summary of your business, services, and pricing for AI agents and LLMs. It ensures autonomous AI agents can accurately parse and recommend your business without dealing with complex JavaScript rendering.",
+      },
+    ],
+  },
 };

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { blogPosts } from "./lib/blog-data";
 
 const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ||
@@ -23,37 +24,43 @@ const publicRoutes: {
 }[] = [
   { path: "/", changeFrequency: "weekly", priority: 1.0, lastModified: now },
   {
-    path: "/services",
+    path: "/Services",
     changeFrequency: "weekly",
     priority: 0.9,
     lastModified: now,
   },
   {
-    path: "/services/web-development",
+    path: "/Services/web-development",
     changeFrequency: "monthly",
     priority: 0.85,
     lastModified: now,
   },
   {
-    path: "/services/app-development",
+    path: "/Services/app-development",
     changeFrequency: "monthly",
     priority: 0.85,
     lastModified: now,
   },
   {
-    path: "/services/crm-erp",
+    path: "/Services/crm-erp",
     changeFrequency: "monthly",
     priority: 0.85,
     lastModified: now,
   },
   {
-    path: "/services/ecommerce",
+    path: "/Services/ecommerce",
     changeFrequency: "monthly",
     priority: 0.85,
     lastModified: now,
   },
   {
-    path: "/services/wordpress",
+    path: "/Services/wordpress",
+    changeFrequency: "monthly",
+    priority: 0.85,
+    lastModified: now,
+  },
+  {
+    path: "/Services/seo-aeo",
     changeFrequency: "monthly",
     priority: 0.85,
     lastModified: now,
@@ -67,7 +74,7 @@ const publicRoutes: {
   {
     path: "/blog",
     changeFrequency: "weekly",
-    priority: 0.7,
+    priority: 0.75,
     lastModified: now,
   },
   {
@@ -103,7 +110,7 @@ const publicRoutes: {
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return publicRoutes.map(
+  const staticEntries: MetadataRoute.Sitemap = publicRoutes.map(
     ({ path, changeFrequency, priority, lastModified }) => ({
       url: `${siteUrl}${path}`,
       lastModified: new Date(lastModified),
@@ -111,4 +118,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority,
     }),
   );
+
+  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${siteUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.datePublished),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticEntries, ...blogEntries];
 }

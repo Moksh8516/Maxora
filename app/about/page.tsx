@@ -176,7 +176,7 @@ export default function AboutPage() {
                   <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </Link>
                 <Link
-                  href="/services"
+                  href="/Services"
                   className="inline-flex items-center justify-center gap-3 rounded-xl border border-gray-200 bg-white/60 px-7 py-4 font-semibold text-gray-800 transition hover:border-blue-300 hover:text-blue-600 dark:border-gray-700 dark:bg-gray-900/50 dark:text-gray-200 dark:hover:border-blue-500 dark:hover:text-blue-400"
                 >
                   Explore our services

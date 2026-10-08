@@ -57,6 +57,12 @@ const otherServices = [
     icon: Database,
     desc: "Tailored business management & automation.",
   },
+  {
+    slug: "seo-aeo",
+    title: "SEO & AI Optimization",
+    icon: Sparkles,
+    desc: "Technical SEO, Core Web Vitals & AI citations.",
+  },
 ];
 
 export default function ServicePageTemplate({ data }: ServicePageTemplateProps) {
@@ -100,7 +106,7 @@ export default function ServicePageTemplate({ data }: ServicePageTemplateProps) 
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              href="/services"
+              href="/Services"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-gray-900/70 text-gray-800 dark:text-gray-200 font-semibold hover:bg-white dark:hover:bg-gray-900 transition-all duration-300"
             >
               <span>Explore All Services</span>
@@ -290,7 +296,7 @@ export default function ServicePageTemplate({ data }: ServicePageTemplateProps) 
               return (
                 <Link
                   key={service.slug}
-                  href={`/services/${service.slug}`}
+                  href={`/Services/${service.slug}`}
                   className="group p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200/80 dark:border-gray-800/80 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-lg transition-all flex flex-col justify-between"
                 >
                   <div>

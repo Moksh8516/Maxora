@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Expert WordPress development company in India. Custom Gutenberg block themes, WooCommerce stores, speed optimization, and secure plugin engineering.",
   alternates: {
-    canonical: "/services/wordpress",
+    canonical: "/Services/wordpress",
   },
   openGraph: {
     title: "Custom WordPress Development Services | Maxora Technology",
     description:
       "High-speed, lightweight, and secure WordPress websites tailored to your brand. Custom themes, WooCommerce, and plugin engineering.",
-    url: "/services/wordpress",
+    url: "/Services/wordpress",
     siteName: "Maxora Technology",
     images: [
       {
@@ -40,7 +40,7 @@ const serviceSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://maxoratechnology.com/services/wordpress/#service",
+      "@id": "https://maxoratechnology.com/Services/wordpress/#service",
       name: "Custom WordPress Development Services",
       serviceType: "Content Management & Web Engineering",
       provider: {
@@ -48,7 +48,7 @@ const serviceSchema = {
         "@id": "https://maxoratechnology.com/#organization",
         name: "Maxora Technology",
       },
-      url: "https://maxoratechnology.com/services/wordpress",
+      url: "https://maxoratechnology.com/Services/wordpress",
       description:
         "Bespoke WordPress theme and plugin development, WooCommerce optimization, site speed enhancement, and headless WordPress architectures.",
       areaServed: [
@@ -91,7 +91,7 @@ const serviceSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://maxoratechnology.com/services/wordpress/#breadcrumb",
+      "@id": "https://maxoratechnology.com/Services/wordpress/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -103,19 +103,19 @@ const serviceSchema = {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://maxoratechnology.com/services",
+          item: "https://maxoratechnology.com/Services",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "WordPress Development",
-          item: "https://maxoratechnology.com/services/wordpress",
+          item: "https://maxoratechnology.com/Services/wordpress",
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://maxoratechnology.com/services/wordpress/#faq",
+      "@id": "https://maxoratechnology.com/Services/wordpress/#faq",
       mainEntity: [
         {
           "@type": "Question",

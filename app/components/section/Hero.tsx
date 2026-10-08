@@ -93,7 +93,7 @@ export default function Hero() {
               </Link>
 
               <Link
-                href="/services"
+                href="/Services"
                 className="group inline-flex items-center justify-center glass-effect px-8 py-4 rounded-xl font-semibold text-lg hover-lift text-gray-900 dark:text-gray-100"
               >
                 <Sparkles

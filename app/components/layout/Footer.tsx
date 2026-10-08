@@ -21,11 +21,12 @@ interface SocialLink {
 export default function Footer() {
   const footerLinks: Record<string, FooterLink[]> = {
     Services: [
-      { label: "App Development", href: "/services/app-development" },
-      { label: "Web Development", href: "/services/web-development" },
-      { label: "WordPress Solutions", href: "/services/wordpress" },
-      { label: "eCommerce Platforms", href: "/services/ecommerce" },
-      { label: "Custom CRM/ERP", href: "/services/crm-erp" },
+      { label: "App Development", href: "/Services/app-development" },
+      { label: "Web Development", href: "/Services/web-development" },
+      { label: "WordPress Solutions", href: "/Services/wordpress" },
+      { label: "eCommerce Platforms", href: "/Services/ecommerce" },
+      { label: "Custom CRM/ERP", href: "/Services/crm-erp" },
+      { label: "SEO & AI Optimization", href: "/Services/seo-aeo" },
     ],
     Company: [
       { label: "About Us", href: "/about" },

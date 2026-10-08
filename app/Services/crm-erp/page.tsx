@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Custom CRM and ERP software development company in India. We engineer tailored business management systems, workflow automation, and centralized data portals.",
   alternates: {
-    canonical: "/services/crm-erp",
+    canonical: "/Services/crm-erp",
   },
   openGraph: {
     title: "Custom CRM & ERP Software Development | Maxora Technology",
     description:
       "Automate workflows, unify business data, and scale your operations with tailored CRM/ERP systems designed by Maxora Technology.",
-    url: "/services/crm-erp",
+    url: "/Services/crm-erp",
     siteName: "Maxora Technology",
     images: [
       {
@@ -40,7 +40,7 @@ const serviceSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://maxoratechnology.com/services/crm-erp/#service",
+      "@id": "https://maxoratechnology.com/Services/crm-erp/#service",
       name: "Custom CRM & ERP Software Development",
       serviceType: "Enterprise Software Engineering",
       provider: {
@@ -48,7 +48,7 @@ const serviceSchema = {
         "@id": "https://maxoratechnology.com/#organization",
         name: "Maxora Technology",
       },
-      url: "https://maxoratechnology.com/services/crm-erp",
+      url: "https://maxoratechnology.com/Services/crm-erp",
       description:
         "Custom development of Customer Relationship Management (CRM) and Enterprise Resource Planning (ERP) systems with workflow automation, analytics dashboards, and multi-system integration.",
       areaServed: [
@@ -91,7 +91,7 @@ const serviceSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://maxoratechnology.com/services/crm-erp/#breadcrumb",
+      "@id": "https://maxoratechnology.com/Services/crm-erp/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -103,19 +103,19 @@ const serviceSchema = {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://maxoratechnology.com/services",
+          item: "https://maxoratechnology.com/Services",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "CRM & ERP Development",
-          item: "https://maxoratechnology.com/services/crm-erp",
+          item: "https://maxoratechnology.com/Services/crm-erp",
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://maxoratechnology.com/services/crm-erp/#faq",
+      "@id": "https://maxoratechnology.com/Services/crm-erp/#faq",
       mainEntity: [
         {
           "@type": "Question",

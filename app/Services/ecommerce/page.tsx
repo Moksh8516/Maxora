@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "E-commerce development company in India building high-converting online stores with Shopify, WooCommerce, and custom headless commerce architectures.",
   alternates: {
-    canonical: "/services/ecommerce",
+    canonical: "/Services/ecommerce",
   },
   openGraph: {
     title: "E-Commerce Development Services | Maxora Technology",
     description:
       "High-speed, conversion-optimized e-commerce platforms engineered for growth. Custom Shopify, WooCommerce, and headless commerce solutions.",
-    url: "/services/ecommerce",
+    url: "/Services/ecommerce",
     siteName: "Maxora Technology",
     images: [
       {
@@ -40,7 +40,7 @@ const serviceSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://maxoratechnology.com/services/ecommerce/#service",
+      "@id": "https://maxoratechnology.com/Services/ecommerce/#service",
       name: "E-Commerce Development Services",
       serviceType: "Online Store & Commerce Engineering",
       provider: {
@@ -48,7 +48,7 @@ const serviceSchema = {
         "@id": "https://maxoratechnology.com/#organization",
         name: "Maxora Technology",
       },
-      url: "https://maxoratechnology.com/services/ecommerce",
+      url: "https://maxoratechnology.com/Services/ecommerce",
       description:
         "Full-featured e-commerce development including custom Shopify themes, WooCommerce setups, headless Next.js storefronts, payment gateways, and inventory automation.",
       areaServed: [
@@ -91,7 +91,7 @@ const serviceSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://maxoratechnology.com/services/ecommerce/#breadcrumb",
+      "@id": "https://maxoratechnology.com/Services/ecommerce/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -103,19 +103,19 @@ const serviceSchema = {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://maxoratechnology.com/services",
+          item: "https://maxoratechnology.com/Services",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "E-Commerce Development",
-          item: "https://maxoratechnology.com/services/ecommerce",
+          item: "https://maxoratechnology.com/Services/ecommerce",
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://maxoratechnology.com/services/ecommerce/#faq",
+      "@id": "https://maxoratechnology.com/Services/ecommerce/#faq",
       mainEntity: [
         {
           "@type": "Question",

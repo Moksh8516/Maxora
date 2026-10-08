@@ -43,7 +43,7 @@ export default function Services() {
         "Flutter",
         "Performance Optimization",
       ],
-      href: "/services/app-development",
+      href: "/Services/app-development",
       gradient: "from-purple-600 to-pink-500",
       badge: "Popular",
     },
@@ -54,7 +54,7 @@ export default function Services() {
         "Modern, responsive web applications built with cutting-edge technologies for optimal performance and scalability.",
       icon: <Globe className="w-6 h-6" />,
       features: ["React / Next.js", "TypeScript", "Performance", "SEO Optimized"],
-      href: "/services/web-development",
+      href: "/Services/web-development",
       gradient: "from-blue-600 to-cyan-500",
     },
     {
@@ -64,7 +64,7 @@ export default function Services() {
         "Custom WordPress themes, plugins, and e-commerce solutions tailored to your specific business needs.",
       icon: <Layout className="w-6 h-6" />,
       features: ["Custom Themes", "WooCommerce", "Plugin Dev", "Maintenance"],
-      href: "/services/wordpress",
+      href: "/Services/wordpress",
       gradient: "from-green-600 to-emerald-500",
     },
     {
@@ -74,7 +74,7 @@ export default function Services() {
         "Full-featured online stores with secure payment gateways, inventory management, and analytics.",
       icon: <ShoppingCart className="w-6 h-6" />,
       features: ["Shopify", "WooCommerce", "Custom Stores", "Payment Integration"],
-      href: "/services/ecommerce",
+      href: "/Services/ecommerce",
       gradient: "from-orange-600 to-red-500",
     },
     {
@@ -84,18 +84,19 @@ export default function Services() {
         "Tailored business management systems that streamline operations and improve productivity.",
       icon: <Database className="w-6 h-6" />,
       features: ["Custom Workflows", "Automation", "Analytics", "Integration"],
-      href: "/services/crm-erp",
+      href: "/Services/crm-erp",
       gradient: "from-indigo-600 to-blue-500",
     },
     {
       id: 6,
-      title: "Cloud & Integrations",
+      title: "Technical SEO & AEO",
       description:
-        "Scalable cloud deployment, API integrations, and ongoing software optimization for growing businesses.",
-      icon: <Cpu className="w-6 h-6" />,
-      features: ["Cloud Setup", "API Sync", "Security", "DevOps"],
-      href: "/services/web-development",
+        "Dominate Google Search and get cited by ChatGPT, Perplexity, and AI Overviews with structured data & Core Web Vitals.",
+      icon: <Sparkles className="w-6 h-6" />,
+      features: ["Core Web Vitals", "Schema JSON-LD", "AI Answer Blocks", "llms.txt Standard"],
+      href: "/Services/seo-aeo",
       gradient: "from-teal-600 to-cyan-500",
+      badge: "Modern Search",
     },
   ];
 
@@ -187,7 +188,7 @@ export default function Services() {
         {/* View All Services Button */}
         <div className="text-center">
           <Link
-            href="/services"
+            href="/Services"
             className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:shadow-xl hover:-translate-y-1 transition-all"
           >
             View All Services & Pricing Details
