@@ -72,8 +72,7 @@ export default function ServicesHero() {
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              href={serviceToggle ? "#services" : ""}
-              onClick={() => setServiceToggle(!serviceToggle)}
+              href="#services"
               className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/80 dark:bg-gray-800/80 border border-gray-300/50 dark:border-gray-700/50 text-gray-700 dark:text-gray-300 font-medium hover:bg-white dark:hover:bg-gray-800 transition-all duration-300"
             >
               Explore Services

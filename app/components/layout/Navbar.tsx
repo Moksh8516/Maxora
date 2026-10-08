@@ -33,7 +33,7 @@ export default function Navbar() {
 
   const navLinks: NavLink[] = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/Services" },
+    { name: "Services", href: "/services" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];

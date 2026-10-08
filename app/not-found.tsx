@@ -51,7 +51,7 @@ export default function NotFound() {
 
   const quickLinks = [
     { name: "Home", href: "/", icon: Home },
-    { name: "Services", href: "/Services", icon: Zap },
+    { name: "Services", href: "/services", icon: Zap },
     { name: "Contact", href: "/contact", icon: Navigation },
     { name: "Blog", href: "/blog", icon: Compass },
   ];

@@ -1,9 +1,20 @@
+import type { Metadata } from "next";
 import PolicyPage from "../components/ui/PolicyPage";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Terms of Service | Maxora Technology",
   description:
-    "The terms that apply when you use the Maxora Technology website or engage us for digital services.",
+    "The terms and conditions that apply when you use the Maxora Technology website or engage us for digital engineering and design services.",
+  alternates: {
+    canonical: "/terms",
+  },
+  openGraph: {
+    title: "Terms of Service | Maxora Technology",
+    description:
+      "Terms of service and legal agreement for Maxora Technology website and engineering services.",
+    url: "/terms",
+    siteName: "Maxora Technology",
+  },
 };
 
 export default function TermsPage() {

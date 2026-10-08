@@ -1,9 +1,20 @@
+import type { Metadata } from "next";
 import PolicyPage from "../components/ui/PolicyPage";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Privacy Policy | Maxora Technology",
   description:
-    "How Maxora Technology collects, uses, stores, and protects personal information.",
+    "How Maxora Technology collects, uses, stores, and protects personal information in accordance with privacy standards.",
+  alternates: {
+    canonical: "/privacy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Maxora Technology",
+    description:
+      "Privacy policy and data protection practices at Maxora Technology.",
+    url: "/privacy",
+    siteName: "Maxora Technology",
+  },
 };
 
 export default function PrivacyPage() {

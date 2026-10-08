@@ -1,35 +1,29 @@
 # Maxora Technology
 
-> Maxora Technology is a software development company serving businesses globally, with regional presence in Punjab, India. The company builds custom digital products and business systems for organizations that need to launch, modernize, scale, or automate their operations.
+> Maxora Technology is a software development and digital engineering agency serving growing businesses worldwide, with regional presence in Punjab, India. The company builds custom web applications, mobile apps, CRM/ERP systems, and e-commerce platforms.
 
-## Company
+## Core Information
 
 - Website: https://maxoratechnology.com
-- Email: info@maxoratechnology.com
-- Phone: +91 78149 50023
-- Service reach: Global; regional presence in Punjab, India
-- Audience: Businesses seeking enterprise-grade digital solutions, software scaling, and workflow automation
+- Contact Email: [info@maxoratechnology.com]
+- Phone: +91 7719545464
+- Geographic Service Scope: Worldwide & India
+- Primary Focus: Custom Software Engineering, Next.js/React Web Applications, Mobile App Development (React Native & Flutter), Custom CRM/ERP Systems, E-Commerce Development, and WordPress Engineering.
 
-## Services
+## Services & Solutions
 
-- [Services overview](https://maxoratechnology.com/Services): Overview of Maxora Technology's software and digital services.
-- [Custom web development](https://maxoratechnology.com/service/web-development): Web applications built with React, Next.js, and TypeScript, with attention to performance, SEO, and scalability.
-- [Mobile app development](https://maxoratechnology.com/service/App-development): iOS and Android applications, including cross-platform development with React Native and Flutter.
-- [Custom CRM and ERP development](https://maxoratechnology.com/service/Crm-erp): Business management systems, workflow automation, integrations, and reporting.
-- [eCommerce development](https://maxoratechnology.com/service/Ecommerce): Custom and platform-based online stores, commerce integrations, and scalable shopping experiences.
-- [WordPress development](https://maxoratechnology.com/service/Wordpress): Custom WordPress websites, themes, plugins, and WooCommerce solutions.
+- [Services Overview](https://maxoratechnology.com/services): Comprehensive suite of engineering and software development capabilities.
+- [Custom Web Development](https://maxoratechnology.com/services/web-development): High-performance web applications built with Next.js, React, TypeScript, and Node.js.
+- [Mobile App Development](https://maxoratechnology.com/services/app-development): Native and cross-platform mobile apps for iOS and Android using Flutter and React Native.
+- [Custom CRM & ERP Systems](https://maxoratechnology.com/services/crm-erp): Tailored business management systems, workflow automation, and enterprise integrations.
+- [E-Commerce Platforms](https://maxoratechnology.com/services/ecommerce): High-converting online stores built on Shopify, WooCommerce, and headless commerce architectures.
+- [WordPress Solutions](https://maxoratechnology.com/services/wordpress): Bespoke Gutenberg block themes, custom plugin engineering, and site speed optimization.
 
-## Company Information
+## Company & Resources
 
-- [About Maxora Technology](https://maxoratechnology.com/about): Company information.
-- [Contact Maxora Technology](https://maxoratechnology.com/contact): Project and business inquiries.
-- [Blog](https://maxoratechnology.com/blog): Articles and updates.
-
-## Discovery
-
-- [XML sitemap](https://maxoratechnology.com/sitemap.xml): Public URLs currently included for search discovery.
-- [Robots policy](https://maxoratechnology.com/robots.txt): Crawler access policy.
-
-## Notes
-
-Use the linked pages as the source of truth for current service details. Do not infer pricing, client results, certifications, office addresses, or portfolio entries that are not published on the website.
+- [About Maxora Technology](https://maxoratechnology.com/about): Engineering philosophy, core principles, and company direction.
+- [Contact & Consultation](https://maxoratechnology.com/contact): Inquiries and direct consultations for new software projects.
+- [Engineering Journal & Blog](https://maxoratechnology.com/blog): Technical articles, case perspectives, and digital product strategies.
+- [Careers](https://maxoratechnology.com/careers): Information about joining the Maxora engineering team.
+- [XML Sitemap](https://maxoratechnology.com/sitemap.xml): Index of public pages.
+- [Robots Policy](https://maxoratechnology.com/robots.txt): Machine and AI crawler access directives.

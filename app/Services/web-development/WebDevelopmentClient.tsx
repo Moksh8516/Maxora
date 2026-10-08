@@ -10,7 +10,6 @@ import {
   CheckCircle,
   Code,
   Layers,
-  Server,
   Rocket,
   BarChart,
   Users,
@@ -19,11 +18,11 @@ import {
   ArrowRight,
   MessageSquare,
   Palette,
-  Cpu,
   ShieldCheck,
   TrendingUp,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const serviceData = {
   id: "web-development",
@@ -150,42 +149,43 @@ const serviceData = {
   ],
   caseStudies: [
     {
-      title: "E-commerce Platform",
-      description: "Built a scalable online store with 200% revenue growth",
+      title: "Custom SaaS Application",
+      description: "Built a scalable enterprise web app with multi-tenant architecture",
       results: [
-        "200% revenue growth",
-        "50% faster load times",
-        "40% conversion increase",
+        "200% faster user onboarding",
+        "Sub-second page load times",
+        "40% increase in user retention",
       ],
     },
     {
-      title: "SaaS Dashboard",
-      description: "Enterprise dashboard with real-time analytics",
+      title: "Interactive Analytics Dashboard",
+      description: "Real-time data visualization platform with role-based access",
       results: [
-        "10k+ active users",
-        "99.9% uptime",
-        "60% user engagement increase",
+        "10k+ active daily users",
+        "99.9% operational uptime",
+        "60% improved decision efficiency",
       ],
     },
     {
-      title: "Mobile-First Web App",
-      description: "Progressive web app with offline capabilities",
+      title: "Modern Corporate Portal",
+      description: "High-performance marketing website with integrated headless CMS",
       results: [
-        "3x mobile traffic",
-        "70% lower bounce rate",
-        "4.8/5 user rating",
+        "3x organic search traffic",
+        "70% lower mobile bounce rate",
+        "100/100 Google Lighthouse score",
       ],
     },
   ],
 };
 
-export default function WebDevelopmentPage() {
+export default function WebDevelopmentClient() {
   const [activeTab, setActiveTab] = useState("overview");
   const router = useRouter();
+
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-24">
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-24">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-transparent dark:from-gray-900/50" />
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse-glow" />
@@ -208,31 +208,29 @@ export default function WebDevelopmentPage() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Modern, high-performance web applications that drive business
-              growth
+              Modern, high-performance web applications that drive business growth
             </p>
 
             <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-              We build custom web applications using modern frameworks like
-              Next.js, React, and TypeScript. Our solutions are optimized for
-              performance, SEO, and user experience, helping businesses
-              establish a strong online presence and drive growth.
+              We build custom web applications using modern frameworks like Next.js,
+              React, and TypeScript. Our solutions are optimized for speed, search visibility,
+              and seamless user experience, helping your business scale confidently.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => router.push("/contact")}
+              <Link
+                href="/contact"
                 className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 hover-lift flex items-center justify-center gap-2"
               >
                 Start Your Project
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button
-                onClick={() => router.push("/Case-Studies")}
-                className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift"
+              </Link>
+              <Link
+                href="/services"
+                className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift flex items-center justify-center gap-2"
               >
-                View Case Studies
-              </button>
+                All Services
+              </Link>
             </div>
           </div>
         </div>
@@ -255,7 +253,7 @@ export default function WebDevelopmentPage() {
               onClick={() => setActiveTab(tab)}
               className={`px-6 py-3 rounded-lg font-medium transition-all ${
                 activeTab === tab
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white"
+                  ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md"
                   : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
               }`}
             >
@@ -270,29 +268,26 @@ export default function WebDevelopmentPage() {
         {/* Overview Tab */}
         {activeTab === "overview" && (
           <div className="space-y-16">
-            {/* Full Description */}
             <div className="max-w-3xl">
               <h2 className="text-3xl md:text-4xl font-heading text-gray-900 dark:text-white mb-6">
-                Custom Web Development Solutions
+                Custom Web Development by Maxora Technology
               </h2>
               <div className="space-y-4">
                 <p className="text-lg text-gray-600 dark:text-gray-300">
-                  At DigitalSolutions, we specialize in creating bespoke web
-                  applications that are tailored to your specific business
-                  needs. Our team of experienced developers uses the latest
-                  technologies to build scalable, secure, and high-performing
-                  websites.
+                  At Maxora Technology, we engineer custom web applications that
+                  solve core operational bottlenecks and accelerate digital growth.
+                  Our team utilizes modern architectures including Next.js, React,
+                  and TypeScript to deliver secure, responsive, and search-ready
+                  digital platforms.
                 </p>
                 <p className="text-lg text-gray-600 dark:text-gray-300">
-                  We believe in a collaborative approach, working closely with
-                  you throughout the development process to ensure the final
-                  product exceeds your expectations and helps you achieve your
-                  business objectives.
+                  We prioritize clean code, accessible UI components, and
+                  reliable cloud backends so your application can effortlessly
+                  handle user scale without accumulating technical debt.
                 </p>
               </div>
             </div>
 
-            {/* Value Proposition */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-8 rounded-2xl glass-effect hover-lift">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mb-6">
@@ -302,8 +297,8 @@ export default function WebDevelopmentPage() {
                   Performance First
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We build applications that load instantly and provide smooth
-                  user experiences across all devices.
+                  We build applications with near-instant initial load times and smooth
+                  interactive transitions across all mobile and desktop devices.
                 </p>
               </div>
 
@@ -315,9 +310,8 @@ export default function WebDevelopmentPage() {
                   Enterprise Security
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  {
-                    "Your data and your customers' data are protected with industry-leading security measures."
-                  }
+                  Your business logic and sensitive customer data are protected with
+                  industry-standard encryption, CSRF mitigation, and strict input validation.
                 </p>
               </div>
 
@@ -326,11 +320,11 @@ export default function WebDevelopmentPage() {
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
-                  Scalable Growth
+                  Scalable Architecture
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Our solutions are designed to grow with your business,
-                  handling increased traffic and features.
+                  Modular, containerized, and serverless-ready solutions designed
+                  to scale compute and database throughput seamlessly.
                 </p>
               </div>
             </div>
@@ -345,9 +339,8 @@ export default function WebDevelopmentPage() {
                 Key <span className="gradient-text">Features</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                {
-                  "Every web application we build includes these essential features to ensure success in today's digital landscape."
-                }
+                Every web application we engineer incorporates best-in-class standards
+                for accessibility, search crawlability, speed, and resilient uptime.
               </p>
             </div>
 
@@ -357,9 +350,7 @@ export default function WebDevelopmentPage() {
                   key={index}
                   className="group p-8 rounded-2xl glass-effect hover-lift"
                 >
-                  <div
-                    className={`w-14 h-14 rounded-xl bg-gradient-to-r from-${feature.color}-600 to-${feature.color}-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
-                  >
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-white">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
@@ -382,13 +373,12 @@ export default function WebDevelopmentPage() {
                 Our Development <span className="gradient-text">Process</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                We follow a proven methodology to ensure your project is
-                delivered on time, within budget, and exceeds expectations.
+                We follow a transparent, milestone-driven development lifecycle with
+                continuous communication and automated quality checks.
               </p>
             </div>
 
             <div className="relative">
-              {/* Timeline line */}
               <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-cyan-500 to-purple-500 md:left-1/2 md:-translate-x-1/2" />
 
               <div className="space-y-12">
@@ -397,12 +387,10 @@ export default function WebDevelopmentPage() {
                     key={index}
                     className={`relative flex ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-start gap-8`}
                   >
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center z-10">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center z-10 text-white">
                       {step.icon}
                     </div>
-                    <div
-                      className={`flex-grow ${index % 2 === 0 ? "md:text-right" : ""}`}
-                    >
+                    <div className={`flex-grow ${index % 2 === 0 ? "md:text-right" : ""}`}>
                       <div
                         className={`p-6 rounded-2xl glass-effect hover-lift max-w-lg ${index % 2 === 0 ? "md:ml-auto" : ""}`}
                       >
@@ -432,8 +420,8 @@ export default function WebDevelopmentPage() {
                 Technology <span className="gradient-text">Stack</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                We use modern, battle-tested technologies to build robust and
-                scalable web applications.
+                We employ battle-tested frameworks, modern databases, and resilient
+                cloud platforms to build production-grade web products.
               </p>
             </div>
 
@@ -453,7 +441,6 @@ export default function WebDevelopmentPage() {
               ))}
             </div>
 
-            {/* Technology Categories */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-8 rounded-2xl glass-effect hover-lift">
                 <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-4">
@@ -462,55 +449,55 @@ export default function WebDevelopmentPage() {
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                     <ChevronRight className="w-4 h-4 text-blue-500" />
-                    Next.js & React
+                    Next.js (App Router, Turbopack) & React 19
                   </li>
                   <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                     <ChevronRight className="w-4 h-4 text-blue-500" />
-                    TypeScript
+                    TypeScript for end-to-end type safety
                   </li>
                   <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                     <ChevronRight className="w-4 h-4 text-blue-500" />
-                    Tailwind CSS
+                    Tailwind CSS & CSS design systems
                   </li>
                 </ul>
               </div>
 
               <div className="p-8 rounded-2xl glass-effect hover-lift">
                 <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-4">
-                  Backend
+                  Backend & APIs
                 </h3>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                     <ChevronRight className="w-4 h-4 text-cyan-500" />
-                    Node.js
+                    Node.js & Next.js Server Actions
                   </li>
                   <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                     <ChevronRight className="w-4 h-4 text-cyan-500" />
-                    MongoDB & PostgreSQL
+                    PostgreSQL, MongoDB & Redis Caching
                   </li>
                   <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                     <ChevronRight className="w-4 h-4 text-cyan-500" />
-                    GraphQL & REST APIs
+                    RESTful APIs & GraphQL Integration
                   </li>
                 </ul>
               </div>
 
               <div className="p-8 rounded-2xl glass-effect hover-lift">
                 <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-4">
-                  DevOps
+                  Cloud & Infrastructure
                 </h3>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                     <ChevronRight className="w-4 h-4 text-purple-500" />
-                    AWS & Vercel
+                    AWS, Vercel & Cloudflare Edge CDN
                   </li>
                   <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                     <ChevronRight className="w-4 h-4 text-purple-500" />
-                    Docker
+                    Docker Containerization
                   </li>
                   <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                     <ChevronRight className="w-4 h-4 text-purple-500" />
-                    CI/CD Pipelines
+                    Automated CI/CD Pipelines
                   </li>
                 </ul>
               </div>
@@ -526,8 +513,8 @@ export default function WebDevelopmentPage() {
                 Business <span className="gradient-text">Benefits</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                Our web development solutions deliver tangible results that
-                drive business growth and success.
+                Our custom engineering approach produces tangible business outcomes:
+                faster loading, higher conversion velocity, and effortless scalability.
               </p>
             </div>
 
@@ -538,7 +525,7 @@ export default function WebDevelopmentPage() {
                   className="group p-8 rounded-2xl glass-effect hover-lift"
                 >
                   <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center text-white">
                       {benefit.icon}
                     </div>
                     <span className="text-3xl font-bold gradient-text">
@@ -565,9 +552,8 @@ export default function WebDevelopmentPage() {
                 Success <span className="gradient-text">Stories</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                {
-                  "See how we've helped businesses transform their digital presence with custom web solutions."
-                }
+                Explore how tailored digital products help teams automate manual steps
+                and deliver exceptional online user journeys.
               </p>
             </div>
 
@@ -577,8 +563,8 @@ export default function WebDevelopmentPage() {
                   key={index}
                   className="group p-8 rounded-2xl glass-effect hover-lift"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mb-6">
-                    <CheckCircle className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mb-6 text-white">
+                    <CheckCircle className="w-6 h-6" />
                   </div>
                   <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
                     {study.title}
@@ -588,10 +574,7 @@ export default function WebDevelopmentPage() {
                   </p>
                   <div className="space-y-2">
                     {study.results.map((result, resultIndex) => (
-                      <div
-                        key={resultIndex}
-                        className="flex items-center gap-2"
-                      >
+                      <div key={resultIndex} className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500" />
                         <span className="text-sm text-gray-600 dark:text-gray-300">
                           {result}
@@ -611,8 +594,8 @@ export default function WebDevelopmentPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center justify-center p-4 rounded-2xl glass-effect mb-8">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center">
-                <MessageSquare className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center text-white">
+                <MessageSquare className="w-8 h-8" />
               </div>
             </div>
 
@@ -622,26 +605,28 @@ export default function WebDevelopmentPage() {
             </h2>
 
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              {
-                "Let's discuss how we can build the perfect web solution for your business needs and goals."
-              }
+              Schedule a free scoping session to discuss how Maxora Technology can build
+              the ideal custom web application for your business goals.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => router.push("/contact")}
+              <Link
+                href="/contact"
                 className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 hover-lift flex items-center justify-center gap-2"
               >
                 Schedule a Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift">
-                View Our Portfolio
-              </button>
+              </Link>
+              <Link
+                href="/services"
+                className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift flex items-center justify-center gap-2"
+              >
+                Explore Other Services
+              </Link>
             </div>
 
             <p className="mt-8 text-sm text-gray-500 dark:text-gray-400">
-              Get a response within 24 hours • No obligation consultation
+              Direct response within 24 hours • Transparent scoping & fixed estimates
             </p>
           </div>
         </div>

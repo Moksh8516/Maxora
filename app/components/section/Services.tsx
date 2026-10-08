@@ -44,7 +44,7 @@ export default function Services() {
         "Flutter",
         "Performance Optimization",
       ],
-      href: "/service/App-development",
+      href: "/services/app-development",
       gradient: "from-purple-600 to-pink-500",
       badge: "Popular",
     },
@@ -55,7 +55,7 @@ export default function Services() {
         "Modern, responsive web applications built with cutting-edge technologies for optimal performance and scalability.",
       icon: <Globe className="w-6 h-6" />,
       features: ["React/Next.js", "TypeScript", "Performance", "SEO Optimized"],
-      href: "/service/Web-development",
+      href: "/services/web-development",
       gradient: "from-blue-600 to-cyan-500",
     },
     {
@@ -65,7 +65,7 @@ export default function Services() {
         "Custom WordPress themes, plugins, and e-commerce solutions tailored to your specific business needs.",
       icon: <Layout className="w-6 h-6" />,
       features: ["Custom Themes", "WooCommerce", "Plugin Dev", "Maintenance"],
-      href: "/service/Wordpress",
+      href: "/services/wordpress",
       gradient: "from-green-600 to-emerald-500",
     },
     {
@@ -75,7 +75,7 @@ export default function Services() {
         "Full-featured online stores with secure payment gateways, inventory management, and analytics.",
       icon: <ShoppingCart className="w-6 h-6" />,
       features: ["Shopify", "WooCommerce", "Custom", "Payment Integration"],
-      href: "/service/Ecommerce",
+      href: "/services/ecommerce",
       gradient: "from-orange-600 to-red-500",
     },
     {
@@ -85,7 +85,7 @@ export default function Services() {
         "Tailored business management systems that streamline operations and improve productivity.",
       icon: <Database className="w-6 h-6" />,
       features: ["Custom Workflows", "Automation", "Analytics", "Integration"],
-      href: "/service/Crm-erp",
+      href: "/services/crm-erp",
       gradient: "from-indigo-600 to-blue-500",
     },
     {
@@ -95,7 +95,7 @@ export default function Services() {
         "Scalable cloud infrastructure, migration, and management services for modern businesses.",
       icon: <Cloud className="w-6 h-6" />,
       features: ["AWS/Azure", "Migration", "Security", "DevOps"],
-      href: "/service/Cloud",
+      href: "/services/web-development",
       gradient: "from-teal-600 to-cyan-500",
       badge: "New",
     },
@@ -247,7 +247,7 @@ export default function Services() {
         {/* View All Services Button */}
         <div className="text-center">
           <Link
-            href="/Services"
+            href="/services"
             className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:shadow-xl hover:-translate-y-1 transition-all"
           >
             View All Services

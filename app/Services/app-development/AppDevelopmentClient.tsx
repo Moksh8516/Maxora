@@ -9,7 +9,6 @@ import {
   CheckCircle,
   Code,
   Layers,
-  Server,
   Rocket,
   BarChart,
   Users,
@@ -18,19 +17,17 @@ import {
   ArrowRight,
   MessageSquare,
   Palette,
-  Cpu,
   ShieldCheck,
   TrendingUp,
   Apple,
   Sparkles,
   Cloud,
   Wifi,
-  Database,
   Globe,
   Cctv,
 } from "lucide-react";
 import { TiVendorAndroid } from "react-icons/ti";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const serviceData = {
   id: "app-development",
@@ -43,37 +40,37 @@ const serviceData = {
     {
       title: "Native Performance",
       description:
-        "Smooth, responsive apps built with platform-specific technologies",
+        "Smooth, responsive apps built with platform-specific optimizations",
       icon: <Zap className="w-5 h-5" />,
       color: "yellow",
     },
     {
-      title: "Cross-Platform",
-      description: "Single codebase for both iOS and Android platforms",
+      title: "Cross-Platform Efficiency",
+      description: "Unified codebase for both iOS and Android platforms using React Native & Flutter",
       icon: <TabletSmartphone className="w-5 h-5" />,
       color: "purple",
     },
     {
       title: "Offline Capability",
-      description: "Function seamlessly without internet connection",
+      description: "Function seamlessly with offline data caching and synchronization",
       icon: <Wifi className="w-5 h-5" />,
       color: "blue",
     },
     {
       title: "App Store Ready",
-      description: "Fully compliant with Apple and Google guidelines",
+      description: "Fully compliant with Apple App Store and Google Play guidelines",
       icon: <Shield className="w-5 h-5" />,
       color: "green",
     },
     {
       title: "Push Notifications",
-      description: "Engage users with timely updates and messages",
+      description: "Engage and retain users with targeted real-time messaging",
       icon: <Sparkles className="w-5 h-5" />,
       color: "pink",
     },
     {
-      title: "Cloud Integration",
-      description: "Scalable backend with secure data synchronization",
+      title: "Cloud & Backend Integration",
+      description: "Scalable backend with secure APIs, authentication, and database sync",
       icon: <Cloud className="w-5 h-5" />,
       color: "cyan",
     },
@@ -96,7 +93,7 @@ const serviceData = {
     {
       name: "iOS",
       icon: <Apple className="w-8 h-8" />,
-      technologies: ["Swift", "UIKit", "SwiftUI", "Core Data", "ARKit"],
+      technologies: ["Swift", "SwiftUI", "UIKit", "Core Data", "TestFlight"],
     },
     {
       name: "Android",
@@ -106,7 +103,7 @@ const serviceData = {
         "Jetpack Compose",
         "Room",
         "Coroutines",
-        "ML Kit",
+        "Google Play Services",
       ],
     },
     {
@@ -115,8 +112,8 @@ const serviceData = {
       technologies: [
         "React Native",
         "Flutter",
-        "Ionic",
-        "Xamarin",
+        "TypeScript",
+        "Dart",
         "Capacitor",
       ],
     },
@@ -124,25 +121,25 @@ const serviceData = {
   benefits: [
     {
       title: "Increased User Engagement",
-      description: "Direct access to customers through their mobile devices",
+      description: "Direct customer touchpoint with home-screen presence",
       icon: <Users className="w-5 h-5" />,
       metric: "3x",
     },
     {
-      title: "Faster Performance",
-      description: "Native apps provide superior speed and responsiveness",
+      title: "Superior Speed & Smoothness",
+      description: "Optimized 60fps animations and rapid interactive response",
       icon: <Rocket className="w-5 h-5" />,
       metric: "60%",
     },
     {
       title: "Higher Conversion Rates",
-      description: "Optimized mobile experiences drive more conversions",
+      description: "Streamlined checkout and native device feature adoption",
       icon: <BarChart className="w-5 h-5" />,
       metric: "40%",
     },
     {
       title: "24/7 Accessibility",
-      description: "Users can access your services anytime, anywhere",
+      description: "Users can interact with your core services anytime, anywhere",
       icon: <Clock className="w-5 h-5" />,
       metric: "100%",
     },
@@ -150,119 +147,113 @@ const serviceData = {
   process: [
     {
       step: "01",
-      title: "Strategy & Planning",
-      description: "Define goals, target audience, and feature requirements",
+      title: "Strategy & UX Research",
+      description: "Define goals, user personas, and feature roadmaps",
       icon: <MessageSquare className="w-6 h-6" />,
     },
     {
       step: "02",
-      title: "UI/UX Design",
-      description: "Create intuitive interfaces and user experience flows",
+      title: "UI/UX Interactive Design",
+      description: "Create pixel-perfect Figma screens and user journeys",
       icon: <Palette className="w-6 h-6" />,
     },
     {
       step: "03",
-      title: "Prototype Development",
-      description: "Build a functional prototype for testing and feedback",
+      title: "Prototype & Architecture",
+      description: "Set up component architecture, state management, and API contracts",
       icon: <Cctv className="w-6 h-6" />,
     },
     {
       step: "04",
       title: "App Development",
-      description: "Full-scale development with modern technologies",
+      description: "Full-scale mobile engineering with clean, modular code",
       icon: <Code className="w-6 h-6" />,
     },
     {
       step: "05",
-      title: "Testing & Quality",
-      description: "Rigorous testing across all devices and scenarios",
+      title: "Testing & Quality Assurance",
+      description: "Automated and manual testing across various screen resolutions and OS versions",
       icon: <ShieldCheck className="w-6 h-6" />,
     },
     {
       step: "06",
-      title: "Launch & Maintenance",
-      description: "App store deployment and ongoing support",
+      title: "Store Launch & Growth",
+      description: "App Store & Play Store publishing with ongoing maintenance",
       icon: <TrendingUp className="w-6 h-6" />,
     },
   ],
   caseStudies: [
     {
-      title: "Fitness Tracking App",
-      description: "Built a comprehensive fitness app with real-time analytics",
+      title: "On-Demand Delivery App",
+      description: "Built a cross-platform mobile app with live GPS tracking and instant notifications",
       results: [
-        "500k+ downloads",
-        "4.9/5 app store rating",
-        "70% daily active users",
+        "100k+ active installs",
+        "4.8/5 app store rating",
+        "70% daily active retention",
       ],
       platform: "iOS & Android",
     },
     {
-      title: "E-commerce Mobile App",
-      description: "Shopping app with AR try-on and instant checkout",
+      title: "mCommerce Shopping App",
+      description: "Mobile commerce application with biometric login and one-tap checkout",
       results: [
         "3x mobile revenue growth",
-        "45% faster checkout",
-        "2M+ monthly transactions",
+        "45% faster checkout completion",
+        "Sub-100ms API response time",
       ],
-      platform: "Cross-platform",
+      platform: "React Native",
     },
     {
-      title: "Enterprise Productivity",
-      description: "Internal tools app for a Fortune 500 company",
+      title: "Enterprise Field Operations App",
+      description: "Internal operations app with offline syncing and barcode scanning",
       results: [
         "50% productivity increase",
-        "99.9% uptime",
-        "10k+ daily users",
+        "Zero data loss in offline mode",
+        "10k+ daily operational logs",
       ],
-      platform: "iOS & Android",
+      platform: "Flutter",
     },
   ],
   appTypes: [
     {
-      type: "Native Apps",
-      description: "Platform-specific applications for maximum performance",
+      type: "Native iOS & Android",
+      description: "Platform-specific codebases for maximum device integration and performance",
       icon: <Zap className="w-6 h-6" />,
       bestFor: [
-        "High-performance needs",
-        "Platform-specific features",
-        "Complex animations",
+        "Hardware-intensive apps",
+        "Complex AR/ML features",
+        "Platform-exclusive design paradigms",
       ],
     },
     {
-      type: "Cross-Platform",
-      description: "Single codebase for multiple platforms",
+      type: "Cross-Platform (React Native / Flutter)",
+      description: "Single codebase powering both major app stores with native feel",
       icon: <TabletSmartphone className="w-6 h-6" />,
       bestFor: [
-        "Faster development",
-        "Budget efficiency",
-        "Consistent UX across platforms",
+        "Faster time to market",
+        "Cost-effective multi-platform releases",
+        "Consistent UI across platforms",
       ],
     },
     {
-      type: "Progressive Web Apps",
-      description: "Web applications with native-like features",
+      type: "Progressive Web Apps (PWA)",
+      description: "Web apps installable directly to mobile home screens",
       icon: <Globe className="w-6 h-6" />,
-      bestFor: ["Wide reach", "No app store approval", "Easier updates"],
+      bestFor: ["Instant distribution", "No store approval delay", "Lightweight footprint"],
     },
   ],
 };
 
-export default function AppDevelopmentPage() {
+export default function AppDevelopmentClient() {
   const [activeTab, setActiveTab] = useState("overview");
-  const router = useRouter();
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-24">
-        {/* Background Effects */}
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-24">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-50/50 to-transparent dark:from-gray-900/50" />
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse-glow" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse-glow" />
-
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-64 h-64 bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 rounded-full blur-3xl animate-float-delayed" />
 
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -277,30 +268,29 @@ export default function AppDevelopmentPage() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Native & cross-platform mobile applications that drive engagement
+              Native & cross-platform mobile applications that drive user engagement
             </p>
 
             <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-              We create powerful, user-friendly mobile applications for iOS and
-              Android platforms. Our apps are designed to deliver exceptional
-              user experiences, drive engagement, and help businesses connect
-              with their audience on the go.
+              We design and build powerful, user-friendly mobile applications for iOS and
+              Android platforms. From MVP validation to enterprise-grade apps, we deliver
+              smooth performance and intuitive experiences.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => router.push("/contact")}
+              <Link
+                href="/contact"
                 className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 hover-lift flex items-center justify-center gap-2"
               >
                 Start Your App Project
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button
-                onClick={() => router.push("/Case-Studies")}
-                className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift"
+              </Link>
+              <Link
+                href="/services"
+                className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift flex items-center justify-center gap-2"
               >
-                View Mobile Case Studies
-              </button>
+                All Services
+              </Link>
             </div>
           </div>
         </div>
@@ -323,7 +313,7 @@ export default function AppDevelopmentPage() {
               onClick={() => setActiveTab(tab)}
               className={`px-6 py-3 rounded-lg font-medium transition-all ${
                 activeTab === tab
-                  ? "bg-gradient-to-r from-purple-600 to-pink-500 text-white"
+                  ? "bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-md"
                   : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
               }`}
             >
@@ -338,36 +328,33 @@ export default function AppDevelopmentPage() {
         {/* Overview Tab */}
         {activeTab === "overview" && (
           <div className="space-y-16">
-            {/* Full Description */}
             <div className="max-w-3xl">
               <h2 className="text-3xl md:text-4xl font-heading text-gray-900 dark:text-white mb-6">
-                Custom Mobile App Development Solutions
+                Mobile App Engineering by Maxora Technology
               </h2>
               <div className="space-y-4">
                 <p className="text-lg text-gray-600 dark:text-gray-300">
-                  At DigitalSolutions, we specialize in creating bespoke mobile
-                  applications that are tailored to your specific business
-                  needs. Our team of experienced developers uses the latest
-                  technologies to build scalable, secure, and high-performing
-                  apps for iOS, Android, and cross-platform solutions.
+                  At Maxora Technology, we craft tailored mobile applications that
+                  combine sleek design with rock-solid architectural foundations.
+                  Our team leverages modern ecosystems including React Native,
+                  Flutter, Swift, and Kotlin to deliver native-feel experiences on both
+                  Apple iOS and Google Android.
                 </p>
                 <p className="text-lg text-gray-600 dark:text-gray-300">
-                  We believe in a collaborative approach, working closely with
-                  you throughout the development process to ensure the final
-                  product exceeds your expectations and helps you achieve your
-                  business objectives in the mobile space.
+                  We collaborate closely throughout the entire lifecycle—from initial
+                  wireframes and clickable prototypes to App Store submission and
+                  continuous post-launch optimization.
                 </p>
               </div>
             </div>
 
-            {/* App Types */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {serviceData.appTypes.map((appType, index) => (
                 <div
                   key={index}
                   className="p-8 rounded-2xl glass-effect hover-lift"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mb-6 text-white">
                     {appType.icon}
                   </div>
                   <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
@@ -393,44 +380,43 @@ export default function AppDevelopmentPage() {
               ))}
             </div>
 
-            {/* Value Proposition */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-8 rounded-2xl glass-effect hover-lift">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mb-6 text-white">
+                  <Zap className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
-                  Native Performance
+                  Fluid 60fps Performance
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Our apps deliver native-level performance with smooth
-                  animations and responsive interactions.
+                  Engineered with native UI threads, hardware acceleration, and optimized
+                  bundle sizes for instant launch and fluid transitions.
                 </p>
               </div>
 
               <div className="p-8 rounded-2xl glass-effect hover-lift">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 flex items-center justify-center mb-6">
-                  <ShieldCheck className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 flex items-center justify-center mb-6 text-white">
+                  <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
                   App Store Compliance
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  All our apps are built to meet strict App Store and Play Store
-                  guidelines for seamless approval.
+                  Built to adhere strictly to Apple Review Guidelines and Google Play
+                  Policies, ensuring reliable approvals and fast release cycles.
                 </p>
               </div>
 
               <div className="p-8 rounded-2xl glass-effect hover-lift">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-pink-600 to-rose-500 flex items-center justify-center mb-6">
-                  <TrendingUp className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-pink-600 to-rose-500 flex items-center justify-center mb-6 text-white">
+                  <TrendingUp className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
-                  Scalable Architecture
+                  Modular Scalability
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Our solutions are designed to grow with your user base,
-                  handling increased traffic and features.
+                  Clean state management and decoupled API layers allow your application
+                  to grow features without instability.
                 </p>
               </div>
             </div>
@@ -445,8 +431,8 @@ export default function AppDevelopmentPage() {
                 Key <span className="gradient-text">Features</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                {`Every mobile application we build includes these essential features to ensure
-                success in today's competitive app market.`}
+                Every mobile application we produce integrates essential mobile capabilities
+                designed to boost user retention and organic App Store visibility.
               </p>
             </div>
 
@@ -456,9 +442,7 @@ export default function AppDevelopmentPage() {
                   key={index}
                   className="group p-8 rounded-2xl glass-effect hover-lift"
                 >
-                  <div
-                    className={`w-14 h-14 rounded-xl bg-gradient-to-r from-${feature.color}-600 to-${feature.color}-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
-                  >
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-white">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
@@ -478,17 +462,16 @@ export default function AppDevelopmentPage() {
           <div className="space-y-12">
             <div className="max-w-3xl">
               <h2 className="text-3xl md:text-4xl font-heading text-gray-900 dark:text-white mb-6">
-                Our App Development{" "}
+                Our Mobile Development{" "}
                 <span className="gradient-text">Process</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                We follow a proven methodology to ensure your mobile app is
-                delivered on time, within budget, and exceeds expectations.
+                A rigorous, stage-gated development model ensuring your mobile app launches
+                on schedule with enterprise-grade quality.
               </p>
             </div>
 
             <div className="relative">
-              {/* Timeline line */}
               <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 via-pink-500 to-indigo-500 md:left-1/2 md:-translate-x-1/2" />
 
               <div className="space-y-12">
@@ -497,12 +480,10 @@ export default function AppDevelopmentPage() {
                     key={index}
                     className={`relative flex ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-start gap-8`}
                   >
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center z-10">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center z-10 text-white">
                       {step.icon}
                     </div>
-                    <div
-                      className={`flex-grow ${index % 2 === 0 ? "md:text-right" : ""}`}
-                    >
+                    <div className={`flex-grow ${index % 2 === 0 ? "md:text-right" : ""}`}>
                       <div
                         className={`p-6 rounded-2xl glass-effect hover-lift max-w-lg ${index % 2 === 0 ? "md:ml-auto" : ""}`}
                       >
@@ -532,13 +513,11 @@ export default function AppDevelopmentPage() {
                 Platform <span className="gradient-text">Expertise</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                We develop for all major mobile platforms using modern,
-                battle-tested technologies to build robust and scalable
-                applications.
+                We develop across iOS, Android, and cross-platform runtimes using modern
+                toolchains to match your target audience and budget.
               </p>
             </div>
 
-            {/* Platform Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {serviceData.platforms.map((platform, index) => (
                 <div
@@ -546,7 +525,7 @@ export default function AppDevelopmentPage() {
                   className="p-8 rounded-2xl glass-effect hover-lift"
                 >
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="p-3 rounded-xl bg-gradient-to-r from-purple-600/10 to-pink-500/10">
+                    <div className="p-3 rounded-xl bg-gradient-to-r from-purple-600/10 to-pink-500/10 text-purple-600 dark:text-purple-400">
                       {platform.icon}
                     </div>
                     <h3 className="text-2xl font-heading text-gray-900 dark:text-white">
@@ -565,22 +544,18 @@ export default function AppDevelopmentPage() {
                   </div>
                   <div className="pt-6 border-t border-gray-200 dark:border-gray-800">
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {index === 0 &&
-                        "Ideal for maximum performance and iOS-specific features"}
-                      {index === 1 &&
-                        "Perfect for reaching Android's vast user base"}
-                      {index === 2 &&
-                        "Best for cost-effective multi-platform deployment"}
+                      {index === 0 && "Ideal for maximum performance, Apple ecosystem integration, and iOS App Store reach"}
+                      {index === 1 && "Optimized for Android device diversity and Google Play Store distribution"}
+                      {index === 2 && "Single codebase with maximum efficiency across both major stores"}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Technology Stack */}
             <div>
               <h3 className="text-2xl font-heading text-gray-900 dark:text-white mb-6">
-                Technology Stack
+                Mobile Technology Stack
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
                 {serviceData.technologies.map((tech, index) => (
@@ -598,69 +573,6 @@ export default function AppDevelopmentPage() {
                 ))}
               </div>
             </div>
-
-            {/* Technology Categories */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-8 rounded-2xl glass-effect hover-lift">
-                <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-4">
-                  Frontend Frameworks
-                </h3>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                    <ChevronRight className="w-4 h-4 text-purple-500" />
-                    React Native
-                  </li>
-                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                    <ChevronRight className="w-4 h-4 text-purple-500" />
-                    Flutter
-                  </li>
-                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                    <ChevronRight className="w-4 h-4 text-purple-500" />
-                    SwiftUI & Jetpack Compose
-                  </li>
-                </ul>
-              </div>
-
-              <div className="p-8 rounded-2xl glass-effect hover-lift">
-                <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-4">
-                  Backend & Database
-                </h3>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                    <ChevronRight className="w-4 h-4 text-pink-500" />
-                    Firebase
-                  </li>
-                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                    <ChevronRight className="w-4 h-4 text-pink-500" />
-                    AWS Amplify
-                  </li>
-                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                    <ChevronRight className="w-4 h-4 text-pink-500" />
-                    GraphQL & REST APIs
-                  </li>
-                </ul>
-              </div>
-
-              <div className="p-8 rounded-2xl glass-effect hover-lift">
-                <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-4">
-                  Tools & Infrastructure
-                </h3>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                    <ChevronRight className="w-4 h-4 text-indigo-500" />
-                    Xcode & Android Studio
-                  </li>
-                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                    <ChevronRight className="w-4 h-4 text-indigo-500" />
-                    Fastlane & CI/CD
-                  </li>
-                  <li className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                    <ChevronRight className="w-4 h-4 text-indigo-500" />
-                    App Store Connect
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         )}
 
@@ -672,8 +584,8 @@ export default function AppDevelopmentPage() {
                 Business <span className="gradient-text">Benefits</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                Our mobile app development solutions deliver tangible results
-                that drive business growth and customer loyalty.
+                A purpose-built mobile app creates a permanent brand presence on users&apos;
+                devices, lifting lifetime value and customer engagement.
               </p>
             </div>
 
@@ -684,7 +596,7 @@ export default function AppDevelopmentPage() {
                   className="group p-8 rounded-2xl glass-effect hover-lift"
                 >
                   <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center text-white">
                       {benefit.icon}
                     </div>
                     <span className="text-3xl font-bold gradient-text">
@@ -711,9 +623,8 @@ export default function AppDevelopmentPage() {
                 Mobile Success <span className="gradient-text">Stories</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                {
-                  "See how we've helped businesses transform their mobile presence with custom app solutions."
-                }
+                See how Maxora Technology turns product ideas into high-ranking,
+                crash-free mobile applications.
               </p>
             </div>
 
@@ -724,8 +635,8 @@ export default function AppDevelopmentPage() {
                   className="group p-8 rounded-2xl glass-effect hover-lift"
                 >
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center">
-                      <CheckCircle className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center text-white">
+                      <CheckCircle className="w-6 h-6" />
                     </div>
                     <span className="px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm font-medium">
                       {study.platform}
@@ -739,10 +650,7 @@ export default function AppDevelopmentPage() {
                   </p>
                   <div className="space-y-2">
                     {study.results.map((result, resultIndex) => (
-                      <div
-                        key={resultIndex}
-                        className="flex items-center gap-2"
-                      >
+                      <div key={resultIndex} className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500" />
                         <span className="text-sm text-gray-600 dark:text-gray-300">
                           {result}
@@ -762,8 +670,8 @@ export default function AppDevelopmentPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center justify-center p-4 rounded-2xl glass-effect mb-8">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center">
-                <MessageSquare className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center text-white">
+                <MessageSquare className="w-8 h-8" />
               </div>
             </div>
 
@@ -773,28 +681,28 @@ export default function AppDevelopmentPage() {
             </h2>
 
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              {` Let's discuss how we can create the perfect mobile solution for
-              your business needs and goals.`}
+              Let&apos;s discuss how Maxora Technology can bring your iOS and Android
+              app concepts to life with speed, reliability, and precision.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => router.push("/contact")}
+              <Link
+                href="/contact"
                 className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 hover-lift flex items-center justify-center gap-2"
               >
                 Schedule a Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button
-                onClick={() => router.push("/Portfolio")}
-                className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift"
+              </Link>
+              <Link
+                href="/services"
+                className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift flex items-center justify-center gap-2"
               >
-                View Our App Portfolio
-              </button>
+                Explore Other Services
+              </Link>
             </div>
 
             <p className="mt-8 text-sm text-gray-500 dark:text-gray-400">
-              Get a response within 24 hours • No obligation consultation
+              Get a response within 24 hours • No obligation scoping session
             </p>
           </div>
         </div>
