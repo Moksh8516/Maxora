@@ -4,18 +4,9 @@ import AppDevelopmentClient from "./AppDevelopmentClient";
 import { JsonLd } from "../../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development Services | iOS & Android Apps | Maxora Technology",
+  title: "Mobile App Development Company India | iOS & Android Apps",
   description:
-    "Custom mobile app development by Maxora Technology. Native iOS (Swift), Android (Kotlin), and cross-platform (React Native, Flutter) mobile applications engineered for high performance.",
-  keywords: [
-    "mobile app development services",
-    "iOS app development",
-    "Android app development",
-    "React Native agency",
-    "Flutter app development",
-    "cross-platform mobile apps",
-    "Maxora Technology mobile apps",
-  ],
+    "Mobile app development company in India building native and cross-platform apps using Flutter and React Native. Fast, secure, and user-centric mobile apps.",
   alternates: {
     canonical: "/services/app-development",
   },
@@ -27,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "Maxora Technology",
     images: [
       {
-        url: "/light logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Mobile App Development - Maxora Technology",
@@ -40,7 +31,7 @@ export const metadata: Metadata = {
     title: "Mobile App Development Services | Maxora Technology",
     description:
       "Enterprise iOS and Android mobile app development with React Native and Flutter.",
-    images: ["/light logo.png"],
+    images: ["/og-image.png"],
   },
 };
 
@@ -119,6 +110,44 @@ const serviceSchema = {
           position: 3,
           name: "App Development",
           item: "https://maxoratechnology.com/services/app-development",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://maxoratechnology.com/services/app-development/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Should we build our app using Flutter, React Native, or Native code?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "For 90% of business applications, cross-platform frameworks like Flutter or React Native offer significant cost and time savings with virtually identical performance to native development.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you publish our app to the App Store and Google Play Store?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we manage the complete submission process including store listings, privacy compliance, review feedback, and release management under your developer accounts.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do you ensure data security in mobile apps?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We implement encrypted on-device storage, HTTPS API communication with token-based JWT authentication, biometric login options, and secure payment processing.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can the mobile app work offline without internet?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we build local caching mechanisms using SQLite or Hive so users can access core content offline and sync data automatically when connectivity returns.",
+          },
         },
       ],
     },

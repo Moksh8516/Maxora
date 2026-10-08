@@ -3,8 +3,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight, Play, Shield, Zap, Globe, Code } from "lucide-react";
-import { Typewriter } from "react-simple-typewriter";
+import { ArrowRight, Shield, Zap, Globe, Code, Sparkles, MapPin } from "lucide-react";
 
 interface Feature {
   icon: React.ElementType;
@@ -28,17 +27,17 @@ export default function Hero() {
   }, []);
 
   const features: Feature[] = [
-    { icon: Shield, label: "Enterprise Security" },
-    { icon: Zap, label: "High Performance" },
-    { icon: Globe, label: "Global Support" },
-    { icon: Code, label: "Clean Code" },
+    { icon: Shield, label: "Reliable Architecture" },
+    { icon: Zap, label: "High Speed & SEO" },
+    { icon: Globe, label: "India & Worldwide" },
+    { icon: Code, label: "Clean Codebase" },
   ];
 
   const stats: Stat[] = [
-    { value: "99.9%", label: "Uptime" },
-    { value: "<24h", label: "Response Time" },
-    { value: "A+", label: "Security" },
-    { value: "∞", label: "Scalability" },
+    { value: "Focused", label: "Digital Agency" },
+    { value: "Direct", label: "Communication" },
+    { value: "Tailored", label: "Around Your Goals" },
+    { value: "100%", label: "Code Ownership" },
   ];
 
   return (
@@ -59,44 +58,25 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT */}
           <div className="text-center pt-2 lg:text-left">
-            {/* Badge */}
+            {/* Location Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect mb-8">
-              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse-glow" />
+              <MapPin className="w-4 h-4 text-blue-600 dark:text-blue-400" />
               <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
-                Digital Solutions for Growing Businesses
+                Punjab, India • Serving Clients Worldwide
               </span>
             </div>
 
-            {/* Title */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading tracking-tight mb-6">
-              <span className="block text-gray-900 dark:text-gray-100">
-                Premium
-              </span>
-
-              <span className="block mt-2 gradient-text">
-                <Typewriter
-                  words={[
-                    "IT Solutions",
-                    "Digital Innovation",
-                    "Tech Excellence",
-                    "Business Growth",
-                  ]}
-                  loop={0}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1500}
-                />
+            {/* Static, crawlable H1 */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading tracking-tight mb-6 text-gray-900 dark:text-gray-100 leading-tight">
+              Custom Web & App Development for{" "}
+              <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                Growing Businesses in India
               </span>
             </h1>
 
             {/* Description */}
             <p className="text-xl text-muted mb-10 max-w-2xl leading-relaxed">
-              Maxora Technology delivers enterprise-grade digital solutions that
-              drive innovation, scalability, and measurable business growth. We
-              transform complex challenges into seamless technological
-              experiences.
+              Maxora Technology builds high-performance websites, mobile apps, custom CRM/ERP platforms, and eCommerce systems. We help ambitious companies turn practical ideas into scalable digital products.
             </p>
 
             {/* Buttons */}
@@ -112,23 +92,26 @@ export default function Hero() {
                 />
               </Link>
 
-              <button className="group inline-flex items-center justify-center glass-effect px-8 py-4 rounded-xl font-semibold text-lg hover-lift">
-                <Play
+              <Link
+                href="/services"
+                className="group inline-flex items-center justify-center glass-effect px-8 py-4 rounded-xl font-semibold text-lg hover-lift text-gray-900 dark:text-gray-100"
+              >
+                <Sparkles
                   className="mr-3 text-blue-600 dark:text-blue-400"
                   size={20}
                 />
-                Watch Showcase
-              </button>
+                Explore Services
+              </Link>
             </div>
 
             {/* Features */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
-                    <feature.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <div key={index} className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0">
+                    <feature.icon className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <span className="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">
                     {feature.label}
                   </span>
                 </div>
@@ -141,8 +124,11 @@ export default function Hero() {
             <div className="relative mx-auto lg:mx-0 max-w-lg">
               <div className="glass-effect rounded-3xl p-8 shadow-2xl hover-lift">
                 <div className="grid grid-cols-2 gap-6">
-                  {/* Code Card — keep dark always for contrast */}
-                  <div className="col-span-2 bg-slate-900 rounded-xl p-4">
+                  {/* Code Card — marked with aria-hidden="true" */}
+                  <div
+                    aria-hidden="true"
+                    className="col-span-2 bg-slate-900 rounded-xl p-4 select-none"
+                  >
                     <div className="flex gap-2 mb-4">
                       <div className="w-3 h-3 rounded-full bg-red-500" />
                       <div className="w-3 h-3 rounded-full bg-yellow-500" />
@@ -157,31 +143,28 @@ export default function Hero() {
                         <span className="text-yellow-400">{"{"}</span>
                       </div>
                       <div className="ml-6 text-cyan-300">
-                        innovation: <span className="text-green-400">true</span>
-                        ,
+                        focus: <span className="text-green-400">&quot;quality&quot;</span>,
                       </div>
                       <div className="ml-6 text-cyan-300">
-                        quality:{" "}
-                        <span className="text-green-400">enterprise</span>,
+                        approach: <span className="text-green-400">&quot;practical&quot;</span>,
                       </div>
                       <div className="ml-6 text-cyan-300">
-                        results:{" "}
-                        <span className="text-green-400">guaranteed</span>
+                        delivery: <span className="text-green-400">&quot;transparent&quot;</span>
                       </div>
                       <div className="text-yellow-400">{"}"}</div>
                     </div>
                   </div>
 
-                  {/* Stats */}
+                  {/* Stats / Positioning */}
                   {stats.map((stat, index) => (
                     <div
                       key={index}
                       className="text-center p-4 rounded-xl glass-effect"
                     >
-                      <div className="text-2xl font-bold gradient-text">
+                      <div className="text-xl font-bold gradient-text">
                         {stat.value}
                       </div>
-                      <div className="text-sm text-muted mt-1">
+                      <div className="text-xs text-muted mt-1">
                         {stat.label}
                       </div>
                     </div>

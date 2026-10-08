@@ -4,17 +4,9 @@ import CrmErpClient from "./CrmErpClient";
 import { JsonLd } from "../../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Custom CRM & ERP Software Development | Maxora Technology",
+  title: "Custom CRM & ERP Software Development Company India",
   description:
-    "Streamline enterprise workflows with custom CRM and ERP systems built by Maxora Technology. Scalable business automation, real-time analytics, and secure integrations.",
-  keywords: [
-    "custom CRM development",
-    "custom ERP software",
-    "enterprise workflow automation",
-    "business management software",
-    "ERP integration services",
-    "Maxora Technology CRM ERP",
-  ],
+    "Custom CRM and ERP software development company in India. We engineer tailored business management systems, workflow automation, and centralized data portals.",
   alternates: {
     canonical: "/services/crm-erp",
   },
@@ -26,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "Maxora Technology",
     images: [
       {
-        url: "/light logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Custom CRM & ERP Development - Maxora Technology",
@@ -39,7 +31,7 @@ export const metadata: Metadata = {
     title: "Custom CRM & ERP Software Development | Maxora Technology",
     description:
       "Scalable, secure, and intuitive business management software tailored to your organization.",
-    images: ["/light logo.png"],
+    images: ["/og-image.png"],
   },
 };
 
@@ -118,6 +110,44 @@ const serviceSchema = {
           position: 3,
           name: "CRM & ERP Development",
           item: "https://maxoratechnology.com/services/crm-erp",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://maxoratechnology.com/services/crm-erp/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Why should we invest in custom CRM/ERP software over Salesforce or Zoho?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Custom software gives you 100% ownership with zero per-user monthly subscription fees. It matches your exact workflow without forcing your team to adapt to rigid third-party structures.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do you protect sensitive company and financial data?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We implement granular role-based permissions (RBAC), secure HTTPS/TLS encryption, database encryption at rest, multi-factor authentication (MFA), and detailed activity audit logs.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can the custom CRM/ERP connect with our existing tools and WhatsApp?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we build custom API integrations to connect with payment gateways, WhatsApp Business API, email servers, accounting software (like Tally or QuickBooks), and customer portals.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long does custom business software take to build and deploy?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A modular MVP CRM/ERP typically takes 6 to 12 weeks. We build modularly so your team can begin using core features early while secondary modules are developed.",
+          },
         },
       ],
     },

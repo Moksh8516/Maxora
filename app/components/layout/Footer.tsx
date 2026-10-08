@@ -1,12 +1,10 @@
 // components/layout/Footer.tsx
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
-  FaXTwitter,
 } from "react-icons/fa6";
 
 interface FooterLink {
@@ -31,6 +29,7 @@ export default function Footer() {
     ],
     Company: [
       { label: "About Us", href: "/about" },
+      { label: "Portfolio & Work", href: "/portfolio" },
       { label: "Careers", href: "/careers" },
       { label: "Blog", href: "/blog" },
       { label: "Contact", href: "/contact" },
@@ -47,8 +46,6 @@ export default function Footer() {
       href: "https://facebook.com/maxora.technology",
       label: "Facebook",
     },
-    { icon: FaXTwitter, href: "https://x.com", label: "X" },
-    { icon: FaLinkedinIn, href: "https://linkedin.com", label: "LinkedIn" },
     {
       icon: FaInstagram,
       href: "https://instagram.com/maxora.technology",
@@ -58,8 +55,8 @@ export default function Footer() {
 
   const contactInfo = [
     { icon: Mail, text: "info@maxoratechnology.com" },
-    { icon: Phone, text: "(+91) 7814950023" },
-    // { icon: MapPin, text: "123 Tech Boulevard, San Francisco, CA" },
+    { icon: Phone, text: "(+91) 7719545464" },
+    { icon: MapPin, text: "Punjab, India (Serving India & Worldwide)" },
   ];
 
   return (
@@ -84,14 +81,13 @@ export default function Footer() {
                 className="hidden h-12 w-auto object-contain dark:block"
               />
             </Link>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Helping growing businesses turn practical ideas into thoughtful
-              digital products.
+            <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+              Custom web, mobile app, and enterprise software engineering for growing businesses.
             </p>
             <div className="space-y-3">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <info.icon className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                  <info.icon className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0" />
                   <span className="text-sm text-gray-600 dark:text-gray-400">
                     {info.text}
                   </span>

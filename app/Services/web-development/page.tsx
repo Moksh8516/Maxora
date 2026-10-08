@@ -1,33 +1,24 @@
-// app/services/web-development/page.tsx
+// app/Services/web-development/page.tsx
 import type { Metadata } from "next";
 import WebDevelopmentClient from "./WebDevelopmentClient";
 import { JsonLd } from "../../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development Services | Next.js & React Apps | Maxora Technology",
+  title: "Custom Web Development Services in India",
   description:
-    "Build high-performance, scalable web applications with Maxora Technology. Expert Next.js, React, TypeScript, and modern backend engineering with SEO and security built in.",
-  keywords: [
-    "custom web development",
-    "Next.js web development",
-    "React development agency",
-    "TypeScript web applications",
-    "enterprise web development",
-    "frontend backend development",
-    "Maxora Technology web development",
-  ],
+    "Custom web development company in India building high-speed Next.js and React applications for growing businesses. Clean code, SEO, and scalable backends.",
   alternates: {
     canonical: "/services/web-development",
   },
   openGraph: {
-    title: "Custom Web Development Services | Maxora Technology",
+    title: "Custom Web Development Services in India | Maxora Technology",
     description:
       "Modern, scalable web applications engineered with Next.js, React, and TypeScript. Optimized for high speed, Core Web Vitals, and search visibility.",
     url: "/services/web-development",
     siteName: "Maxora Technology",
     images: [
       {
-        url: "/light logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Custom Web Development - Maxora Technology",
@@ -37,10 +28,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Web Development Services | Maxora Technology",
+    title: "Custom Web Development Services in India | Maxora Technology",
     description:
       "Fast, accessible, and search-optimized custom web applications built for growing businesses.",
-    images: ["/light logo.png"],
+    images: ["/og-image.png"],
   },
 };
 
@@ -50,7 +41,7 @@ const serviceSchema = {
     {
       "@type": "Service",
       "@id": "https://maxoratechnology.com/services/web-development/#service",
-      name: "Custom Web Development Services",
+      name: "Custom Web Development Services in India",
       serviceType: "Web Application Development",
       provider: {
         "@type": "Organization",
@@ -119,6 +110,44 @@ const serviceSchema = {
           position: 3,
           name: "Web Development",
           item: "https://maxoratechnology.com/services/web-development",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://maxoratechnology.com/services/web-development/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Why should we build a custom website instead of using WordPress or Wix?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Custom web development with Next.js and React provides unmatched speed, full design flexibility, enterprise-grade security, and complete ownership of your codebase without plugin vulnerabilities or licensing fees.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long does a typical custom web development project take?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most custom web development projects take between 4 to 8 weeks depending on scope, custom integrations, and data migration needs. We provide a milestone-driven schedule during project scoping.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Will our website be optimized for mobile devices and search engines?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. All web applications engineered by Maxora Technology are fully responsive across smartphones, tablets, and desktops, and include technical SEO, schema markup, and Core Web Vitals optimization.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you offer post-launch support and maintenance?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we provide ongoing technical support, security patches, framework updates, and feature enhancements to ensure your digital products remain fast and reliable.",
+          },
         },
       ],
     },

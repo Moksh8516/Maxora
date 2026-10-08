@@ -1,31 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Clock3 } from "lucide-react";
+import { ArrowRight, BookOpen, Clock3, User, Sparkles } from "lucide-react";
 import { JsonLd } from "../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Blog & Engineering Insights | Maxora Technology",
+  title: "Engineering Insights & Software Development Guides",
   description:
-    "Practical insights and guides from Maxora Technology on custom web development, mobile app architecture, CRM/ERP automation, and digital scaling.",
-  keywords: [
-    "Maxora Technology blog",
-    "web development insights",
-    "app development guides",
-    "custom software architecture",
-    "business automation tips",
-  ],
+    "Practical guides and technical insights from Maxora Technology on custom web development, mobile app architecture, CRM/ERP automation, and digital scaling in India.",
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
-    title: "Blog & Engineering Insights | Maxora Technology",
+    title: "Engineering Insights & Software Development Guides | Maxora Technology",
     description:
       "Articles and deep dives into web performance, modern app engineering, and automation for growing businesses.",
     url: "/blog",
     siteName: "Maxora Technology",
     images: [
       {
-        url: "/light logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Maxora Technology Blog",
@@ -35,12 +28,84 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog & Engineering Insights | Maxora Technology",
+    title: "Engineering Insights & Software Development Guides | Maxora Technology",
     description:
       "Clear, practical guides about building and scaling modern digital products.",
-    images: ["/light logo.png"],
+    images: ["/og-image.png"],
   },
 };
+
+const posts = [
+  {
+    category: "Web Development",
+    title: "What a growing business should expect from its first website",
+    excerpt:
+      "A useful first website should make your offer clear, earn trust, and create a simple path to enquiry. Here is how to prioritise the work before adding complexity.",
+    date: "September 9, 2026",
+    readTime: "5 min read",
+    author: "Maxora Engineering Team",
+    serviceLink: "/services/web-development",
+    serviceLabel: "Explore Web Development",
+  },
+  {
+    category: "Enterprise Software",
+    title: "When custom software is worth the investment",
+    excerpt:
+      "Custom software is not automatically the right answer. We look at the operational signals that make a tailored workflow more valuable than another disconnected tool.",
+    date: "September 9, 2026",
+    readTime: "6 min read",
+    author: "Maxora Engineering Team",
+    serviceLink: "/services/crm-erp",
+    serviceLabel: "Explore CRM & ERP Systems",
+  },
+  {
+    category: "Automation",
+    title: "Start small: a practical path to business automation",
+    excerpt:
+      "The best automation opportunities are often repetitive handoffs, follow-ups, and data entry. A focused first workflow can create learning without creating unnecessary risk.",
+    date: "September 9, 2026",
+    readTime: "4 min read",
+    author: "Maxora Engineering Team",
+    serviceLink: "/services/crm-erp",
+    serviceLabel: "Learn About Automation",
+  },
+  {
+    category: "CMS & Speed",
+    title: "WordPress vs Custom Next.js: Website Cost & ROI Comparison in India",
+    excerpt:
+      "Comparing total cost of ownership, PageSpeed scores, security maintenance, and lead conversion rates between custom Next.js builds and standard WordPress themes.",
+    date: "October 2026",
+    readTime: "7 min read",
+    author: "Maxora Engineering Team",
+    badge: "Buyer Guide",
+    serviceLink: "/services/wordpress",
+    serviceLabel: "Compare WordPress Options",
+  },
+  {
+    category: "Real Estate Tech",
+    title: "Custom CRM vs Commercial SaaS for Indian Real Estate Agencies",
+    excerpt:
+      "Why real estate brokers and property agencies lose leads on generic SaaS platforms and how custom lead pipelines with WhatsApp automation increase site visits.",
+    date: "October 2026",
+    readTime: "6 min read",
+    author: "Maxora Engineering Team",
+    badge: "Case Study",
+    serviceLink: "/portfolio",
+    serviceLabel: "View Real Estate CRM Demo",
+  },
+  {
+    category: "Mobile Architecture",
+    title: "Why Startups Choose Cross-Platform Apps (Flutter & React Native) in 2026",
+    excerpt:
+      "How early-stage companies cut development costs in half and reach iOS and Android users simultaneously without compromising on 60fps native performance.",
+    date: "October 2026",
+    readTime: "5 min read",
+    author: "Maxora Engineering Team",
+    badge: "Technical Guide",
+    serviceLink: "/services/app-development",
+    serviceLabel: "Explore Mobile App Services",
+  },
+];
 
 const blogSchema = {
   "@context": "https://schema.org",
@@ -57,42 +122,16 @@ const blogSchema = {
         "@id": "https://maxoratechnology.com/#organization",
         name: "Maxora Technology",
       },
-      blogPost: [
-        {
-          "@type": "BlogPosting",
-          headline:
-            "What a growing business should expect from its first website",
-          description:
-            "A useful first website should make your offer clear, earn trust, and create a simple path to enquiry.",
-          datePublished: "2026-09-09",
-          author: {
-            "@type": "Organization",
-            name: "Maxora Technology",
-          },
+      blogPost: posts.map((post) => ({
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: "2026-10-01",
+        author: {
+          "@type": "Organization",
+          name: post.author,
         },
-        {
-          "@type": "BlogPosting",
-          headline: "When custom software is worth the investment",
-          description:
-            "Operational signals that make a tailored workflow more valuable than another disconnected SaaS tool.",
-          datePublished: "2026-09-09",
-          author: {
-            "@type": "Organization",
-            name: "Maxora Technology",
-          },
-        },
-        {
-          "@type": "BlogPosting",
-          headline: "Start small: a practical path to business automation",
-          description:
-            "A focused first workflow can create learning without creating unnecessary risk.",
-          datePublished: "2026-09-09",
-          author: {
-            "@type": "Organization",
-            name: "Maxora Technology",
-          },
-        },
-      ],
+      })),
     },
     {
       "@type": "BreadcrumbList",
@@ -114,33 +153,6 @@ const blogSchema = {
     },
   ],
 };
-
-const posts = [
-  {
-    category: "Digital foundations",
-    title: "What a growing business should expect from its first website",
-    excerpt:
-      "A useful first website should make your offer clear, earn trust, and create a simple path to enquiry. Here is how to prioritise the work before adding complexity.",
-    date: "September 9, 2026",
-    readTime: "5 min read",
-  },
-  {
-    category: "Product thinking",
-    title: "When custom software is worth the investment",
-    excerpt:
-      "Custom software is not automatically the right answer. We look at the operational signals that make a tailored workflow more valuable than another disconnected tool.",
-    date: "September 9, 2026",
-    readTime: "6 min read",
-  },
-  {
-    category: "Automation",
-    title: "Start small: a practical path to business automation",
-    excerpt:
-      "The best automation opportunities are often repetitive handoffs, follow-ups, and data entry. A focused first workflow can create learning without creating unnecessary risk.",
-    date: "September 9, 2026",
-    readTime: "4 min read",
-  },
-];
 
 export default function BlogPage() {
   return (
@@ -168,24 +180,44 @@ export default function BlogPage() {
             {posts.map((post) => (
               <article
                 key={post.title}
-                className="surface-card flex h-full flex-col p-7"
+                className="surface-card flex h-full flex-col p-7 hover:border-blue-500/50 transition-colors"
               >
-                <div className="mb-8 flex items-center justify-between gap-3 text-xs font-semibold uppercase tracking-[0.14em] text-blue-600 dark:text-blue-400">
+                <div className="mb-6 flex items-center justify-between gap-3 text-xs font-semibold uppercase tracking-[0.14em] text-blue-600 dark:text-blue-400">
                   <span>{post.category}</span>
-                  <span className="rounded-full bg-blue-500/10 px-2 py-1">
-                    New
-                  </span>
+                  {post.badge ? (
+                    <span className="rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 px-2.5 py-1 text-[11px] font-bold">
+                      {post.badge}
+                    </span>
+                  ) : (
+                    <span className="rounded-full bg-blue-500/10 px-2 py-1">
+                      Article
+                    </span>
+                  )}
                 </div>
-                <h2 className="mb-4 text-2xl font-bold leading-tight text-gray-900 dark:text-white">
+                <h2 className="mb-3 text-xl font-bold leading-snug text-gray-900 dark:text-white">
                   {post.title}
                 </h2>
-                <p className="mb-8 flex-1 leading-7 text-gray-600 dark:text-gray-300">
+                <p className="mb-6 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center justify-between border-t border-gray-200 pt-5 text-sm text-gray-500 dark:border-gray-800 dark:text-gray-400">
-                  <span>{post.date}</span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <Clock3 className="h-4 w-4" />
+
+                <div className="mb-4">
+                  <Link
+                    href={post.serviceLink}
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    <span>{post.serviceLabel}</span>
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
+
+                <div className="flex items-center justify-between border-t border-gray-200 pt-4 text-xs text-gray-500 dark:border-gray-800 dark:text-gray-400">
+                  <span className="inline-flex items-center gap-1">
+                    <User className="h-3.5 w-3.5" />
+                    {post.author}
+                  </span>
+                  <span className="inline-flex items-center gap-1">
+                    <Clock3 className="h-3.5 w-3.5" />
                     {post.readTime}
                   </span>
                 </div>
@@ -196,9 +228,9 @@ export default function BlogPage() {
           <div className="mt-14 text-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 font-semibold text-blue-600 dark:text-blue-400"
+              className="inline-flex items-center gap-2 font-semibold text-blue-600 dark:text-blue-400 hover:underline"
             >
-              Discuss an idea with our team
+              Discuss a project idea with our team
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>

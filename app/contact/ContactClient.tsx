@@ -60,7 +60,7 @@ export default function ContactClient() {
     {
       icon: Phone,
       title: "Phone",
-      details: ["(+91) 7814950023"],
+      details: ["(+91) 7719545464"],
       color: "from-blue-500 to-cyan-500",
     },
     {

@@ -77,6 +77,12 @@ const publicRoutes: {
     lastModified: now,
   },
   {
+    path: "/portfolio",
+    changeFrequency: "monthly",
+    priority: 0.75,
+    lastModified: now,
+  },
+  {
     path: "/contact",
     changeFrequency: "monthly",
     priority: 0.8,

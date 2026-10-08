@@ -73,12 +73,12 @@ const contactSchema = {
         "@type": "Organization",
         "@id": "https://maxoratechnology.com/#organization",
         name: "Maxora Technology",
-        telephone: "+91-7814950023",
+        telephone: "+91-7719545464",
         email: "info@maxoratechnology.com",
         contactPoint: [
           {
             "@type": "ContactPoint",
-            telephone: "+91-7814950023",
+            telephone: "+91-7719545464",
             contactType: "customer service",
             email: "info@maxoratechnology.com",
             availableLanguage: ["English", "Hindi", "Punjabi"],

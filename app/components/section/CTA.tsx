@@ -56,7 +56,7 @@ export default function CTA() {
                     <Zap className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   </Link>
                   <a
-                    href="tel:+917814950023"
+                    href="tel:+917719545464"
                     className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gray-100 dark:bg-white/10 backdrop-blur-sm text-gray-900 dark:text-white font-semibold hover:bg-gray-200 dark:hover:bg-white/20 transition-all duration-300 border border-gray-300 dark:border-white/20"
                   >
                     <Phone className="w-5 h-5" />
@@ -76,8 +76,8 @@ export default function CTA() {
                     {
                       icon: <Phone className="w-5 h-5" />,
                       label: "Call Us",
-                      value: "+91 7814950023",
-                      href: "tel:+917814950023",
+                      value: "+91 7719545464",
+                      href: "tel:+917719545464",
                     },
                     {
                       icon: <Calendar className="w-5 h-5" />,

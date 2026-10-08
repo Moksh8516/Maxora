@@ -30,24 +30,11 @@ const siteUrl = (
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Maxora Technology | Premium IT Solutions & Digital Innovation",
+    default: "Web & App Development Company in India | Maxora Technology",
     template: "%s | Maxora Technology",
   },
   description:
-    "Transform your business with cutting-edge App Development, Web Solutions, eCommerce, and Custom CRM/ERP systems. Global IT services with enterprise-grade quality.",
-  keywords: [
-    "IT solutions",
-    "app development",
-    "web development",
-    "WordPress development",
-    "Shopify",
-    "WooCommerce",
-    "CRM development",
-    "ERP systems",
-    "software engineering",
-    "digital transformation",
-    "Maxora Technology",
-  ],
+    "Custom websites, mobile apps, WordPress, eCommerce and CRM/ERP systems for growing businesses. Based in India, working worldwide. Free consultation.",
   authors: [{ name: "Maxora Technology", url: siteUrl }],
   creator: "Maxora Technology",
   publisher: "Maxora Technology",
@@ -64,24 +51,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Maxora Technology",
-    title: "Maxora Technology | Premium IT Solutions & Digital Innovation",
+    title: "Web & App Development Company in India | Maxora Technology",
     description:
-      "Transform your business with cutting-edge App Development, Web Solutions, eCommerce, and Custom CRM/ERP systems. Global IT services with enterprise-grade quality.",
+      "Custom websites, mobile apps, WordPress, eCommerce and CRM/ERP systems for growing businesses. Based in India, working worldwide. Free consultation.",
     images: [
       {
-        url: "/light logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Maxora Technology - Premium IT Solutions & Digital Innovation",
+        alt: "Maxora Technology - Web & App Development Company in India",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maxora Technology | Premium IT Solutions & Digital Innovation",
+    title: "Web & App Development Company in India | Maxora Technology",
     description:
-      "Transform your business with cutting-edge App Development, Web Solutions, eCommerce, and Custom CRM/ERP systems.",
-    images: ["/light logo.png"],
+      "Custom websites, mobile apps, WordPress, eCommerce and CRM/ERP systems for growing businesses. Based in India, working worldwide.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -134,4 +121,3 @@ export default function RootLayout({
     </html>
   );
 }
-

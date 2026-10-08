@@ -4,17 +4,9 @@ import EcommerceClient from "./EcommerceClient";
 import { JsonLd } from "../../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "E-Commerce Development Services | Shopify & Custom Stores | Maxora Technology",
+  title: "E-Commerce Development Company India | Shopify & Custom Stores",
   description:
-    "Launch high-converting, lightning-fast online stores with Maxora Technology. Expert custom Shopify, WooCommerce, headless commerce, and payment integrations.",
-  keywords: [
-    "ecommerce development services",
-    "Shopify developers",
-    "WooCommerce custom development",
-    "headless commerce agency",
-    "online store development",
-    "Maxora Technology ecommerce",
-  ],
+    "E-commerce development company in India building high-converting online stores with Shopify, WooCommerce, and custom headless commerce architectures.",
   alternates: {
     canonical: "/services/ecommerce",
   },
@@ -26,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "Maxora Technology",
     images: [
       {
-        url: "/light logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "E-Commerce Development Services - Maxora Technology",
@@ -39,7 +31,7 @@ export const metadata: Metadata = {
     title: "E-Commerce Development Services | Maxora Technology",
     description:
       "Boost sales and conversion rates with secure, high-performance online stores built by Maxora Technology.",
-    images: ["/light logo.png"],
+    images: ["/og-image.png"],
   },
 };
 
@@ -118,6 +110,44 @@ const serviceSchema = {
           position: 3,
           name: "E-Commerce Development",
           item: "https://maxoratechnology.com/services/ecommerce",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://maxoratechnology.com/services/ecommerce/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Which e-commerce platform is best for our business: Shopify or WooCommerce?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Shopify is ideal for businesses wanting an all-in-one hosted solution with minimal server management. WooCommerce is best for brands requiring complete customizability, open-source ownership, and lower monthly software fees.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can you integrate local Indian payment gateways like UPI and Razorpay?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we integrate all major Indian payment solutions including UPI, Razorpay, Cashfree, PayU, and Paytm alongside international processors like Stripe and PayPal.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do you optimize online stores for mobile shoppers?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We implement sticky add-to-cart buttons, fast slide-out carts, compressed WebP media, one-click checkout options, and thumb-friendly navigation to ensure high mobile conversion rates.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can our store sync inventory automatically with our accounting or ERP software?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we build custom API connectors to sync real-time stock levels, orders, and customer data directly with your ERP, CRM, or warehouse management system.",
+          },
         },
       ],
     },

@@ -4,83 +4,23 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/Services",
-        destination: "/services",
-        permanent: true,
-      },
-      {
-        source: "/service/web-development",
-        destination: "/services/web-development",
-        permanent: true,
-      },
-      {
-        source: "/service/Web-development",
-        destination: "/services/web-development",
-        permanent: true,
-      },
-      {
-        source: "/service/App-development",
-        destination: "/services/app-development",
-        permanent: true,
-      },
-      {
-        source: "/service/app-development",
-        destination: "/services/app-development",
-        permanent: true,
-      },
-      {
-        source: "/service/Crm-erp",
-        destination: "/services/crm-erp",
-        permanent: true,
-      },
-      {
-        source: "/service/crm-erp",
-        destination: "/services/crm-erp",
-        permanent: true,
-      },
-      {
-        source: "/service/Ecommerce",
-        destination: "/services/ecommerce",
-        permanent: true,
-      },
-      {
-        source: "/service/ecommerce",
-        destination: "/services/ecommerce",
-        permanent: true,
-      },
-      {
-        source: "/service/Wordpress",
-        destination: "/services/wordpress",
-        permanent: true,
-      },
-      {
-        source: "/service/wordpress",
-        destination: "/services/wordpress",
-        permanent: true,
-      },
-      {
-        source: "/service/Cloud",
-        destination: "/services",
+        source: "/service/:slug*",
+        destination: "/services/:slug*",
         permanent: true,
       },
       {
         source: "/Case-Studies",
-        destination: "/services",
+        destination: "/portfolio",
         permanent: true,
       },
       {
         source: "/case-studies",
-        destination: "/services",
+        destination: "/portfolio",
         permanent: true,
       },
       {
         source: "/Portfolio",
-        destination: "/services",
-        permanent: true,
-      },
-      {
-        source: "/portfolio",
-        destination: "/services",
+        destination: "/portfolio",
         permanent: true,
       },
     ];
@@ -88,4 +28,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-

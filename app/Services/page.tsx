@@ -8,31 +8,21 @@ import CTA from "../components/section/CTA";
 import { JsonLd } from "../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Digital Services & Software Solutions | Maxora Technology",
+  title: "Digital Services & Custom Software Solutions",
   description:
     "Explore Maxora Technology's full suite of enterprise digital solutions: custom web apps, iOS/Android mobile development, AI CRM/ERP, and eCommerce systems.",
-  keywords: [
-    "web development services",
-    "mobile app development",
-    "eCommerce solutions",
-    "WordPress development",
-    "custom CRM development",
-    "ERP systems",
-    "custom software engineering",
-    "Maxora Technology services",
-  ],
   alternates: {
     canonical: "/services",
   },
   openGraph: {
-    title: "Digital Services & Software Solutions | Maxora Technology",
+    title: "Digital Services & Custom Software Solutions | Maxora Technology",
     description:
       "Enterprise-grade custom web applications, mobile apps, AI CRM/ERP systems, and scalable eCommerce platforms built for growing businesses.",
     url: "/services",
     siteName: "Maxora Technology",
     images: [
       {
-        url: "/light logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Maxora Technology Digital Services",
@@ -42,10 +32,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Services & Software Solutions | Maxora Technology",
+    title: "Digital Services & Custom Software Solutions | Maxora Technology",
     description:
       "Discover our comprehensive digital solutions: web apps, mobile apps, custom CRM/ERP, eCommerce, and WordPress development.",
-    images: ["/light logo.png"],
+    images: ["/og-image.png"],
   },
 };
 

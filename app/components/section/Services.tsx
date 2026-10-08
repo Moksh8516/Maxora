@@ -3,17 +3,16 @@
 import { useState } from "react";
 import Link from "next/link";
 import {
-  Code,
   Globe,
   Layout,
   ShoppingCart,
   Database,
   Smartphone,
-  Cloud,
   Shield,
   ArrowRight,
-  Sparkles,
   Zap,
+  Code,
+  Sparkles,
   Cpu,
 } from "lucide-react";
 
@@ -54,7 +53,7 @@ export default function Services() {
       description:
         "Modern, responsive web applications built with cutting-edge technologies for optimal performance and scalability.",
       icon: <Globe className="w-6 h-6" />,
-      features: ["React/Next.js", "TypeScript", "Performance", "SEO Optimized"],
+      features: ["React / Next.js", "TypeScript", "Performance", "SEO Optimized"],
       href: "/services/web-development",
       gradient: "from-blue-600 to-cyan-500",
     },
@@ -74,7 +73,7 @@ export default function Services() {
       description:
         "Full-featured online stores with secure payment gateways, inventory management, and analytics.",
       icon: <ShoppingCart className="w-6 h-6" />,
-      features: ["Shopify", "WooCommerce", "Custom", "Payment Integration"],
+      features: ["Shopify", "WooCommerce", "Custom Stores", "Payment Integration"],
       href: "/services/ecommerce",
       gradient: "from-orange-600 to-red-500",
     },
@@ -90,21 +89,18 @@ export default function Services() {
     },
     {
       id: 6,
-      title: "Cloud Solutions",
+      title: "Cloud & Integrations",
       description:
-        "Scalable cloud infrastructure, migration, and management services for modern businesses.",
-      icon: <Cloud className="w-6 h-6" />,
-      features: ["AWS/Azure", "Migration", "Security", "DevOps"],
+        "Scalable cloud deployment, API integrations, and ongoing software optimization for growing businesses.",
+      icon: <Cpu className="w-6 h-6" />,
+      features: ["Cloud Setup", "API Sync", "Security", "DevOps"],
       href: "/services/web-development",
       gradient: "from-teal-600 to-cyan-500",
-      badge: "New",
     },
   ];
 
-  const featuredServices = services.slice(0, 3);
-
   return (
-    <section className="relative overflow-hidden py-20 lg:py-28">
+    <section id="services" className="relative overflow-hidden py-20 lg:py-28">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/20 to-transparent dark:via-gray-900/20" />
       <div className="absolute top-10 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />
@@ -126,120 +122,64 @@ export default function Services() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            We deliver cutting-edge digital solutions that transform businesses
-            and create lasting value for our clients.
+            We deliver thoughtful digital solutions that transform businesses and create lasting value for our clients.
           </p>
         </div>
 
-        {/* Featured Services Grid (Desktop) */}
-        <div className="hidden lg:grid grid-cols-3 gap-8 mb-16">
-          {featuredServices.map((service) => (
+        {/* Single Responsive CSS Grid (Zero DOM Duplication) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {services.map((service) => (
             <div
               key={service.id}
-              className="relative group"
+              className="relative group flex flex-col justify-between rounded-2xl p-8 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200/60 dark:border-gray-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10"
               onMouseEnter={() => setHoveredCard(service.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              <div className="absolute inset-0 bg-white dark:bg-gray-900 rounded-2xl" />
-              <div
-                className={`absolute inset-0 bg-gradient-to-r ${service.gradient} rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-              />
-              <div className="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-8 transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl group-hover:shadow-blue-500/10">
-                {/* Icon */}
-                <div
-                  className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${service.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <div className="text-white">{service.icon}</div>
+              <div>
+                {/* Icon & Badge */}
+                <div className="flex items-center justify-between mb-6">
+                  <div
+                    className={`p-4 rounded-xl bg-gradient-to-br ${service.gradient} text-white shadow-md group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    {service.icon}
+                  </div>
+                  {service.badge && (
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-orange-500/20 text-orange-600 dark:text-orange-400">
+                      {service.badge}
+                    </span>
+                  )}
                 </div>
 
-                {/* Badge */}
-                {service.badge && (
-                  <span
-                    className={`absolute top-6 right-6 px-3 py-1 rounded-full text-xs font-semibold ${
-                      service.badge === "Popular"
-                        ? "bg-orange-500/20 text-orange-600 dark:text-orange-400"
-                        : "bg-green-500/20 text-green-600 dark:text-green-400"
-                    }`}
-                  >
-                    {service.badge}
-                  </span>
-                )}
-
-                {/* Content */}
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                {/* Title & Description */}
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-6">
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Features */}
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2.5 mb-8">
                   {service.features.map((feature, index) => (
                     <li
                       key={index}
-                      className="flex items-center gap-3 text-gray-700 dark:text-gray-300"
+                      className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300"
                     >
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                      <span className="text-sm">{feature}</span>
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-
-                {/* Learn More */}
-                <Link
-                  href={service.href}
-                  className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium group/link"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                </Link>
               </div>
-            </div>
-          ))}
-        </div>
 
-        {/* Mobile & Tablet Grid */}
-        <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          {services.slice(0, 4).map((service) => (
-            <div
-              key={service.id}
-              className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="flex items-start gap-4">
-                <div
-                  className={`p-3 rounded-lg bg-gradient-to-br ${service.gradient}`}
-                >
-                  <div className="text-white">{service.icon}</div>
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                      {service.title}
-                    </h3>
-                    {service.badge && (
-                      <span
-                        className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                          service.badge === "Popular"
-                            ? "bg-orange-500/20 text-orange-600 dark:text-orange-400"
-                            : "bg-green-500/20 text-green-600 dark:text-green-400"
-                        }`}
-                      >
-                        {service.badge}
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                    {service.description}
-                  </p>
-                  <Link
-                    href={service.href}
-                    className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 text-sm font-medium"
-                  >
-                    Learn More <ArrowRight className="w-3 h-3" />
-                  </Link>
-                </div>
-              </div>
+              {/* Learn More */}
+              <Link
+                href={service.href}
+                className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group/link"
+              >
+                Learn More
+                <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+              </Link>
             </div>
           ))}
         </div>
@@ -250,12 +190,12 @@ export default function Services() {
             href="/services"
             className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:shadow-xl hover:-translate-y-1 transition-all"
           >
-            View All Services
+            View All Services & Pricing Details
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
-        {/* Stats Section */}
+        {/* Positioning Section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             {
@@ -274,7 +214,7 @@ export default function Services() {
               icon: <Code className="w-5 h-5" />,
             },
             {
-              value: "Built",
+              value: "Tailored",
               label: "Around Your Business",
               icon: <Shield className="w-5 h-5" />,
             },
@@ -289,7 +229,7 @@ export default function Services() {
               <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                 {stat.value}
               </div>
-              <div className="text-gray-600 dark:text-gray-300">
+              <div className="text-gray-600 dark:text-gray-300 text-sm">
                 {stat.label}
               </div>
             </div>
@@ -303,13 +243,11 @@ export default function Services() {
               Our Process
             </h3>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              We follow a proven methodology to ensure project success from
-              concept to deployment
+              We follow a transparent methodology to ensure project success from concept to launch
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            {/* Connecting Line */}
             <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 transform -translate-y-1/2" />
 
             {[
@@ -326,7 +264,7 @@ export default function Services() {
               {
                 step: "03",
                 title: "Development",
-                desc: "Building your solution with agile methodology",
+                desc: "Building your solution with clean architecture",
               },
               {
                 step: "04",
@@ -342,7 +280,7 @@ export default function Services() {
                   <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
                     {item.desc}
                   </p>
                 </div>
