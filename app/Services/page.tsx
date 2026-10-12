@@ -131,7 +131,7 @@ const servicesSchema = {
           name: "How much does custom software development cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Custom software projects range from $15,000 for basic solutions to $100,000+ for enterprise systems. We offer transparent pricing and provide detailed quotes after understanding your requirements.",
+            text: "Each project is scoped individually based on your technical requirements, deliverables, and timeline. We provide clear, milestone-driven estimates after an initial discovery consultation.",
           },
         },
         {

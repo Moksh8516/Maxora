@@ -100,7 +100,10 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${spaceGrotesk.variable} ${inter.variable}`}
     >
-      <body className="font-sans antialiased bg-bg-primary text-text-primary transition-colors duration-300">
+      <body
+        suppressHydrationWarning
+        className="font-sans antialiased bg-bg-primary text-text-primary transition-colors duration-300"
+      >
         <StructuredData />
         <ThemeProvider
           attribute="class"

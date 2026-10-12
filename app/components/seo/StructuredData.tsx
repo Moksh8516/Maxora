@@ -41,7 +41,7 @@ export const defaultOrganizationSchema = {
           name: "India",
         },
         {
-          "@type": "Country",
+          "@type": "AdministrativeArea",
           name: "Worldwide",
         },
       ],
@@ -76,10 +76,16 @@ export const defaultOrganizationSchema = {
       description: service.description,
       provider: { "@id": `${siteUrl}/#organization` },
       url: `${siteUrl}${service.href}`,
-      areaServed: {
-        "@type": "Country",
-        name: "Worldwide",
-      },
+      areaServed: [
+        {
+          "@type": "Country",
+          name: "India",
+        },
+        {
+          "@type": "AdministrativeArea",
+          name: "Worldwide",
+        },
+      ],
     })),
   ],
 };

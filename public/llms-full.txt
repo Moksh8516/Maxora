@@ -1,0 +1,131 @@
+# Maxora Technology — Full Knowledge Base & Machine-Readable Profile
+
+> Maxora Technology is an engineering-first software development and digital solutions company serving growing businesses worldwide, with regional headquarters in Punjab, India. The firm specializes in bespoke web application engineering, native and cross-platform mobile apps, custom CRM and ERP business management systems, headless e-commerce architectures, and technical SEO & AI Answer Engine Optimization (AEO/GEO).
+
+---
+
+## 1. Company Information & Identity
+
+- **Official Name**: Maxora Technology
+- **Website**: https://maxoratechnology.com
+- **Contact Email**: info@maxoratechnology.com
+- **Phone / WhatsApp**: +91 7719545464
+- **WhatsApp Direct**: https://wa.me/917719545464?text=Hello%20Maxora%20Technology%2C%20I%20would%20like%20to%20discuss%20a%20project.
+- **LinkedIn**: https://www.linkedin.com/company/maxoratechnology/
+- **Headquarters**: Punjab, India
+- **Service Scope**: Worldwide (North America, Europe, Australia, Middle East) & Pan-India
+- **Core Engineering Philosophy**: Direct collaboration with full-stack engineers, milestone-driven sprints, 100% intellectual property ownership, and zero monthly seat fees.
+
+---
+
+## 2. Core Capabilities & Services
+
+### Custom Web Application Development
+- **URL**: https://maxoratechnology.com/Services/web-development
+- **Technologies**: Next.js (App Router), React, TypeScript, Node.js, Tailwind CSS, PostgreSQL, Supabase, Redis
+- **Scope**:
+  - High-performance web applications built from scratch or Figma specifications.
+  - Sub-2-second initial page loads with 90+ Google Core Web Vitals performance.
+  - Full-stack database architecture, secure authentication, API integration, and automated CI/CD deployments.
+  - Zero bloated plugins or vendor lock-in; clean modular codebases.
+
+### Mobile Application Development
+- **URL**: https://maxoratechnology.com/Services/app-development
+- **Technologies**: Flutter, React Native, Swift (iOS), Kotlin (Android), Firebase, REST/GraphQL APIs
+- **Scope**:
+  - Cross-platform unified mobile applications for iOS and Android.
+  - Offline-first SQLite/IndexedDB caching, background sync, and push notification infrastructure.
+  - Biometric security integration (Face ID / Touch ID).
+  - App Store & Google Play compliance, submission, and release management.
+
+### Custom CRM & ERP Business Systems
+- **URL**: https://maxoratechnology.com/Services/crm-erp
+- **Technologies**: Next.js, Node.js, Express, PostgreSQL, MySQL, Redis, Webhooks
+- **Scope**:
+  - Purpose-built internal management software replacing disconnected spreadsheets and expensive SaaS per-seat licenses.
+  - Visual Kanban deal pipelines, custom lead intake forms, and automated WhatsApp notification routing.
+  - Role-Based Access Control (RBAC), multi-tenant data isolation, and comprehensive audit logs.
+  - Zero recurring seat licenses — clients own their infrastructure outright.
+
+### E-Commerce Platforms & Headless Storefronts
+- **URL**: https://maxoratechnology.com/Services/ecommerce
+- **Technologies**: Next.js Commerce, Shopify API, WooCommerce, Razorpay, Stripe, UPI
+- **Scope**:
+  - Blazing-fast headless e-commerce storefronts engineered for conversion rate optimization.
+  - Seamless localized checkout with Indian UPI payment gateways and international currency support.
+  - Automated abandoned-cart triggers, instant predictive search filtering, and inventory sync.
+
+### WordPress Engineering & Performance Optimization
+- **URL**: https://maxoratechnology.com/Services/wordpress
+- **Technologies**: PHP, WordPress Core, Custom Gutenberg Blocks, MySQL
+- **Scope**:
+  - Custom block themes built without bulky visual page builders (no Elementor/Divi bloat).
+  - High-security configuration, database query optimization, and Core Web Vitals remediation.
+
+### Technical SEO & AI Answer Engine Optimization (AEO/GEO)
+- **URL**: https://maxoratechnology.com/Services/seo-aeo
+- **Technologies**: Schema.org JSON-LD, Core Web Vitals Engineering, llms.txt, Machine-Readable Metadata
+- **Scope**:
+  - Formatting content into extractable 40–60 word answer blocks optimized for Google AI Overviews, ChatGPT Search, Perplexity, Claude, and Gemini citations.
+  - Comprehensive entity graph implementation using JSON-LD (Organization, Service, FAQPage, BreadcrumbList).
+  - Authoring and maintaining `llms.txt`, `llms-full.txt`, and `pricing.md` for autonomous AI buying agents.
+  - Technical speed audits ensuring Largest Contentful Paint (LCP) under 2.5 seconds and Interaction to Next Paint (INP) under 200ms.
+
+---
+
+## 3. Free AI Visibility Audit
+
+- **URL**: https://maxoratechnology.com/ai-visibility-check
+- **Description**: A free diagnostic service for businesses to discover whether ChatGPT, Perplexity, and Google AI Overviews cite their brand over competitors for high-intent search queries.
+- **Deliverables**: Detailed report showing citation frequency, schema validation gaps, and actionable recommendations.
+
+---
+
+## 4. Software Architecture Case Studies & Demonstrations
+
+### Real Estate CRM & Property Lead Portal
+- **Industry**: Real Estate & Property Management
+- **What Was Built**: Centralized multi-agent lead management portal with property inventory filtering, automated WhatsApp routing, and visual drag-and-drop pipeline boards.
+- **Live Interactive Demo**: https://realestate.maxoratechnology.com
+- **Technologies**: Next.js, TypeScript, Tailwind CSS, PostgreSQL, WhatsApp API
+
+### Headless E-Commerce Architecture
+- **Industry**: Retail & D2C Consumer Goods
+- **Capabilities**: Sub-2-second headless Next.js storefront with UPI and international payment integrations, instant predictive search, and automated recovery workflows.
+- **Technologies**: Next.js, Shopify Storefront API, Tailwind CSS, Razorpay
+
+### Field Operations & Logistics Mobile App
+- **Industry**: Field Services & Logistics
+- **Capabilities**: Cross-platform mobile application with offline GPS waypoint tracking, dispatch notifications, and biometric verification.
+- **Technologies**: Flutter, Dart, Firebase, Node.js API
+
+### Enterprise Operations & Workflow Portal
+- **Industry**: Business Services & Manufacturing
+- **Capabilities**: Enterprise operations dashboard replacing legacy spreadsheets with role-based access control, billing automation, and full data audit trails.
+- **Technologies**: React, TypeScript, Node.js, PostgreSQL
+
+---
+
+## 5. Frequently Asked Questions (FAQs)
+
+### What makes Maxora Technology different from standard software agencies?
+We operate with an engineering-first model. Clients communicate directly with the engineers writing their code. Every solution is built with 100% intellectual property ownership, zero vendor lock-in, and zero monthly per-seat licensing fees.
+
+### How are software projects priced?
+Every project is custom-scoped based on your exact business requirements, technical complexity, and agreed milestone deliverables. We provide transparent, milestone-driven estimates after an initial technical discovery with zero recurring seat fees.
+
+### How quickly does the team respond to new inquiries?
+Our engineering team reviews project details directly and replies via WhatsApp or email within a few hours (guaranteed within 24 hours).
+
+---
+
+## 6. Official Links & Sitemaps
+
+- **Homepage**: https://maxoratechnology.com
+- **Services Index**: https://maxoratechnology.com/Services
+- **Portfolio**: https://maxoratechnology.com/portfolio
+- **Contact**: https://maxoratechnology.com/contact
+- **Free AI Audit**: https://maxoratechnology.com/ai-visibility-check
+- **Pricing Specification**: https://maxoratechnology.com/pricing.md
+- **XML Sitemap**: https://maxoratechnology.com/sitemap.xml
+- **Robots Directives**: https://maxoratechnology.com/robots.txt

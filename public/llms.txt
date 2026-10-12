@@ -5,8 +5,9 @@
 ## Core Information
 
 - Website: https://maxoratechnology.com
-- Contact Email: [info@maxoratechnology.com]
+- Contact Email: [info@maxoratechnology.com](mailto:info@maxoratechnology.com)
 - Phone: +91 7719545464
+- WhatsApp: [+91 7719545464](https://wa.me/917719545464)
 - LinkedIn: https://www.linkedin.com/company/maxoratechnology/
 - Geographic Service Scope: Worldwide & India
 - Primary Focus: Custom Software Engineering, Next.js/React Web Applications, Mobile App Development (React Native & Flutter), Custom CRM/ERP Systems, E-Commerce Development, WordPress Engineering, and Technical SEO & AI Answer Engine Optimization (AEO/GEO).
@@ -22,6 +23,11 @@
 - [Technical SEO & AEO Services](https://maxoratechnology.com/Services/seo-aeo): Core Web Vitals engineering, Schema.org entity graphs, extractable content answer blocks, and AI engine citation optimization for ChatGPT, Perplexity, and Google AI Overviews.
 - [Free AI Visibility Check](https://maxoratechnology.com/ai-visibility-check): Free technical audit testing whether ChatGPT, Perplexity, and Google AI Overviews cite and recommend a prospect's business.
 - [Portfolio & Case Studies](https://maxoratechnology.com/portfolio): Live software demos and architectural case studies.
+
+## Machine-Readable Specifications & Knowledge
+
+- [Commercial & Engagement Model](https://maxoratechnology.com/pricing.md): Requirement-based milestone structures, 100% IP code ownership, and zero monthly seat fees.
+- [Full LLM Knowledge Base](https://maxoratechnology.com/llms-full.txt): Single-file compilation of all Maxora Technology services, architecture patterns, FAQs, and engineering philosophy.
 
 ## Company & Resources
 

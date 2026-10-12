@@ -5,7 +5,7 @@ import Services from "./components/section/Services";
 import { JsonLd } from "./components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Custom Web & App Development Company | Maxora Technology",
+  title: "Custom Web & App Development Company",
   description:
     "Maxora Technology builds high-performance custom websites, mobile applications, CRM/ERP systems, and scalable eCommerce platforms for growing businesses worldwide.",
   alternates: {

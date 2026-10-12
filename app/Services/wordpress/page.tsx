@@ -54,11 +54,11 @@ const serviceSchema = {
       areaServed: [
         {
           "@type": "Country",
-          name: "Worldwide",
+          name: "India",
         },
         {
-          "@type": "Country",
-          name: "India",
+          "@type": "AdministrativeArea",
+          name: "Worldwide",
         },
       ],
       hasOfferCatalog: {

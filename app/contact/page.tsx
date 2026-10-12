@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Maxora Technology",
     images: [
       {
-        url: "/light logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Contact Maxora Technology",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Contact Maxora Technology | Get in Touch",
     description:
       "Schedule a technical consultation for your web, app, or enterprise software project.",
-    images: ["/light logo.png"],
+    images: ["/og-image.png"],
   },
 };
 

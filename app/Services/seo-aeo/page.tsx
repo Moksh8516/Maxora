@@ -6,7 +6,7 @@ import { JsonLd } from "../../components/seo/StructuredData";
 export const metadata: Metadata = {
   title: "Technical SEO & AEO (AI Engine Optimization) Services India",
   description:
-    "Dominate Google Search and AI answer engines (ChatGPT, Perplexity, Google AI Overviews). Technical SEO, Schema markup, Core Web Vitals, and LLM citation optimization in India.",
+    "Improve Google rankings and get cited by AI answer engines (ChatGPT, Perplexity, Google AI Overviews). Technical SEO, Schema markup, Core Web Vitals, and LLM citation optimization in India.",
   alternates: {
     canonical: "/Services/seo-aeo",
   },
@@ -54,11 +54,11 @@ const serviceSchema = {
       areaServed: [
         {
           "@type": "Country",
-          name: "Worldwide",
+          name: "India",
         },
         {
-          "@type": "Country",
-          name: "India",
+          "@type": "AdministrativeArea",
+          name: "Worldwide",
         },
       ],
       hasOfferCatalog: {

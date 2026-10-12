@@ -137,12 +137,7 @@ export default function PortfolioPage() {
                       ))}
                     </div>
 
-                    {project.todoNote && (
-                      <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-700 dark:text-amber-400 mb-6">
-                        {/* TODO(owner): real case study */}
-                        {project.todoNote}
-                      </div>
-                    )}
+
                   </div>
                 </div>
 

@@ -524,7 +524,7 @@ export const servicesData: Record<string, ServiceData> = {
     slug: "seo-aeo",
     metaTitle: "Technical SEO & AEO (AI Engine Optimization) Services India",
     metaDescription:
-      "Dominate Google Search and AI answer engines (ChatGPT, Perplexity, Google AI Overviews). Technical SEO, Schema markup, Core Web Vitals, and LLM citation optimization in India.",
+      "Improve Google rankings and get cited by AI answer engines (ChatGPT, Perplexity, Google AI Overviews). Technical SEO, Schema markup, Core Web Vitals, and LLM citation optimization in India.",
     h1: "Technical SEO & AI Answer Engine Optimization (AEO)",
     subheading:
       "Get ranked on Google and cited by ChatGPT, Perplexity, and Google AI Overviews with technical architecture, structured data, and extractable content.",

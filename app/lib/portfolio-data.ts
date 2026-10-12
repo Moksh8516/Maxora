@@ -15,10 +15,10 @@ export interface PortfolioCaseStudy {
 
 export const portfolioContent = {
   header: {
-    badge: "Case Studies & Demos",
-    title: "Engineering Portfolio & Case Studies",
+    badge: "Portfolio & Architecture Demos",
+    title: "Work & Sample Architectures",
     description:
-      "Explore software architectures, web applications, and live interactive systems engineered by Maxora Technology.",
+      "Explore live products and sample system architectures built by Maxora Technology. Live demos are marked; architecture cards show capability and scope.",
   },
   caseStudies: [
     {
@@ -34,37 +34,34 @@ export const portfolioContent = {
       isLiveDemo: true,
     },
     {
-      id: "case-study-placeholder-1",
-      projectName: "Custom Headless E-Commerce Storefront",
-      industry: "Retail & Consumer Goods",
+      id: "sample-ecommerce",
+      projectName: "Headless E-Commerce Storefront",
+      industry: "Retail & D2C — Sample Architecture",
       whatWeBuilt:
-        "Sub-2-second headless storefront with localized UPI payment gateways, automated abandoned cart triggers, and instant search filtering.",
+        "Sample architecture: a sub-2-second headless storefront with UPI payment integration, abandoned-cart automation, and instant-search filtering. This demonstrates our e-commerce capability — contact us for client-specific details.",
       techUsed: ["Next.js", "Shopify API", "Tailwind CSS", "Razorpay"],
       screenshotUrl: "/og-image.png",
-      screenshotAlt: "E-Commerce Architecture Showcase",
-      todoNote: "TODO(owner): Add real client name, verified deliverables, and high-res screenshot.",
+      screenshotAlt: "Headless E-Commerce Architecture — Maxora Technology",
     },
     {
-      id: "case-study-placeholder-2",
-      projectName: "Cross-Platform Field Operations Mobile App",
-      industry: "Logistics & Field Services",
+      id: "sample-mobile-app",
+      projectName: "Field Operations Mobile App",
+      industry: "Logistics & Field Services — Sample Architecture",
       whatWeBuilt:
-        "Unified iOS and Android application with offline GPS logging, biometric authentication, and instant dispatch notifications.",
+        "Sample architecture: cross-platform iOS and Android app with offline GPS logging, biometric authentication, and dispatch push notifications. This demonstrates our mobile capability — contact us for client-specific details.",
       techUsed: ["Flutter", "Dart", "Firebase", "Node.js API"],
       screenshotUrl: "/og-image.png",
-      screenshotAlt: "Mobile Application Interface Showcase",
-      todoNote: "TODO(owner): Add real client name, verified deliverables, and high-res screenshot.",
+      screenshotAlt: "Field Operations Mobile App Architecture — Maxora Technology",
     },
     {
-      id: "case-study-placeholder-3",
-      projectName: "Enterprise Operations & Workflow System",
-      industry: "Business Services & Manufacturing",
+      id: "sample-crm-erp",
+      projectName: "Enterprise Workflow & Operations Portal",
+      industry: "Business Services & Manufacturing — Sample Architecture",
       whatWeBuilt:
-        "Custom workflow management system replacing disconnected spreadsheets with role-based access control, billing automation, and audit trails.",
+        "Sample architecture: custom workflow portal replacing disconnected spreadsheets, with role-based access control, billing automation, and full audit trails. This demonstrates our CRM/ERP capability — contact us for client-specific details.",
       techUsed: ["React", "TypeScript", "Node.js", "PostgreSQL"],
       screenshotUrl: "/og-image.png",
-      screenshotAlt: "Custom Enterprise Operations Dashboard",
-      todoNote: "TODO(owner): Add real client name, verified deliverables, and high-res screenshot.",
+      screenshotAlt: "Enterprise Operations Portal Architecture — Maxora Technology",
     },
   ] as PortfolioCaseStudy[],
 };

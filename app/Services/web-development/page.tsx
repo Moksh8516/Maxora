@@ -48,17 +48,17 @@ const serviceSchema = {
         "@id": "https://maxoratechnology.com/#organization",
         name: "Maxora Technology",
       },
-      url: "https://maxoratechnology.com/services/web-development",
+      url: "https://maxoratechnology.com/Services/web-development",
       description:
         "Custom web application development using Next.js, React, TypeScript, Node.js, and modern cloud databases with attention to Core Web Vitals performance, security, and scalability.",
       areaServed: [
         {
           "@type": "Country",
-          name: "Worldwide",
+          name: "India",
         },
         {
-          "@type": "Country",
-          name: "India",
+          "@type": "AdministrativeArea",
+          name: "Worldwide",
         },
       ],
       hasOfferCatalog: {
