@@ -1,108 +1,126 @@
-export const greetingTemplate = (name: string, company: string) => `
+// app/components/ui/greetingTemplate.ts
+
+export const greetingTemplate = (name: string, company?: string) => `
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You for Contacting Maxora Technology</title>
 </head>
-<body style="margin:0; padding:0; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%); min-height: 100vh; padding: 20px;">
-  <center>
-    <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 580px; margin: 40px auto;">
-      <!-- Header with Gradient -->
-      <tr>
-        <td style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px 12px 0 0; padding: 40px 20px; text-align: center;">
-          <h1 style="margin:0; color: white; font-size: 32px; font-weight: 300; letter-spacing: 1px;">
-            Welcome, ${name}!
-          </h1>
-          <div style="font-size: 48px; margin-top: 15px;">✨</div>
-        </td>
-      </tr>
-      
-      <!-- Main Content Card -->
-      <tr>
-        <td style="background: white; padding: 40px 30px; border-radius: 0 0 12px 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
-          <!-- Introduction -->
-          <p style="color: #555; font-size: 16px; line-height: 1.6; margin: 0 0 25px 0;">
-            We're absolutely delighted to connect with you. Your message has been received and is currently in the best hands.
-          </p>
+<body style="margin: 0; padding: 0; background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1e293b; line-height: 1.6;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #f8fafc; padding: 30px 15px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 580px; background-color: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
           
-          <!-- Key Message -->
-          <div style="background: #f8f9ff; border-left: 4px solid #667eea; padding: 20px; margin: 30px 0; border-radius: 0 8px 8px 0;">
-            <p style="color: #444; font-size: 15px; line-height: 1.7; margin: 0;">
-              <strong>What's next?</strong><br>
-              Our team is reviewing your inquiry and will get back to you within 24-48 hours with a thoughtful response.
-            </p>
-          </div>
-          
-          <!-- Additional Info -->
-          <table width="100%" cellpadding="0" cellspacing="0" style="margin: 30px 0;">
-            <tr>
-              <td style="width: 24px; vertical-align: top; padding-right: 12px;">
-                <div style="color: #667eea; font-size: 20px;">✓</div>
-              </td>
-              <td>
-                <p style="color: #555; font-size: 15px; line-height: 1.6; margin: 0 0 10px 0;">
-                  We've sent a confirmation to your email
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td style="width: 24px; vertical-align: top; padding-right: 12px;">
-                <div style="color: #667eea; font-size: 20px;">⏱</div>
-              </td>
-              <td>
-                <p style="color: #555; font-size: 15px; line-height: 1.6; margin: 0;">
-                  Response time: 24-48 hours
-                </p>
-              </td>
-            </tr>
-          </table>
-          
-          <!-- Warm Closing -->
-          <p style="color: #555; font-size: 16px; line-height: 1.6; margin: 40px 0 20px 0;">
-            Wishing You a Wonderful Day Ahead,<br>
-            <span style="color: #667eea; font-size: 18px; font-weight: 600; margin-top: 5px; display: block;">
-              ${company}
-            </span>
-          </p>
-          
-          <!-- Signature Decoration -->
-          <div style="border-top: 1px solid #eee; margin-top: 40px; padding-top: 25px; text-align: center;">
-            <p style="color: #888; font-size: 14px; margin: 0 0 8px 0;">
-              Need immediate assistance?
-            </p>
-            <a href="mailto:maxoratechnology@gmail.com" style="color: #667eea; text-decoration: none; font-weight: 500; font-size: 15px;">
-              maxoratechnology@gmail.com
-            </a>
-          </div>
-        </td>
-      </tr>
-      
-      <!-- Footer -->
-      <tr>
-        <td style="padding: 30px 20px 20px 20px; text-align: center;">
-          <p style="color: #999; font-size: 12px; line-height: 1.5; margin: 0;">
-            This is an automated message. Please do not reply directly to this email.<br>
-            © ${new Date().getFullYear()} Your Company. All rights reserved.
-          </p>
-          <p style="color: #aaa; font-size: 11px; margin-top: 15px;">
-            <a href="#" style="color: #aaa; text-decoration: none; margin: 0 10px;">Privacy Policy</a> • 
-            <a href="#" style="color: #aaa; text-decoration: none; margin: 0 10px;">Terms of Service</a> • 
-            <a href="#" style="color: #aaa; text-decoration: none; margin: 0 10px;">Unsubscribe</a>
-          </p>
-        </td>
-      </tr>
-    </table>
-    
-    <!-- Subtle Pattern Background -->
-    <div style="max-width: 600px; margin: 0 auto; opacity: 0.03; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; pointer-events: none;">
-      <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="200" cy="200" r="150" stroke="currentColor" stroke-width="2"/>
-        <circle cx="200" cy="200" r="100" stroke="currentColor" stroke-width="1"/>
-        <circle cx="200" cy="200" r="50" stroke="currentColor" stroke-width="1"/>
-      </svg>
-    </div>
-  </center>
+          <!-- Header Banner -->
+          <tr>
+            <td style="background-color: #1e293b; padding: 32px 30px; text-align: left; border-bottom: 3px solid #2563eb;">
+              <h1 style="margin: 0; font-size: 20px; font-weight: 700; color: #ffffff; letter-spacing: -0.5px;">
+                Maxora Technology
+              </h1>
+              <p style="margin: 6px 0 0 0; font-size: 13px; color: #94a3b8;">
+                Software Engineering & Digital Solutions
+              </p>
+            </td>
+          </tr>
+
+          <!-- Main Body Content -->
+          <tr>
+            <td style="padding: 36px 30px 24px 30px;">
+              <p style="margin: 0 0 16px 0; font-size: 16px; font-weight: 600; color: #0f172a;">
+                Hello ${name}${company ? ` (${company})` : ""},
+              </p>
+              
+              <p style="margin: 0 0 16px 0; font-size: 14px; color: #334155;">
+                Thank you for reaching out to Maxora Technology. We have safely received your inquiry and project details.
+              </p>
+
+              <!-- Process Box -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #f1f5f9; border-radius: 8px; border-left: 4px solid #2563eb; margin: 24px 0;">
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 6px 0; font-size: 13px; font-weight: 600; color: #0f172a;">
+                      What happens next?
+                    </p>
+                    <p style="margin: 0; font-size: 13px; color: #475569;">
+                      Our engineering team is reviewing your requirements. We will review your project scope and follow up directly on WhatsApp or email within 24 hours.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Quick Connect Details -->
+              <p style="margin: 0 0 12px 0; font-size: 13px; color: #334155;">
+                If your project is urgent or you would like to share additional files, feel free to message our team directly:
+              </p>
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 24px 0;">
+                <tr>
+                  <td style="padding: 8px 0; font-size: 13px; color: #334155;">
+                    <strong>WhatsApp:</strong> 
+                    <a href="https://wa.me/917719545464" style="color: #2563eb; text-decoration: none;">+91 7719545464</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-size: 13px; color: #334155;">
+                    <strong>Direct Email:</strong> 
+                    <a href="mailto:info@maxoratechnology.com" style="color: #2563eb; text-decoration: none;">info@maxoratechnology.com</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; font-size: 13px; color: #334155;">
+                    <strong>Website:</strong> 
+                    <a href="https://maxoratechnology.com" style="color: #2563eb; text-decoration: none;">maxoratechnology.com</a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 24px 0 0 0; font-size: 14px; color: #334155;">
+                Warm regards,<br>
+                <strong>The Maxora Engineering Team</strong>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer with Real Compliance Links -->
+          <tr>
+            <td style="background-color: #f8fafc; padding: 20px 30px; text-align: center; border-top: 1px solid #e2e8f0;">
+              <p style="margin: 0 0 8px 0; font-size: 12px; color: #64748b;">
+                Maxora Technology • Punjab, India • Serving Clients Worldwide
+              </p>
+              <p style="margin: 0; font-size: 11px; color: #94a3b8;">
+                <a href="https://maxoratechnology.com/privacy" style="color: #64748b; text-decoration: underline;">Privacy Policy</a> • 
+                <a href="https://maxoratechnology.com/terms" style="color: #64748b; text-decoration: underline;">Terms of Service</a> • 
+                <a href="https://maxoratechnology.com/contact" style="color: #64748b; text-decoration: underline;">Contact Us</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
+`;
+
+export const greetingPlainText = (name: string, company?: string) => `
+Hello ${name}${company ? ` (${company})` : ""},
+
+Thank you for contacting Maxora Technology. We have safely received your inquiry and project requirements.
+
+What happens next?
+Our engineering team is reviewing your project details. We will follow up with you directly via WhatsApp or email within 24 hours.
+
+If your project is urgent or you would like to send additional specifications, reach us directly:
+- WhatsApp: +91 7719545464 (https://wa.me/917719545464)
+- Email: info@maxoratechnology.com
+- Website: https://maxoratechnology.com
+
+Warm regards,
+The Maxora Engineering Team
+Maxora Technology • Punjab, India
+Privacy Policy: https://maxoratechnology.com/privacy
 `;
