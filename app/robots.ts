@@ -12,21 +12,23 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: [
-          "Google-Extended",
-          "GPTBot",
-          "OAI-SearchBot",
-          "ChatGPT-User",
-          "ClaudeBot",
-          "Claude-User",
-          "PerplexityBot",
-          "Perplexity-User",
-        ],
+        userAgent: "*",
         allow: "/",
         disallow: privatePaths,
       },
       {
-        userAgent: "*",
+        userAgent: [
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "Claude-User",
+          "GPTBot",
+          "OAI-SearchBot",
+          "ChatGPT-User",
+          "PerplexityBot",
+          "Perplexity-User",
+          "Google-Extended",
+        ],
         allow: "/",
         disallow: privatePaths,
       },

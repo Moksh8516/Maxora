@@ -24,6 +24,12 @@ const publicRoutes: {
 }[] = [
   { path: "/", changeFrequency: "weekly", priority: 1.0, lastModified: now },
   {
+    path: "/ai-visibility-check",
+    changeFrequency: "weekly",
+    priority: 0.9,
+    lastModified: now,
+  },
+  {
     path: "/Services",
     changeFrequency: "weekly",
     priority: 0.9,

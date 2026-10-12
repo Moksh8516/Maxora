@@ -6,14 +6,16 @@ const siteUrl = (
   "https://maxoratechnology.com"
 ).replace(/\/$/, "");
 
+import { siteConfig } from "../../lib/site-config";
+
 export const defaultOrganizationSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": ["Organization", "ProfessionalService"],
       "@id": `${siteUrl}/#organization`,
-      name: "Maxora Technology",
-      legalName: "Maxora Technology",
+      name: siteConfig.name,
+      legalName: siteConfig.legalName,
       url: siteUrl,
       logo: {
         "@type": "ImageObject",
@@ -25,10 +27,9 @@ export const defaultOrganizationSchema = {
         height: "150",
       },
       image: `${siteUrl}/og-image.png`,
-      email: "info@maxoratechnology.com",
-      telephone: "+917719545464",
-      description:
-        "Maxora Technology is a digital agency providing custom web development, mobile applications, CRM/ERP systems, and eCommerce solutions for growing businesses.",
+      email: siteConfig.contact.email,
+      telephone: siteConfig.contact.phoneTel,
+      description: siteConfig.description,
       address: {
         "@type": "PostalAddress",
         addressRegion: "Punjab",
@@ -45,15 +46,16 @@ export const defaultOrganizationSchema = {
         },
       ],
       sameAs: [
-        "https://facebook.com/maxora.technology",
-        "https://instagram.com/maxora.technology",
+        siteConfig.social.facebook,
+        siteConfig.social.instagram,
+        ...(siteConfig.social.linkedin ? [siteConfig.social.linkedin] : []),
       ],
       contactPoint: [
         {
           "@type": "ContactPoint",
-          telephone: "+917719545464",
+          telephone: siteConfig.contact.phoneTel,
           contactType: "customer service",
-          email: "info@maxoratechnology.com",
+          email: siteConfig.contact.email,
           availableLanguage: ["English", "Hindi", "Punjabi"],
         },
       ],
@@ -62,12 +64,23 @@ export const defaultOrganizationSchema = {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
       url: siteUrl,
-      name: "Maxora Technology",
-      description:
-        "Custom Web Development, Mobile Apps, WordPress & CRM/ERP Systems",
+      name: siteConfig.name,
+      description: siteConfig.description,
       publisher: { "@id": `${siteUrl}/#organization` },
       inLanguage: "en",
     },
+    ...siteConfig.services.map((service) => ({
+      "@type": "Service",
+      "@id": `${siteUrl}${service.href}/#service`,
+      name: service.title,
+      description: service.description,
+      provider: { "@id": `${siteUrl}/#organization` },
+      url: `${siteUrl}${service.href}`,
+      areaServed: {
+        "@type": "Country",
+        name: "Worldwide",
+      },
+    })),
   ],
 };
 

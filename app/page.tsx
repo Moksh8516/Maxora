@@ -1,37 +1,38 @@
 import type { Metadata } from "next";
 import Hero from "./components/section/Hero";
+import WhyMaxora from "./components/section/WhyMaxora";
 import Services from "./components/section/Services";
 import { JsonLd } from "./components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Maxora Technology | Custom Web & App Development, CRM & Cloud Solutions",
+  title: "Custom Web & App Development Company | Maxora Technology",
   description:
-    "Maxora Technology builds high-performance custom websites, mobile applications, AI-powered CRM/ERP systems, and scalable eCommerce platforms for growing businesses worldwide.",
+    "Maxora Technology builds high-performance custom websites, mobile applications, CRM/ERP systems, and scalable eCommerce platforms for growing businesses worldwide.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Maxora Technology | Custom Web & App Development, CRM & Cloud Solutions",
+    title: "Custom Web & App Development Company | Maxora Technology",
     description:
-      "Transform your business with cutting-edge App Development, Web Solutions, eCommerce, and Custom CRM/ERP systems. Global IT services with enterprise-grade quality.",
+      "Transform your business with custom web and mobile app development, scalable eCommerce, and bespoke CRM/ERP systems. Worldwide engineering.",
     url: "/",
     siteName: "Maxora Technology",
     images: [
       {
-        url: "/light logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Maxora Technology - Digital Solutions & Software Engineering",
+        alt: "Maxora Technology - Custom Web and App Development",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maxora Technology | Custom Web & App Development, CRM & Cloud Solutions",
+    title: "Custom Web & App Development Company | Maxora Technology",
     description:
-      "Custom web applications, iOS/Android mobile apps, and AI-powered CRM/ERP systems tailored for growing businesses.",
-    images: ["/light logo.png"],
+      "Custom web applications, iOS/Android mobile apps, and custom CRM/ERP systems tailored for growing businesses worldwide.",
+    images: ["/og-image.png"],
   },
 };
 
@@ -40,9 +41,9 @@ const homePageSchema = {
   "@type": "WebPage",
   "@id": "https://maxoratechnology.com/#webpage",
   url: "https://maxoratechnology.com/",
-  name: "Maxora Technology | Custom Web & App Development, CRM & Cloud Solutions",
+  name: "Custom Web & App Development Company | Maxora Technology",
   description:
-    "Maxora Technology builds high-performance custom websites, mobile applications, AI-powered CRM/ERP systems, and scalable eCommerce platforms for growing businesses worldwide.",
+    "Maxora Technology builds high-performance custom websites, mobile applications, CRM/ERP systems, and scalable eCommerce platforms for growing businesses worldwide.",
   isPartOf: {
     "@type": "WebSite",
     "@id": "https://maxoratechnology.com/#website",
@@ -59,6 +60,7 @@ export default function Home() {
     <>
       <JsonLd data={homePageSchema} />
       <Hero />
+      <WhyMaxora />
       <Services />
     </>
   );

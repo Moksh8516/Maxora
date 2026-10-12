@@ -1,19 +1,22 @@
+// app/portfolio/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, ExternalLink, Sparkles, FolderGit2, CheckCircle } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, ExternalLink, FolderGit2 } from "lucide-react";
 import { JsonLd } from "../components/seo/StructuredData";
+import { portfolioContent } from "../lib/portfolio-data";
 
 export const metadata: Metadata = {
-  title: "Portfolio & Product Demos",
+  title: "Portfolio & Case Studies | Maxora Technology",
   description:
-    "Explore digital products, custom web applications, and live demos built by Maxora Technology for growing businesses.",
+    "Explore digital products, custom web applications, and live demos built by Maxora Technology for growing businesses worldwide.",
   alternates: {
     canonical: "/portfolio",
   },
   openGraph: {
-    title: "Portfolio & Product Demos | Maxora Technology",
+    title: "Portfolio & Case Studies | Maxora Technology",
     description:
-      "Explore digital products, custom web applications, and live demos built by Maxora Technology.",
+      "Explore software architectures, web applications, and live interactive systems engineered by Maxora Technology.",
     url: "/portfolio",
     siteName: "Maxora Technology",
     images: [
@@ -24,10 +27,11 @@ export const metadata: Metadata = {
         alt: "Maxora Technology Portfolio & Work",
       },
     ],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio & Product Demos | Maxora Technology",
+    title: "Portfolio & Case Studies | Maxora Technology",
     description: "Explore digital products and web applications built by Maxora Technology.",
     images: ["/og-image.png"],
   },
@@ -40,7 +44,7 @@ const portfolioSchema = {
       "@type": "CollectionPage",
       "@id": "https://maxoratechnology.com/portfolio/#webpage",
       url: "https://maxoratechnology.com/portfolio",
-      name: "Portfolio & Product Demos | Maxora Technology",
+      name: "Portfolio & Case Studies | Maxora Technology",
       description: "Digital products and custom software built by Maxora Technology.",
       breadcrumb: {
         "@type": "BreadcrumbList",
@@ -63,34 +67,6 @@ const portfolioSchema = {
   ],
 };
 
-const projects = [
-  {
-    title: "Real Estate CRM & Lead Manager",
-    category: "Custom Web Application",
-    description:
-      "A complete real estate lead management platform featuring property listings, automated agent follow-ups, and interactive sales pipeline dashboards.",
-    demoUrl: "https://realestate.maxoratechnology.com",
-    isLive: true,
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "CRM", "Live Demo"],
-  },
-  {
-    title: "BusinessOS Platform",
-    category: "Enterprise System",
-    description:
-      "Modular operational system uniting sales, employee task workflows, and billing management. [TODO: Add client/product details upon confirmation]",
-    isLive: false,
-    tags: ["React", "Node.js", "PostgreSQL", "Workflow Engine"],
-  },
-  {
-    title: "Review & Reputation Dashboard",
-    category: "SaaS Product",
-    description:
-      "Centralized feedback and customer review management platform for multi-location businesses. [TODO: Add client/product details upon confirmation]",
-    isLive: false,
-    tags: ["Next.js", "Analytics", "API Integration"],
-  },
-];
-
 export default function PortfolioPage() {
   return (
     <>
@@ -101,57 +77,76 @@ export default function PortfolioPage() {
           <header className="max-w-3xl mx-auto text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-sm font-medium mb-6">
               <FolderGit2 className="w-4 h-4" />
-              <span>Our Work & Demos</span>
+              <span>{portfolioContent.header.badge}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-6 tracking-tight">
-              Selected Digital Products & Demos
+              {portfolioContent.header.title}
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              We design and build custom software that solves real operational bottlenecks. Explore our live demos and product architectures.
+              {portfolioContent.header.description}
             </p>
           </header>
 
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
-            {projects.map((project, idx) => (
+          {/* Case Studies Grid */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
+            {portfolioContent.caseStudies.map((project) => (
               <div
-                key={idx}
-                className="rounded-3xl bg-white dark:bg-gray-900 border border-gray-200/80 dark:border-gray-800/80 p-8 shadow-lg flex flex-col justify-between hover:-translate-y-1 transition-all"
+                key={project.id}
+                className="rounded-3xl bg-white dark:bg-gray-900 border border-gray-200/80 dark:border-gray-800/80 overflow-hidden shadow-lg flex flex-col justify-between hover:-translate-y-1 transition-all"
               >
                 <div>
-                  <div className="flex items-center justify-between gap-3 mb-4">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
-                      {project.category}
-                    </span>
-                    {project.isLive && (
-                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-green-500/10 text-green-600 dark:text-green-400">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                  {/* Screenshot Thumbnail */}
+                  <div className="relative w-full h-52 bg-slate-950 overflow-hidden border-b border-gray-100 dark:border-gray-800">
+                    <Image
+                      src={project.screenshotUrl}
+                      alt={project.screenshotAlt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover opacity-90 hover:opacity-100 transition-opacity"
+                    />
+                    {project.isLiveDemo && (
+                      <span className="absolute top-4 right-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-green-500 text-white shadow-md">
+                        <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
                         Live Demo
                       </span>
                     )}
                   </div>
 
-                  <h2 className="text-2xl font-bold font-heading mb-3 text-gray-900 dark:text-white">
-                    {project.title}
-                  </h2>
+                  <div className="p-7">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-2">
+                      {project.industry}
+                    </span>
 
-                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
-                    {project.description}
-                  </p>
+                    <h2 className="text-2xl font-bold font-heading mb-3 text-gray-900 dark:text-white">
+                      {project.projectName}
+                    </h2>
 
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {project.tags.map((tag, tIdx) => (
-                      <span
-                        key={tIdx}
-                        className="px-2.5 py-1 rounded-lg bg-gray-100 dark:bg-gray-800 text-xs font-medium text-gray-700 dark:text-gray-300"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-5">
+                      {project.whatWeBuilt}
+                    </p>
+
+                    {/* Tech used badges */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.techUsed.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2.5 py-1 rounded-lg bg-gray-100 dark:bg-gray-800 text-xs font-medium text-gray-700 dark:text-gray-300"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    {project.todoNote && (
+                      <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-700 dark:text-amber-400 mb-6">
+                        {/* TODO(owner): real case study */}
+                        {project.todoNote}
+                      </div>
+                    )}
                   </div>
                 </div>
 
-                <div>
+                <div className="p-7 pt-0">
                   {project.demoUrl ? (
                     <a
                       href={project.demoUrl}
@@ -167,7 +162,7 @@ export default function PortfolioPage() {
                       href="/contact"
                       className="inline-flex items-center justify-between w-full p-3.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                     >
-                      <span>Inquire About This Architecture</span>
+                      <span>Inquire About Similar Architecture</span>
                       <ArrowUpRight className="w-4 h-4" />
                     </Link>
                   )}

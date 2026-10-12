@@ -2,9 +2,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { siteConfig } from "../../lib/site-config";
 import {
   FaFacebookF,
   FaInstagram,
+  FaLinkedinIn,
 } from "react-icons/fa6";
 
 interface FooterLink {
@@ -27,6 +29,7 @@ export default function Footer() {
       { label: "eCommerce Platforms", href: "/Services/ecommerce" },
       { label: "Custom CRM/ERP", href: "/Services/crm-erp" },
       { label: "SEO & AI Optimization", href: "/Services/seo-aeo" },
+      { label: "Free AI Visibility Check", href: "/ai-visibility-check" },
     ],
     Company: [
       { label: "About Us", href: "/about" },
@@ -44,20 +47,29 @@ export default function Footer() {
   const socialLinks: SocialLink[] = [
     {
       icon: FaFacebookF,
-      href: "https://facebook.com/maxora.technology",
+      href: siteConfig.social.facebook,
       label: "Facebook",
     },
     {
       icon: FaInstagram,
-      href: "https://instagram.com/maxora.technology",
+      href: siteConfig.social.instagram,
       label: "Instagram",
     },
+    ...(siteConfig.social.linkedin
+      ? [
+          {
+            icon: FaLinkedinIn,
+            href: siteConfig.social.linkedin,
+            label: "LinkedIn",
+          },
+        ]
+      : []),
   ];
 
   const contactInfo = [
-    { icon: Mail, text: "info@maxoratechnology.com" },
-    { icon: Phone, text: "(+91) 7719545464" },
-    { icon: MapPin, text: "Punjab, India (Serving India & Worldwide)" },
+    { icon: Mail, text: siteConfig.contact.email },
+    { icon: Phone, text: siteConfig.contact.phoneDisplay },
+    { icon: MapPin, text: siteConfig.contact.addressDisplay },
   ];
 
   return (

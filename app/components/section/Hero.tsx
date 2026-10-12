@@ -37,7 +37,7 @@ export default function Hero() {
     { value: "Focused", label: "Digital Agency" },
     { value: "Direct", label: "Communication" },
     { value: "Tailored", label: "Around Your Goals" },
-    { value: "100%", label: "Code Ownership" },
+    { value: "Modern", label: "Tech Stack" },
   ];
 
   return (
