@@ -43,6 +43,7 @@ export const contactPageContent = {
     },
   ],
   services: [
+    { label: "AI & Automation", value: "AI & Automation" },
     { label: "Website / Web Application", value: "Website" },
     { label: "Mobile Application", value: "Mobile App" },
     { label: "Online Store / eCommerce", value: "eCommerce" },

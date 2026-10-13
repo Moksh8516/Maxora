@@ -84,6 +84,7 @@ export const aiVisibilityContent = {
   ],
   solutions: [
     { label: "Search & AI Visibility", value: "Search & AI Visibility" },
+    { label: "AI & Automation", value: "AI & Automation" },
     { label: "Website / Web Application", value: "Website" },
     { label: "Mobile Application", value: "Mobile App" },
     { label: "Online Store / eCommerce", value: "eCommerce" },

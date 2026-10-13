@@ -285,13 +285,20 @@ export default function ContactClient() {
                     </label>
                     <input
                       {...register("whatsapp", {
-                        required: "WhatsApp number is required",
+                        required: "WhatsApp or phone number is required",
                         pattern: {
-                          value: /^(\+91[\-\s]?)?[6789]\d{9}$/,
-                          message: "Enter a valid 10-digit number",
+                          value: /^\+?[0-9\s\-()]{7,20}$/,
+                          message: "Please enter a valid phone number",
+                        },
+                        validate: (val) => {
+                          const digits = String(val).replace(/\D/g, "");
+                          return (
+                            (digits.length >= 7 && digits.length <= 15) ||
+                            "Please enter a valid phone number (7-15 digits)"
+                          );
                         },
                       })}
-                      placeholder="e.g. 7719545464"
+                      placeholder="e.g. +1 415 555 2671"
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-gray-900/70 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                     />
                     {errors.whatsapp && (
@@ -364,7 +371,7 @@ export default function ContactClient() {
                       {...register("email", {
                         required: "Email address is required",
                         pattern: {
-                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                          value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                           message: "Please enter a valid email address",
                         },
                       })}

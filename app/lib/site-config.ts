@@ -55,6 +55,11 @@ export const siteConfig = {
       description: "Bespoke business management systems with zero per-seat monthly license fees.",
     },
     {
+      title: "AI & Automation",
+      href: "/Services/ai-automation",
+      description: "AI voice assistants, intelligent WhatsApp bots, and autonomous lead automation pipelines.",
+    },
+    {
       title: "SEO & AI Optimization",
       href: "/Services/seo-aeo",
       description: "Technical SEO, Core Web Vitals optimization, and AEO for Google AI Overviews and ChatGPT.",

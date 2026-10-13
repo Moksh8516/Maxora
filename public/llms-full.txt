@@ -71,6 +71,15 @@
   - Authoring and maintaining `llms.txt`, `llms-full.txt`, and `pricing.md` for autonomous AI buying agents.
   - Technical speed audits ensuring Largest Contentful Paint (LCP) under 2.5 seconds and Interaction to Next Paint (INP) under 200ms.
 
+### AI & Automation Services
+- **URL**: https://maxoratechnology.com/Services/ai-automation
+- **Technologies**: OpenAI, Claude, Google Gemini, Perplexity, Sarvam AI, Vapi, Retell AI, ElevenLabs, Twilio Voice, WhatsApp Business Cloud API, n8n, Pabbly Connect, Make, Zapier, LangChain, PostgreSQL/pgvector
+- **Scope**:
+  - Conversational AI Voice Assistants: Inbound call answering, caller qualification, Google/Calendly booking, and live agent call forwarding with sub-500ms latency.
+  - WhatsApp AI Support Bots: Official Meta Cloud API integration with RAG retrieval from company documents/catalogs, multi-language support, and human escalation.
+  - Autonomous Lead Pipelines: Sub-60-second lead qualification and enrichment from Meta Ads, Google Ads, and web forms directly into CRM with automated WhatsApp/SMS sequences.
+  - Document Extraction Agents: Automated data extraction from invoices, receipts, PDFs, and emails into ERP/databases without manual data entry.
+
 ---
 
 ## 3. Free AI Visibility Audit

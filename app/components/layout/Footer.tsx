@@ -28,6 +28,7 @@ export default function Footer() {
       { label: "WordPress Solutions", href: "/Services/wordpress" },
       { label: "eCommerce Platforms", href: "/Services/ecommerce" },
       { label: "Custom CRM/ERP", href: "/Services/crm-erp" },
+      { label: "AI & Automation", href: "/Services/ai-automation" },
       { label: "SEO & AI Optimization", href: "/Services/seo-aeo" },
       { label: "Free AI Visibility Check", href: "/ai-visibility-check" },
     ],

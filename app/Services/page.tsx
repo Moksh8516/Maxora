@@ -94,6 +94,12 @@ const servicesSchema = {
           url: "https://maxoratechnology.com/Services/seo-aeo",
           description: "Full-stack technical SEO, Core Web Vitals, Schema.org entity graphs, and generative AI search optimization.",
         },
+        {
+          "@type": "Service",
+          name: "AI & Automation Services",
+          url: "https://maxoratechnology.com/Services/ai-automation",
+          description: "AI voice assistants, intelligent WhatsApp bots, autonomous lead routing pipelines, and custom AI agents.",
+        },
       ],
     },
     {

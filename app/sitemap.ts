@@ -72,6 +72,12 @@ const publicRoutes: {
     lastModified: now,
   },
   {
+    path: "/Services/ai-automation",
+    changeFrequency: "monthly",
+    priority: 0.85,
+    lastModified: now,
+  },
+  {
     path: "/about",
     changeFrequency: "monthly",
     priority: 0.7,

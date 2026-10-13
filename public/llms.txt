@@ -21,6 +21,7 @@
 - [E-Commerce Platforms](https://maxoratechnology.com/Services/ecommerce): High-converting online stores built on Shopify, WooCommerce, and headless commerce architectures.
 - [WordPress Solutions](https://maxoratechnology.com/Services/wordpress): Bespoke Gutenberg block themes, custom plugin engineering, and site speed optimization.
 - [Technical SEO & AEO Services](https://maxoratechnology.com/Services/seo-aeo): Core Web Vitals engineering, Schema.org entity graphs, extractable content answer blocks, and AI engine citation optimization for ChatGPT, Perplexity, and Google AI Overviews.
+- [AI & Automation Services](https://maxoratechnology.com/Services/ai-automation): AI voice assistants, conversational WhatsApp bots (official Meta Cloud API), automated lead qualification, CRM webhook orchestration, and autonomous document extraction agents.
 - [Free AI Visibility Check](https://maxoratechnology.com/ai-visibility-check): Free technical audit testing whether ChatGPT, Perplexity, and Google AI Overviews cite and recommend a prospect's business.
 - [Portfolio & Case Studies](https://maxoratechnology.com/portfolio): Live software demos and architectural case studies.
 

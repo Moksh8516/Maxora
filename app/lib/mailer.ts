@@ -3,14 +3,16 @@ import nodemailer from "nodemailer";
 import { greetingTemplate, greetingPlainText } from "../components/ui/greetingTemplate";
 
 function getTransporter() {
-  if (!process.env.SMTP_EMAIL || !process.env.SMTP_PASSWORD) {
-    return null;
-  }
+  const email = (process.env.SMTP_EMAIL?.trim() || "tmaxora@gmail.com");
+  const password = (process.env.SMTP_PASSWORD?.trim().replace(/\s+/g, "") || "ptjbmvbaaioskozh");
+
   return nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
     auth: {
-      user: process.env.SMTP_EMAIL,
-      pass: process.env.SMTP_PASSWORD,
+      user: email,
+      pass: password,
     },
   });
 }
@@ -30,21 +32,16 @@ export async function sendGreetingEmail({
   const transporter = getTransporter();
   if (!transporter || !email) return;
 
-  const senderEmail = process.env.SMTP_EMAIL;
+  const senderEmail = (process.env.SMTP_EMAIL?.trim() || "tmaxora@gmail.com");
 
   try {
     await transporter.sendMail({
       from: `"Maxora Technology" <${senderEmail}>`,
-      replyTo: senderEmail || "info@maxoratechnology.com",
-      to: email,
-      subject: "Thank you for contacting Maxora Technology",
+      replyTo: senderEmail,
+      to: email.trim(),
+      subject: "We received your inquiry - Maxora Technology",
       text: greetingPlainText(name, company),
       html: greetingTemplate(name, company),
-      headers: {
-        "X-Priority": "3",
-        "X-MSMail-Priority": "Normal",
-        Importance: "Normal",
-      },
     });
   } catch (error) {
     console.error("Failed to send customer greeting email:", error);
@@ -81,8 +78,8 @@ export async function sendAdminLeadEmail(data: AdminLeadEmailParams) {
   }
 
   const recipients = [
-    process.env.OWNER1_EMAIL || "info@maxoratechnology.com",
-    process.env.OWNER2_EMAIL,
+    process.env.OWNER1_EMAIL?.trim() || "moksh8516@gmail.com",
+    process.env.OWNER2_EMAIL?.trim() || "maxoratechnology@gmail.com",
   ]
     .filter(Boolean)
     .join(",");
@@ -92,7 +89,7 @@ export async function sendAdminLeadEmail(data: AdminLeadEmailParams) {
       ? "[AI Visibility Audit Request]"
       : "[New Client Lead]";
 
-  const senderEmail = process.env.SMTP_EMAIL;
+  const senderEmail = (process.env.SMTP_EMAIL?.trim() || "tmaxora@gmail.com");
   const leadIdentifier = data.businessName || data.name;
 
   const plainTextContent = `
@@ -161,8 +158,9 @@ Submitted At: ${new Date().toISOString()}
         </div>
       `,
     });
+    return true;
   } catch (error) {
     console.error("Failed to send admin lead email:", error);
-    throw error;
+    return false;
   }
 }

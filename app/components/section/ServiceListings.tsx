@@ -19,6 +19,10 @@ import {
   Users,
   Target,
   Sparkles,
+  Bot,
+  PhoneCall,
+  Workflow,
+  MessageSquareCode,
 } from "lucide-react";
 
 interface Service {
@@ -333,6 +337,54 @@ export default function ServiceListings() {
       ],
       href: "/Services/seo-aeo",
       gradient: "from-teal-600 to-cyan-500",
+      featured: true,
+    },
+    {
+      id: "ai-automation",
+      title: "AI & Automation",
+      description: "AI Voice Assistants, WhatsApp Bots & Lead Workflows",
+      fullDescription:
+        "We engineer intelligent AI voice agents, custom WhatsApp support bots, and autonomous lead pipelines that operate 24/7. Cut operational friction, eliminate missed customer calls, and qualify leads in under 60 seconds with modern LLMs and automated workflows.",
+      icon: <Bot className="w-6 h-6" />,
+      features: [
+        {
+          title: "AI Voice Assistants",
+          description: "Human-grade phone call handling & scheduling",
+          icon: <PhoneCall className="w-5 h-5" />,
+        },
+        {
+          title: "WhatsApp AI Bots",
+          description: "Official Meta API with 24/7 knowledge RAG",
+          icon: <MessageSquareCode className="w-5 h-5" />,
+        },
+        {
+          title: "Lead Automation",
+          description: "Instant CRM routing & automated follow-ups",
+          icon: <Workflow className="w-5 h-5" />,
+        },
+        {
+          title: "Document AI Agents",
+          description: "Automated invoice parsing & contract extraction",
+          icon: <Code className="w-5 h-5" />,
+        },
+      ],
+      technologies: [
+        "OpenAI GPT-4o",
+        "Vapi / Retell",
+        "ElevenLabs",
+        "Twilio",
+        "WhatsApp Cloud API",
+        "n8n / Make",
+        "pgvector",
+      ],
+      benefits: [
+        "<60 second lead response time",
+        "24/7 inbound phone & WhatsApp coverage",
+        "Zero extra headcount scaling stress",
+        "Direct CRM & calendar synchronization",
+      ],
+      href: "/Services/ai-automation",
+      gradient: "from-blue-600 via-cyan-500 to-indigo-600",
       featured: true,
     },
     // {

@@ -71,6 +71,17 @@
 
 ---
 
+### 6. AI Voice Agents, WhatsApp Bots & Autonomous Lead Pipelines
+- **Model**: Requirement-Based Milestone Sprints
+- **Tech Stack**: OpenAI, Claude, Google Gemini, Perplexity, Sarvam AI, Vapi, Retell AI, ElevenLabs, Twilio, WhatsApp Business Cloud API, n8n, Pabbly Connect, Make, Zapier, PostgreSQL/pgvector
+- **Scope & Deliverables**:
+  - AI Voice Assistants: 24/7 inbound phone call answering, caller qualification, and Google Calendar / Calendly appointment booking with sub-500ms latency.
+  - WhatsApp AI Bots: Official Meta Cloud API bot with conversational knowledge retrieval (RAG) over company documents, pricing estimates, and human escalation.
+  - Lead Automation: <60-second lead qualification and enrichment from Meta/Google Ads and web forms directly into CRM with automated WhatsApp/SMS sequences.
+  - Document & Operations AI: Autonomous parsing of invoices, receipts, PDFs, and customer emails into structured database records with zero manual data entry.
+
+---
+
 ## Payment Terms & Engagement Structure
 
 - **Structure**: Milestone-based payments tied to clear technical deliverables (e.g., initial architecture approval, staging sprint reviews, and final production handover).

@@ -83,15 +83,17 @@ export async function POST(req: Request) {
     }
 
     const cleanPhone = String(contactPhone).replace(/[^\d+]/g, "");
-    if (cleanPhone.length < 10) {
+    const digitsOnly = cleanPhone.replace(/\D/g, "");
+    if (digitsOnly.length < 7 || digitsOnly.length > 16) {
       return NextResponse.json(
-        { success: false, message: "Please provide a valid 10-digit WhatsApp or phone number" },
+        { success: false, message: "Please provide a valid phone or WhatsApp number" },
         { status: 400 },
       );
     }
 
     const cleanEmail = email ? String(email).trim().toLowerCase() : "";
-    if (!cleanEmail || !cleanEmail.includes("@")) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!cleanEmail || !emailRegex.test(cleanEmail)) {
       return NextResponse.json(
         { success: false, message: "Please provide a valid email address" },
         { status: 400 },

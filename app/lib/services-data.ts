@@ -619,4 +619,115 @@ export const servicesData: Record<string, ServiceData> = {
       },
     ],
   },
+  "ai-automation": {
+    slug: "ai-automation",
+    metaTitle: "AI & Automation Services in India | Voice Agents, WhatsApp Bots & Lead Pipelines",
+    metaDescription:
+      "Scale business operations with AI voice assistants, WhatsApp automation bots, intelligent lead pipelines, and custom autonomous AI workflows from Maxora Technology.",
+    h1: "AI & Automation Services for Modern Businesses",
+    subheading:
+      "Deploy natural AI voice agents, 24/7 WhatsApp AI bots, and autonomous lead workflows that cut overhead and respond to buyers in seconds.",
+    intro:
+      "Maxora Technology builds intelligent AI voice agents, custom WhatsApp conversational bots, and automated lead response engines that work around the clock. By combining modern Large Language Models (LLMs), real-time speech synthesis, and workflow orchestration engines, we help businesses eliminate repetitive manual tasks, qualify leads instantly, and deliver human-grade customer support without scaling headcount.",
+    whoItsFor: [
+      "Businesses losing high-intent leads due to slow response times or unanswered after-hours phone calls.",
+      "Service providers, real estate firms, and clinics needing automated appointment booking and client intake.",
+      "eCommerce and D2C brands wanting 24/7 WhatsApp support, instant order tracking, and AI-driven product recommendations.",
+      "Sales teams looking to automate lead enrichment, CRM data entry, and multi-channel follow-up sequences.",
+    ],
+    deliverables: [
+      {
+        title: "AI Voice Assistants & Inbound Phone Agents",
+        description:
+          "Ultra-realistic conversational voice agents powered by modern speech engines (Vapi, Retell, ElevenLabs, Twilio) that answer customer calls, qualify buyer intent, book calendar appointments, and route complex cases to live representatives.",
+      },
+      {
+        title: "Intelligent WhatsApp AI Bots & Support Agents",
+        description:
+          "Official WhatsApp Business Cloud API integrations equipped with custom RAG knowledge retrieval. Answers customer questions from your company docs, sends product catalogs, calculates quotes, and collects lead details seamlessly.",
+      },
+      {
+        title: "Autonomous Lead Automation & CRM Routing",
+        description:
+          "Instant lead ingestion from Meta Ads, Google Ads, website forms, and landing pages. Automatically enriches contact data, scores lead intent, triggers immediate WhatsApp/SMS/Email notifications, and syncs directly into your CRM.",
+      },
+      {
+        title: "Custom LLM Agents & Document Extraction",
+        description:
+          "Autonomous microservices that extract structured data from unstructured invoices, PDFs, emails, and contracts, pushing verified data straight to your database or ERP with zero manual copy-pasting.",
+      },
+      {
+        title: "Multi-Platform Workflow Orchestration",
+        description:
+          "Robust backend automation pipelines engineered using n8n, Make, Zapier, or custom Node/Python microservices connecting your marketing, sales, accounting, and communication channels.",
+      },
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Workflow Audit & Opportunity Mapping",
+        description:
+          "We analyze your current communication channels, manual bottlenecks, and repetitive staff tasks to design an automation architecture with clear ROI.",
+      },
+      {
+        step: "02",
+        title: "Knowledge Base & Agent Prompt Engineering",
+        description:
+          "We ingest your company documentation, FAQs, pricing guidelines, and brand tone into structured vector databases and hardened system prompts with safety guardrails.",
+      },
+      {
+        step: "03",
+        title: "Integration & Webhook Architecture",
+        description:
+          "We connect the AI agents to your telephony (Twilio), WhatsApp API, CRM, calendar systems (Google/Calendly), and databases with end-to-end failover handling.",
+      },
+      {
+        step: "04",
+        title: "Testing, Deployment & Continuous Optimization",
+        description:
+          "We run extensive edge-case testing, monitor conversational transcripts, refine responses based on real user interactions, and ensure 99.9% uptime.",
+      },
+    ],
+    techStack: [
+      "OpenAI GPT-4o / Claude 3.5 Sonnet",
+      "Google Gemini / Perplexity AI",
+      "Sarvam AI (Indic & Hindi Voice Models)",
+      "Vapi / Retell AI (Voice Agents)",
+      "ElevenLabs (Voice Synthesis)",
+      "Twilio / VoIP SIP Trunking",
+      "WhatsApp Business Cloud API",
+      "n8n / Pabbly Connect / Make / Zapier",
+      "LangChain / LlamaIndex",
+      "PostgreSQL / pgvector (RAG)",
+      "Node.js & Python Webhooks",
+      "HubSpot / Salesforce / Custom CRM",
+    ],
+    faqs: [
+      {
+        question: "How do AI voice assistants sound? Do they sound like robots?",
+        answer:
+          "Modern AI voice agents sound remarkably human, complete with natural pacing, breathing pauses, emotional inflection, and sub-500ms response latencies. Most callers cannot distinguish them from a trained human receptionist.",
+      },
+      {
+        question: "Can the WhatsApp bot handle official business verification and green tick?",
+        answer:
+          "Yes. We build directly on the official Meta WhatsApp Business Cloud API. We guide you through Meta Business Verification and ensure compliance with Meta's messaging policies and template guidelines.",
+      },
+      {
+        question: "What happens when an AI voice or chat agent encounters a question it doesn't know?",
+        answer:
+          "Our agents are built with strict guardrails against hallucinations. When an inquiry falls outside its knowledge boundaries, the agent politely informs the caller or user and immediately transfers the conversation to a human team member or creates an urgent CRM ticket.",
+      },
+      {
+        question: "How does lead automation improve our conversion rates?",
+        answer:
+          "Industry data shows responding to an inbound lead within 60 seconds increases conversion rates by over 300%. Our lead automation triggers instant personalized WhatsApp and phone follow-ups the moment an ad form or website inquiry is submitted.",
+      },
+      {
+        question: "How is pricing scoped for AI and automation systems?",
+        answer:
+          "Every automation system is scoped based on your specific requirements: number of channels (Voice, WhatsApp, Web), integration complexity (CRM, ERP, inventory), and expected conversation volume. We provide clear milestone-based pricing with zero hidden vendor lock-in.",
+      },
+    ],
+  },
 };
