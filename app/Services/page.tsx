@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     "Explore Maxora Technology's full suite of enterprise digital solutions: custom web apps, iOS/Android mobile development, AI CRM/ERP, and eCommerce systems.",
   alternates: {
-    canonical: "/Services",
+    canonical: "/services",
   },
   openGraph: {
     title: "Software Engineering & Digital Services | Maxora Technology",
     description:
       "Enterprise-grade custom web applications, mobile apps, AI CRM/ERP systems, and scalable eCommerce platforms built for growing businesses.",
-    url: "/Services",
+    url: "/services",
     siteName: "Maxora Technology",
     images: [
       {
@@ -43,8 +43,8 @@ const servicesSchema = {
   "@graph": [
     {
       "@type": "CollectionPage",
-      "@id": "https://maxoratechnology.com/Services/#webpage",
-      url: "https://maxoratechnology.com/Services",
+      "@id": "https://maxoratechnology.com/services/#webpage",
+      url: "https://maxoratechnology.com/services",
       name: "Digital Services & Software Solutions | Maxora Technology",
       description:
         "Comprehensive digital services including web development, mobile apps, eCommerce, custom CRM/ERP, and WordPress solutions.",
@@ -60,50 +60,56 @@ const servicesSchema = {
         {
           "@type": "Service",
           name: "Custom Web Development",
-          url: "https://maxoratechnology.com/Services/web-development",
+          url: "https://maxoratechnology.com/services/web-development",
           description: "Modern, high-performance web applications built with Next.js, React, and TypeScript.",
         },
         {
           "@type": "Service",
           name: "Mobile App Development",
-          url: "https://maxoratechnology.com/Services/app-development",
+          url: "https://maxoratechnology.com/services/app-development",
           description: "Native iOS & Android mobile applications and cross-platform solutions with React Native and Flutter.",
         },
         {
           "@type": "Service",
           name: "Custom CRM & ERP Systems",
-          url: "https://maxoratechnology.com/Services/crm-erp",
+          url: "https://maxoratechnology.com/services/crm-erp",
           description: "AI-enhanced business management systems, workflow automation, and predictive analytics.",
         },
         {
           "@type": "Service",
           name: "eCommerce Development",
-          url: "https://maxoratechnology.com/Services/ecommerce",
+          url: "https://maxoratechnology.com/services/ecommerce",
           description: "Scalable online stores with custom Next.js, Shopify, and WooCommerce architectures.",
         },
         {
           "@type": "Service",
           name: "WordPress Development",
-          url: "https://maxoratechnology.com/Services/wordpress",
+          url: "https://maxoratechnology.com/services/wordpress",
           description: "Bespoke WordPress theme development, plugins, speed optimization, and security management.",
         },
         {
           "@type": "Service",
           name: "Technical SEO & AEO Optimization",
-          url: "https://maxoratechnology.com/Services/seo-aeo",
+          url: "https://maxoratechnology.com/services/seo-aeo",
           description: "Full-stack technical SEO, Core Web Vitals, Schema.org entity graphs, and generative AI search optimization.",
         },
         {
           "@type": "Service",
           name: "AI & Automation Services",
-          url: "https://maxoratechnology.com/Services/ai-automation",
+          url: "https://maxoratechnology.com/services/ai-automation",
           description: "AI voice assistants, intelligent WhatsApp bots, autonomous lead routing pipelines, and custom AI agents.",
+        },
+        {
+          "@type": "Service",
+          name: "Website Development in Patiala",
+          url: "https://maxoratechnology.com/web-development-patiala",
+          description: "Custom websites, e-commerce, and software engineering for businesses in Patiala and surrounding Punjab regions.",
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://maxoratechnology.com/Services/#breadcrumb",
+      "@id": "https://maxoratechnology.com/services/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -115,13 +121,13 @@ const servicesSchema = {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://maxoratechnology.com/Services",
+          item: "https://maxoratechnology.com/services",
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://maxoratechnology.com/Services/#faq",
+      "@id": "https://maxoratechnology.com/services/#faq",
       mainEntity: [
         {
           "@type": "Question",
