@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import PolicyPage from "../components/ui/PolicyPage";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Maxora Technology",
+  title: "Privacy Policy",
   description:
-    "How Maxora Technology collects, uses, stores, and protects personal information in accordance with privacy standards.",
+    "How Maxora Technology collects, uses, stores, and protects personal information in accordance with applicable global and Indian data protection standards.",
   alternates: {
     canonical: "/privacy",
   },

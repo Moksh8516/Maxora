@@ -1,7 +1,7 @@
 // components/layout/Footer.tsx
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { siteConfig } from "../../lib/site-config";
 import {
   FaFacebookF,
@@ -58,19 +58,23 @@ export default function Footer() {
     },
     ...(siteConfig.social.linkedin
       ? [
-          {
-            icon: FaLinkedinIn,
-            href: siteConfig.social.linkedin,
-            label: "LinkedIn",
-          },
-        ]
+        {
+          icon: FaLinkedinIn,
+          href: siteConfig.social.linkedin,
+          label: "LinkedIn",
+        },
+      ]
       : []),
   ];
 
   const contactInfo = [
+    { icon: MapPin, text: `${siteConfig.legalName}, Patiala, Punjab, India` },
+    ...(siteConfig.contact.publicAddress
+      ? [{ icon: MapPin, text: siteConfig.contact.publicAddress }]
+      : []),
+    { icon: Clock, text: siteConfig.contact.hours },
     { icon: Mail, text: siteConfig.contact.email },
     { icon: Phone, text: siteConfig.contact.phoneDisplay },
-    { icon: MapPin, text: siteConfig.contact.addressDisplay },
   ];
 
   return (
@@ -96,7 +100,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">
-              Custom web, mobile app, and enterprise software engineering for growing businesses.
+              Custom web, mobile app, and enterprise software engineering. Serving clients worldwide.
             </p>
             <div className="space-y-3">
               {contactInfo.map((info, index) => (

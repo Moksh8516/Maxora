@@ -36,10 +36,10 @@ export default function ServicesHero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6"
           >
-            Transform Your Business With{" "}
+            Full-Stack Software Engineering &{" "}
             <span className="relative inline-block">
               <span className="relative z-10 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent animate-gradient">
-                Our Expertise
+                Digital Services
               </span>
               <div className="absolute -bottom-2 left-0 w-full h-3 bg-gradient-to-r from-blue-500/30 to-cyan-500/30 blur-lg" />
             </span>
@@ -52,8 +52,7 @@ export default function ServicesHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto"
           >
-            We deliver cutting-edge digital solutions that drive growth, enhance
-            efficiency, and create lasting value for your business.
+            Maxora Technology engineers high-performance web applications, cross-platform mobile apps, custom CRM/ERP platforms, and search & AI visibility solutions for ambitious businesses.
           </motion.p>
 
           {/* CTA Buttons */}

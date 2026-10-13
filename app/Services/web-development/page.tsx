@@ -4,17 +4,17 @@ import WebDevelopmentClient from "./WebDevelopmentClient";
 import { JsonLd } from "../../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development Services in India",
+  title: "Custom Web Development Services",
   description:
     "Custom web development company in India building high-speed Next.js and React applications for growing businesses. Clean code, SEO, and scalable backends.",
   alternates: {
-    canonical: "/services/web-development",
+    canonical: "/Services/web-development",
   },
   openGraph: {
-    title: "Custom Web Development Services in India | Maxora Technology",
+    title: "Custom Web Development Services | Maxora Technology",
     description:
       "Modern, scalable web applications engineered with Next.js, React, and TypeScript. Optimized for high speed, Core Web Vitals, and search visibility.",
-    url: "/services/web-development",
+    url: "/Services/web-development",
     siteName: "Maxora Technology",
     images: [
       {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Web Development Services in India | Maxora Technology",
+    title: "Custom Web Development Services | Maxora Technology",
     description:
       "Fast, accessible, and search-optimized custom web applications built for growing businesses.",
     images: ["/og-image.png"],
@@ -40,8 +40,8 @@ const serviceSchema = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://maxoratechnology.com/services/web-development/#service",
-      name: "Custom Web Development Services in India",
+      "@id": "https://maxoratechnology.com/Services/web-development/#service",
+      name: "Custom Web Development Services",
       serviceType: "Web Application Development",
       provider: {
         "@type": "Organization",
@@ -91,7 +91,7 @@ const serviceSchema = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://maxoratechnology.com/services/web-development/#breadcrumb",
+      "@id": "https://maxoratechnology.com/Services/web-development/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -103,19 +103,19 @@ const serviceSchema = {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://maxoratechnology.com/services",
+          item: "https://maxoratechnology.com/Services",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Web Development",
-          item: "https://maxoratechnology.com/services/web-development",
+          item: "https://maxoratechnology.com/Services/web-development",
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://maxoratechnology.com/services/web-development/#faq",
+      "@id": "https://maxoratechnology.com/Services/web-development/#faq",
       mainEntity: [
         {
           "@type": "Question",

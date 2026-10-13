@@ -1,6 +1,6 @@
 # Maxora Technology
 
-> Maxora Technology is a software development and digital engineering agency serving growing businesses worldwide, with regional presence in Punjab, India. The company builds custom web applications, mobile apps, CRM/ERP systems, and e-commerce platforms.
+> Maxora Technology is a software development and digital engineering agency serving growing businesses worldwide, as well as companies across the Patiala, Punjab region (including Patiala, Rajpura, Nabha, Samana, Sirhind, Sangrur, Malerkotla, Khanna, Mohali, Zirakpur, Chandigarh, and Ambala). The company builds custom web applications, mobile apps, CRM/ERP systems, e-commerce platforms, and provides technical SEO & AI search optimization.
 
 ## Core Information
 
@@ -9,7 +9,7 @@
 - Phone: +91 7719545464
 - WhatsApp: [+91 7719545464](https://wa.me/917719545464)
 - LinkedIn: https://www.linkedin.com/company/maxoratechnology/
-- Geographic Service Scope: Worldwide & India
+- Geographic Service Scope: Worldwide, Pan-India, and Regional Punjab (Patiala & surrounding towns)
 - Primary Focus: Custom Software Engineering, Next.js/React Web Applications, Mobile App Development (React Native & Flutter), Custom CRM/ERP Systems, E-Commerce Development, WordPress Engineering, and Technical SEO & AI Answer Engine Optimization (AEO/GEO).
 
 ## Services & Solutions

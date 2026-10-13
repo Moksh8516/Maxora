@@ -545,7 +545,7 @@ export const servicesData: Record<string, ServiceData> = {
       {
         title: "AEO & Generative Engine Optimization (GEO)",
         description:
-          "Structuring content into extractable 40-60 word standalone answer blocks, natural-language definition lists, and comparison matrices engineered for LLM passage retrieval.",
+          "Structuring content into extractable standalone answer blocks, natural-language definition lists, and comparison matrices engineered for LLM passage retrieval.",
       },
       {
         title: "Advanced Schema.org & Entity Graph",
@@ -600,22 +600,22 @@ export const servicesData: Record<string, ServiceData> = {
       {
         question: "What is the difference between traditional SEO and AEO (Answer Engine Optimization)?",
         answer:
-          "Traditional SEO focuses on ranking your web pages in search engine result lists. AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) format and position your content so AI assistants (ChatGPT, Perplexity, Google AI Overviews) extract and cite your brand as the direct, trusted answer to user queries.",
+          "Traditional SEO focuses on ranking web pages in search engine result lists. AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) structure and position your content so AI assistants like ChatGPT, Perplexity, and Google AI Overviews extract and cite your brand as an authoritative, direct answer to buyer queries.",
       },
       {
         question: "How do we get our business cited in ChatGPT and Google AI Overviews?",
         answer:
-          "AI models select sources that have concise direct answers (40-60 word summaries), cited statistics, valid Schema.org markup, fast page loads, and consistent entity consensus across authoritative third-party platforms.",
+          "AI models select sources that provide clear direct answer passages, structured Schema.org entity data, reliable technical performance, and verified brand consensus across authoritative third-party platforms.",
       },
       {
         question: "Will technical SEO and AEO improve our existing website traffic?",
         answer:
-          "Yes. By fixing technical crawl errors, optimizing Core Web Vitals under 2 seconds, and targeting high-intent search fan-out queries, you capture traditional search traffic while safeguarding against zero-click AI search cannibalization.",
+          "Technical SEO resolves crawl bottlenecks, optimizes Core Web Vitals, and structures content for both organic search queries and generative answer engines to safeguard visibility.",
       },
       {
         question: "What is llms.txt and does our company website need it?",
         answer:
-          "llms.txt is an emerging standard that provides a clean, Markdown-formatted summary of your business, services, and pricing for AI agents and LLMs. It ensures autonomous AI agents can accurately parse and recommend your business without dealing with complex JavaScript rendering.",
+          "llms.txt is an emerging standard that provides a clean, Markdown-formatted summary of your company, services, and technical capabilities so autonomous AI agents can parse and recommend your business without executing complex client scripts.",
       },
     ],
   },

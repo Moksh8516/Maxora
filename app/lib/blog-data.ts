@@ -580,7 +580,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "How much does a professional business website cost in India?",
         answer:
-          "Professional custom business websites typically range from ₹35,000 to ₹1,50,000+ depending on custom design requirements, interactive features, and system integrations.",
+          "Professional custom web development projects are scoped individually based on your technical requirements, bespoke UI design, third-party integrations, and performance benchmarks. We provide clear milestone-based pricing with full code ownership and zero recurring per-seat fees.",
       },
       {
         question: "Do we need to provide all the website copy and text ourselves?",

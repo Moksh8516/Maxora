@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import PolicyPage from "../components/ui/PolicyPage";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Maxora Technology",
+  title: "Terms of Service",
   description:
-    "The terms and conditions that apply when you use the Maxora Technology website or engage us for digital engineering and design services.",
+    "The legal terms and conditions that apply when you use the Maxora Technology website or engage our team for digital engineering and design services.",
   alternates: {
     canonical: "/terms",
   },

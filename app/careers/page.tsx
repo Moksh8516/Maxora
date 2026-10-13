@@ -9,7 +9,7 @@ import {
 import { JsonLd } from "../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Careers at Maxora Technology | Engineering & Design Roles",
+  title: "Engineering & Design Careers",
   description:
     "Explore career opportunities with Maxora Technology. Join our engineering and design team building high-impact web apps, mobile apps, and enterprise systems.",
   keywords: [

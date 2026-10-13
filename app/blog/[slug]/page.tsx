@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { blogPosts, BlogPost } from "../../lib/blog-data";
 import { JsonLd } from "../../components/seo/StructuredData";
+import { siteConfig } from "../../lib/site-config";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -367,10 +368,10 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="tel:+917719545464"
+                href={`tel:${siteConfig.contact.phoneTel}`}
                 className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border-2 border-white/60 text-white font-semibold hover:bg-white/10 transition-all"
               >
-                <span>Call (+91) 7719545464</span>
+                <span>Call {siteConfig.contact.phoneDisplay}</span>
               </a>
             </div>
           </section>

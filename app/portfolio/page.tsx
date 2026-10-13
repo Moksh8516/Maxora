@@ -7,9 +7,9 @@ import { JsonLd } from "../components/seo/StructuredData";
 import { portfolioContent } from "../lib/portfolio-data";
 
 export const metadata: Metadata = {
-  title: "Portfolio & Case Studies | Maxora Technology",
+  title: "Portfolio & Case Studies",
   description:
-    "Explore digital products, custom web applications, and live demos built by Maxora Technology for growing businesses worldwide.",
+    "Explore custom websites, mobile applications, and enterprise systems engineered by Maxora Technology for ambitious companies in India and worldwide.",
   alternates: {
     canonical: "/portfolio",
   },
@@ -165,6 +165,8 @@ export default function PortfolioPage() {
               </div>
             ))}
           </div>
+
+          {/* TODO(owner): Add approved client work / REAL_LOCAL_PROOF as individual /work/<slug> pages when client names and case studies are approved. Omitted to avoid fabricating client proof. */}
 
           {/* CTA Box */}
           <div className="max-w-4xl mx-auto rounded-3xl bg-gradient-to-br from-blue-600 to-cyan-500 p-8 sm:p-12 text-center text-white shadow-xl">

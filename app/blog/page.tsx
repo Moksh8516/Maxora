@@ -5,9 +5,9 @@ import { JsonLd } from "../components/seo/StructuredData";
 import { blogPosts } from "../lib/blog-data";
 
 export const metadata: Metadata = {
-  title: "Engineering Insights & Software Development Guides",
+  title: "Software Engineering & Web Insights",
   description:
-    "Practical guides and technical insights from Maxora Technology on custom web development, mobile app architecture, CRM/ERP automation, and digital scaling in India.",
+    "Practical guides and engineering insights from Maxora Technology on custom web development, mobile apps, CRM/ERP architecture, and digital growth.",
   alternates: {
     canonical: "/blog",
   },

@@ -184,7 +184,7 @@ export default function WordpressClient() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
-                onClick={() => router.push("/services")}
+                onClick={() => router.push("/Services")}
                 className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift"
               >
                 Explore All Services
@@ -393,7 +393,7 @@ export default function WordpressClient() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
-                onClick={() => router.push("/services")}
+                onClick={() => router.push("/Services")}
                 className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift"
               >
                 View Other Services

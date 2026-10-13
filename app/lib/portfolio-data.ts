@@ -16,7 +16,7 @@ export interface PortfolioCaseStudy {
 export const portfolioContent = {
   header: {
     badge: "Portfolio & Architecture Demos",
-    title: "Work & Sample Architectures",
+    title: "Custom Web, Mobile & Software Development Portfolio",
     description:
       "Explore live products and sample system architectures built by Maxora Technology. Live demos are marked; architecture cards show capability and scope.",
   },

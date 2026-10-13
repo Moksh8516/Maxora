@@ -14,13 +14,13 @@ import {
   HelpCircle,
   MessageSquare,
   Globe,
-  Code,
   Smartphone,
   Layout,
   ShoppingCart,
   Database,
 } from "lucide-react";
 import { ServiceData } from "../../lib/services-data";
+import { siteConfig } from "../../lib/site-config";
 
 interface ServicePageTemplateProps {
   data: ServiceData;
@@ -259,21 +259,26 @@ export default function ServicePageTemplate({ data }: ServicePageTemplateProps) 
                 className="rounded-2xl bg-white dark:bg-gray-900 border border-gray-200/80 dark:border-gray-800/80 overflow-hidden shadow-sm"
               >
                 <button
+                  type="button"
                   onClick={() => toggleFaq(idx)}
+                  aria-expanded={openFaq === idx}
+                  aria-controls={`faq-ans-${idx}`}
                   className="w-full text-left p-6 flex justify-between items-center gap-4 font-semibold text-lg text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   <span>{faq.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 shrink-0 transition-transform duration-200 ${
-                      openFaq === idx ? "rotate-180 text-blue-600 dark:text-blue-400" : ""
-                    }`}
+                    className={`w-5 h-5 shrink-0 transition-transform duration-200 ${openFaq === idx ? "rotate-180 text-blue-600 dark:text-blue-400" : ""
+                      }`}
                   />
                 </button>
-                {openFaq === idx && (
-                  <div className="px-6 pb-6 text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-gray-800 pt-4">
-                    {faq.answer}
-                  </div>
-                )}
+                <div
+                  id={`faq-ans-${idx}`}
+                  className={`px-6 pb-6 text-gray-600 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-gray-800 pt-4 ${
+                    openFaq === idx ? "block" : "hidden"
+                  }`}
+                >
+                  {faq.answer}
+                </div>
               </div>
             ))}
           </div>
@@ -339,10 +344,10 @@ export default function ServicePageTemplate({ data }: ServicePageTemplateProps) 
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="tel:+917719545464"
+              href={`tel:${siteConfig.contact.phoneTel}`}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border-2 border-white/60 text-white font-semibold text-lg hover:bg-white/10 transition-all"
             >
-              <span>Call (+91) 7719545464</span>
+              <span>Call {siteConfig.contact.phoneDisplay}</span>
             </a>
           </div>
         </section>

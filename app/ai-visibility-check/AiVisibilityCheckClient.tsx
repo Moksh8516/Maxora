@@ -277,7 +277,7 @@ export default function AiVisibilityCheckClient() {
                         );
                       },
                     })}
-                    placeholder="e.g. +1 415 555 2671 or +91 7719545464"
+                    placeholder="e.g. +1 415 555 2671"
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                   />
                   {errors.whatsapp && (
@@ -286,13 +286,17 @@ export default function AiVisibilityCheckClient() {
                 </div>
               </div>
 
-              {/* Business Name & Social Media Profile Link (BOTH REQUIRED) */}
+              {/* Business Name & Social Media Profile Link */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1.5">
+                  <label
+                    htmlFor="aiBusinessName"
+                    className="block text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1.5"
+                  >
                     Business Name *
                   </label>
                   <input
+                    id="aiBusinessName"
                     {...register("businessName", {
                       required: "Business name is required",
                     })}
@@ -305,19 +309,18 @@ export default function AiVisibilityCheckClient() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1.5">
-                    Social Media Profile Link *
+                  <label
+                    htmlFor="aiSocialProfile"
+                    className="block text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1.5"
+                  >
+                    Social Media Profile Link <span className="text-gray-400 font-normal lowercase">(optional)</span>
                   </label>
                   <input
-                    {...register("socialProfile", {
-                      required: "Please provide your social profile link or handle",
-                    })}
+                    id="aiSocialProfile"
+                    {...register("socialProfile")}
                     placeholder="e.g. instagram.com/acme or linkedin.com/company/acme"
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                   />
-                  {errors.socialProfile && (
-                    <p className="text-xs text-red-500 mt-1">{errors.socialProfile.message}</p>
-                  )}
                 </div>
               </div>
 
@@ -346,11 +349,11 @@ export default function AiVisibilityCheckClient() {
                     {...register("email", {
                       required: "Email address is required",
                       pattern: {
-                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                         message: "Please enter a valid email address",
                       },
                     })}
-                    placeholder="name@company.com or name@gmail.com"
+                    placeholder="name@company.com"
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                   />
                   {errors.email && (

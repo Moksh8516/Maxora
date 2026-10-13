@@ -1,10 +1,10 @@
-// app/services/ecommerce/page.tsx
+// app/Services/ecommerce/page.tsx
 import type { Metadata } from "next";
 import EcommerceClient from "./EcommerceClient";
 import { JsonLd } from "../../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "E-Commerce Development Company India | Shopify & Custom Stores",
+  title: "E-Commerce Development Services",
   description:
     "E-commerce development company in India building high-converting online stores with Shopify, WooCommerce, and custom headless commerce architectures.",
   alternates: {

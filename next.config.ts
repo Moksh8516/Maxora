@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/service/:slug*",
+        source: "/Service/:slug*",
         destination: "/Services/:slug*",
         permanent: true,
       },
@@ -18,3 +18,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+

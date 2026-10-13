@@ -471,19 +471,17 @@ export default function ServiceListings() {
                 <button
                   key={service.id}
                   onClick={() => setActiveService(service.id)}
-                  className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
-                    activeService === service.id
+                  className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${activeService === service.id
                       ? `bg-gradient-to-r ${service.gradient} text-white shadow-lg shadow-blue-500/25`
                       : "bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 border border-gray-200/50 dark:border-gray-700/50"
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-4">
                     <div
-                      className={`p-3 rounded-lg ${
-                        activeService === service.id
+                      className={`p-3 rounded-lg ${activeService === service.id
                           ? "bg-white/20"
                           : `bg-gradient-to-br ${service.gradient}`
-                      }`}
+                        }`}
                     >
                       <div
                         className={
@@ -505,11 +503,10 @@ export default function ServiceListings() {
                         )}
                       </div>
                       <p
-                        className={`text-sm mt-1 ${
-                          activeService === service.id
+                        className={`text-sm mt-1 ${activeService === service.id
                             ? "text-white/90"
                             : "text-gray-600 dark:text-gray-400"
-                        }`}
+                          }`}
                       >
                         {service.description}
                       </p>

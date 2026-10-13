@@ -1,17 +1,17 @@
-// app/services/crm-erp/page.tsx
+// app/Services/crm-erp/page.tsx
 import type { Metadata } from "next";
 import CrmErpClient from "./CrmErpClient";
 import { JsonLd } from "../../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Custom CRM & ERP Software Development Company India",
+  title: "Custom CRM & ERP Development",
   description:
     "Custom CRM and ERP software development company in India. We engineer tailored business management systems, workflow automation, and centralized data portals.",
   alternates: {
     canonical: "/Services/crm-erp",
   },
   openGraph: {
-    title: "Custom CRM & ERP Software Development | Maxora Technology",
+    title: "Custom CRM & ERP Development | Maxora Technology",
     description:
       "Automate workflows, unify business data, and scale your operations with tailored CRM/ERP systems designed by Maxora Technology.",
     url: "/Services/crm-erp",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom CRM & ERP Software Development | Maxora Technology",
+    title: "Custom CRM & ERP Development | Maxora Technology",
     description:
       "Scalable, secure, and intuitive business management software tailored to your organization.",
     images: ["/og-image.png"],

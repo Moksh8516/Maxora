@@ -4,14 +4,14 @@ import SeoAeoClient from "./SeoAeoClient";
 import { JsonLd } from "../../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Technical SEO & AEO (AI Engine Optimization) Services India",
+  title: "Technical SEO & AEO Services in India",
   description:
-    "Improve Google rankings and get cited by AI answer engines (ChatGPT, Perplexity, Google AI Overviews). Technical SEO, Schema markup, Core Web Vitals, and LLM citation optimization in India.",
+    "Technical SEO and generative engine optimization in India. We engineer Core Web Vitals, Schema graphs, and content structure for Google and AI answer engines.",
   alternates: {
     canonical: "/Services/seo-aeo",
   },
   openGraph: {
-    title: "Technical SEO & AEO (AI Engine Optimization) Services | Maxora Technology",
+    title: "Technical SEO & AEO Services in India | Maxora Technology",
     description:
       "Modern technical SEO, Core Web Vitals engineering, Schema JSON-LD, and generative engine optimization to capture Google and AI search visibility.",
     url: "/Services/seo-aeo",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Technical SEO & AEO (AI Engine Optimization) Services | Maxora Technology",
+    title: "Technical SEO & AEO Services in India | Maxora Technology",
     description:
       "Optimize your website for Google Search and AI answer engines like ChatGPT and Perplexity.",
     images: ["/og-image.png"],
@@ -129,7 +129,7 @@ const serviceSchema = {
           name: "What is the difference between traditional SEO and AEO (Answer Engine Optimization)?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Traditional SEO focuses on ranking your web pages in search engine result lists. AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) format and position your content so AI assistants (ChatGPT, Perplexity, Google AI Overviews) extract and cite your brand as the direct, trusted answer to user queries.",
+            text: "Traditional SEO focuses on ranking web pages in search engine result lists. AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) structure and position your content so AI assistants like ChatGPT, Perplexity, and Google AI Overviews extract and cite your brand as an authoritative, direct answer to buyer queries.",
           },
         },
         {
@@ -137,7 +137,7 @@ const serviceSchema = {
           name: "How do we get our business cited in ChatGPT and Google AI Overviews?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "AI models select sources that have concise direct answers (40-60 word summaries), cited statistics, valid Schema.org markup, fast page loads, and consistent entity consensus across authoritative third-party platforms.",
+            text: "AI models select sources that provide clear direct answer passages, structured Schema.org entity data, reliable technical performance, and verified brand consensus across authoritative third-party platforms.",
           },
         },
         {
@@ -145,7 +145,7 @@ const serviceSchema = {
           name: "Will technical SEO and AEO improve our existing website traffic?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. By fixing technical crawl errors, optimizing Core Web Vitals under 2 seconds, and targeting high-intent search fan-out queries, you capture traditional search traffic while safeguarding against zero-click AI search cannibalization.",
+            text: "Technical SEO resolves crawl bottlenecks, optimizes Core Web Vitals, and structures content for both organic search queries and generative answer engines to safeguard visibility.",
           },
         },
         {
@@ -153,7 +153,7 @@ const serviceSchema = {
           name: "What is llms.txt and does our company website need it?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "llms.txt is an emerging standard that provides a clean, Markdown-formatted summary of your business, services, and pricing for AI agents and LLMs. It ensures autonomous AI agents can accurately parse and recommend your business without dealing with complex JavaScript rendering.",
+            text: "llms.txt is an emerging standard that provides a clean, Markdown-formatted summary of your company, services, and technical capabilities so autonomous AI agents can parse and recommend your business without executing complex client scripts.",
           },
         },
       ],

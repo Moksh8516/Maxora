@@ -4,6 +4,7 @@
 import { motion } from "framer-motion";
 import { Calendar, MessageSquare, Phone, Zap } from "lucide-react";
 import Link from "next/link";
+import { siteConfig } from "../../lib/site-config";
 
 export default function CTA() {
   return (
@@ -56,7 +57,7 @@ export default function CTA() {
                     <Zap className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   </Link>
                   <a
-                    href="tel:+917719545464"
+                    href={`tel:${siteConfig.contact.phoneTel}`}
                     className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gray-100 dark:bg-white/10 backdrop-blur-sm text-gray-900 dark:text-white font-semibold hover:bg-gray-200 dark:hover:bg-white/20 transition-all duration-300 border border-gray-300 dark:border-white/20"
                   >
                     <Phone className="w-5 h-5" />
@@ -70,14 +71,14 @@ export default function CTA() {
                     {
                       icon: <MessageSquare className="w-5 h-5" />,
                       label: "Email Us",
-                      value: "info@maxoratechnology.com",
-                      href: "mailto:info@maxoratechnology.com",
+                      value: siteConfig.contact.email,
+                      href: `mailto:${siteConfig.contact.email}`,
                     },
                     {
                       icon: <Phone className="w-5 h-5" />,
                       label: "Call Us",
-                      value: "+91 7719545464",
-                      href: "tel:+917719545464",
+                      value: siteConfig.contact.phoneDisplay,
+                      href: `tel:${siteConfig.contact.phoneTel}`,
                     },
                     {
                       icon: <Calendar className="w-5 h-5" />,

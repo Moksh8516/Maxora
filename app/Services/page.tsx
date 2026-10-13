@@ -1,4 +1,3 @@
-// app/services/page.tsx
 import type { Metadata } from "next";
 import ServicesHero from "../components/section/ServiceHero";
 import ServiceListings from "../components/section/ServiceListings";
@@ -8,14 +7,14 @@ import CTA from "../components/section/CTA";
 import { JsonLd } from "../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Digital Services & Custom Software Solutions",
+  title: "Software Engineering & Digital Services",
   description:
     "Explore Maxora Technology's full suite of enterprise digital solutions: custom web apps, iOS/Android mobile development, AI CRM/ERP, and eCommerce systems.",
   alternates: {
     canonical: "/Services",
   },
   openGraph: {
-    title: "Digital Services & Custom Software Solutions | Maxora Technology",
+    title: "Software Engineering & Digital Services | Maxora Technology",
     description:
       "Enterprise-grade custom web applications, mobile apps, AI CRM/ERP systems, and scalable eCommerce platforms built for growing businesses.",
     url: "/Services",
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Services & Custom Software Solutions | Maxora Technology",
+    title: "Software Engineering & Digital Services | Maxora Technology",
     description:
       "Discover our comprehensive digital solutions: web apps, mobile apps, custom CRM/ERP, eCommerce, and WordPress development.",
     images: ["/og-image.png"],

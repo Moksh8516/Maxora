@@ -4,7 +4,7 @@ import { JsonLd } from "../components/seo/StructuredData";
 import { aiVisibilityContent } from "../lib/ai-visibility-data";
 
 export const metadata: Metadata = {
-  title: "Free AI Visibility Check | Maxora Technology",
+  title: "Free AI Visibility Check",
   description:
     "Check whether ChatGPT, Perplexity, and Google AI Overviews recommend your business. Free technical audit and citation breakdown by Maxora Technology.",
   alternates: {

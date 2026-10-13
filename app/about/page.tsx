@@ -10,13 +10,15 @@ import {
   Rocket,
   Sparkles,
   Target,
+  MapPin,
 } from "lucide-react";
 import { JsonLd } from "../components/seo/StructuredData";
+import { siteConfig } from "../lib/site-config";
 
 export const metadata: Metadata = {
-  title: "About Maxora Technology | Engineering Digital Solutions for Growth",
+  title: "About Our Team & Philosophy",
   description:
-    "Learn how Maxora Technology partners with ambitious businesses to build scalable web applications, mobile apps, custom CRM/ERP platforms, and high-performance digital products.",
+    "Learn how Maxora Technology builds scalable web applications, mobile apps, CRM/ERP platforms, and high-performance digital systems for ambitious companies.",
   keywords: [
     "about Maxora Technology",
     "software development agency India",
@@ -154,7 +156,7 @@ export default function AboutPage() {
                 About Maxora Technology
               </div>
               <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-                Big care for the details that move your business forward.
+                Software engineering and digital solutions built on clarity and craft.
               </h1>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-gray-700 dark:text-gray-200 sm:text-xl">
                 Maxora is a growing digital agency helping businesses turn good
@@ -347,6 +349,31 @@ export default function AboutPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Factual Company Overview & Regional Scope */}
+        <section className="border-t border-gray-200/70 bg-white/40 py-20 dark:border-gray-800/70 dark:bg-gray-950/20 lg:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-600 dark:text-blue-400">
+                <MapPin className="h-4 w-4" />
+                <span>Headquarters & Service Scope</span>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
+                Based in Patiala, Serving Clients Worldwide
+              </h2>
+              <div className="mt-6 space-y-4 text-base sm:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                <p>
+                  Maxora Technology is an independent software development agency headquartered in Patiala, Punjab, India. We engineer custom web applications, mobile apps, CRM/ERP platforms, e-commerce storefronts, and technical search solutions.
+                </p>
+                <p>
+                  While our engineering standards and project delivery model serve growing businesses worldwide, we also maintain dedicated regional collaboration for enterprises across {siteConfig.serviceTowns.join(", ")}.
+                </p>
+              </div>
+
+              {/* TODO(owner): Add real team members (names, roles, photos) once provided. Omitted to avoid fabricating team data. */}
             </div>
           </div>
         </section>

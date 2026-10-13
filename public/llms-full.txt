@@ -1,19 +1,14 @@
-# Maxora Technology — Full Knowledge Base & Machine-Readable Profile
+# Maxora Technology — Comprehensive Machine-Readable Knowledge Base
 
-> Maxora Technology is an engineering-first software development and digital solutions company serving growing businesses worldwide, with regional headquarters in Punjab, India. The firm specializes in bespoke web application engineering, native and cross-platform mobile apps, custom CRM and ERP business management systems, headless e-commerce architectures, and technical SEO & AI Answer Engine Optimization (AEO/GEO).
+## 1. Company Profile & Overview
 
----
-
-## 1. Company Information & Identity
-
-- **Official Name**: Maxora Technology
+- **Legal / Brand Name**: Maxora Technology
 - **Website**: https://maxoratechnology.com
 - **Contact Email**: info@maxoratechnology.com
 - **Phone / WhatsApp**: +91 7719545464
-- **WhatsApp Direct**: https://wa.me/917719545464?text=Hello%20Maxora%20Technology%2C%20I%20would%20like%20to%20discuss%20a%20project.
-- **LinkedIn**: https://www.linkedin.com/company/maxoratechnology/
-- **Headquarters**: Punjab, India
-- **Service Scope**: Worldwide (North America, Europe, Australia, Middle East) & Pan-India
+- **Working Hours**: Monday – Friday, 9:00 AM – 6:00 PM IST
+- **Headquarters / Regional Base**: Punjab, India
+- **Service Scope**: Worldwide (North America, Europe, Australia, Middle East), Pan-India, and Regional Punjab (Patiala, Rajpura, Nabha, Samana, Sirhind-Fatehgarh Sahib, Sangrur, Malerkotla, Khanna, Mohali, Zirakpur, Chandigarh, Ambala)
 - **Core Engineering Philosophy**: Direct collaboration with full-stack engineers, milestone-driven sprints, 100% intellectual property ownership, and zero monthly seat fees.
 
 ---
@@ -66,19 +61,24 @@
 - **URL**: https://maxoratechnology.com/Services/seo-aeo
 - **Technologies**: Schema.org JSON-LD, Core Web Vitals Engineering, llms.txt, Machine-Readable Metadata
 - **Scope**:
-  - Formatting content into extractable 40–60 word answer blocks optimized for Google AI Overviews, ChatGPT Search, Perplexity, Claude, and Gemini citations.
+  - Formatting content into clear, extractable answer blocks and structured schemas optimized for Google AI Overviews, ChatGPT Search, Perplexity, Claude, and Gemini citations.
   - Comprehensive entity graph implementation using JSON-LD (Organization, Service, FAQPage, BreadcrumbList).
   - Authoring and maintaining `llms.txt`, `llms-full.txt`, and `pricing.md` for autonomous AI buying agents.
   - Technical speed audits ensuring Largest Contentful Paint (LCP) under 2.5 seconds and Interaction to Next Paint (INP) under 200ms.
 
 ### AI & Automation Services
 - **URL**: https://maxoratechnology.com/Services/ai-automation
-- **Technologies**: OpenAI, Claude, Google Gemini, Perplexity, Sarvam AI, Vapi, Retell AI, ElevenLabs, Twilio Voice, WhatsApp Business Cloud API, n8n, Pabbly Connect, Make, Zapier, LangChain, PostgreSQL/pgvector
+- **Technologies**: OpenAI, Claude, Vapi, Retell AI, ElevenLabs, Twilio Voice, WhatsApp Business Cloud API, n8n, Make, LangChain, PostgreSQL/pgvector
 - **Scope**:
   - Conversational AI Voice Assistants: Inbound call answering, caller qualification, Google/Calendly booking, and live agent call forwarding with sub-500ms latency.
   - WhatsApp AI Support Bots: Official Meta Cloud API integration with RAG retrieval from company documents/catalogs, multi-language support, and human escalation.
   - Autonomous Lead Pipelines: Sub-60-second lead qualification and enrichment from Meta Ads, Google Ads, and web forms directly into CRM with automated WhatsApp/SMS sequences.
   - Document Extraction Agents: Automated data extraction from invoices, receipts, PDFs, and emails into ERP/databases without manual data entry.
+
+### Regional Coverage (Patiala & Surrounding Towns)
+- **Base Location**: Based in Patiala, Punjab, India.
+- **Regional Service Towns**: Patiala, Rajpura, Nabha, Samana, Sirhind-Fatehgarh Sahib, Sangrur, Malerkotla, Khanna, Mohali, Zirakpur, Chandigarh, Ambala.
+- **Service Scope**: Full digital and software engineering capabilities served directly to regional and worldwide clients without intermediary agency markups.
 
 ---
 
@@ -132,6 +132,13 @@ Our engineering team reviews project details directly and replies via WhatsApp o
 
 - **Homepage**: https://maxoratechnology.com
 - **Services Index**: https://maxoratechnology.com/Services
+- **Web Development**: https://maxoratechnology.com/Services/web-development
+- **Mobile Apps**: https://maxoratechnology.com/Services/app-development
+- **Custom CRM/ERP**: https://maxoratechnology.com/Services/crm-erp
+- **E-Commerce**: https://maxoratechnology.com/Services/ecommerce
+- **WordPress**: https://maxoratechnology.com/Services/wordpress
+- **Technical SEO & AEO**: https://maxoratechnology.com/Services/seo-aeo
+- **AI & Automation**: https://maxoratechnology.com/Services/ai-automation
 - **Portfolio**: https://maxoratechnology.com/portfolio
 - **Contact**: https://maxoratechnology.com/contact
 - **Free AI Audit**: https://maxoratechnology.com/ai-visibility-check

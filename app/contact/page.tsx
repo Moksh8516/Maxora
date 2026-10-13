@@ -3,10 +3,12 @@ import type { Metadata } from "next";
 import ContactClient from "./ContactClient";
 import { JsonLd } from "../components/seo/StructuredData";
 
+import { siteConfig } from "../lib/site-config";
+
 export const metadata: Metadata = {
-  title: "Contact Us | Request a Consultation | Maxora Technology",
+  title: "Contact Us | Request a Consultation",
   description:
-    "Get in touch with Maxora Technology for web development, mobile apps, custom CRM/ERP, and ecommerce solutions. Response within 24 hours.",
+    "Connect with Maxora Technology for custom web development, mobile apps, CRM/ERP systems, and e-commerce solutions. Fast response within 24 business hours.",
   keywords: [
     "contact Maxora Technology",
     "hire software developers",
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
     canonical: "/contact",
   },
   openGraph: {
-    title: "Contact Maxora Technology | Get in Touch",
+    title: "Contact Us | Request a Consultation | Maxora Technology",
     description:
       "Ready to start your next software or web project? Connect with the Maxora Technology engineering team today.",
     url: "/contact",
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Maxora Technology | Get in Touch",
+    title: "Contact Us | Request a Consultation | Maxora Technology",
     description:
       "Schedule a technical consultation for your web, app, or enterprise software project.",
     images: ["/og-image.png"],
@@ -69,22 +71,27 @@ const contactSchema = {
           },
         ],
       },
-      mainEntity: {
-        "@type": "Organization",
-        "@id": "https://maxoratechnology.com/#organization",
-        name: "Maxora Technology",
-        telephone: "+91-7719545464",
-        email: "info@maxoratechnology.com",
-        contactPoint: [
-          {
-            "@type": "ContactPoint",
-            telephone: "+91-7719545464",
-            contactType: "customer service",
-            email: "info@maxoratechnology.com",
-            availableLanguage: ["English", "Hindi", "Punjabi"],
-          },
-        ],
-      },
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://maxoratechnology.com/#professionalservice",
+      name: siteConfig.name,
+      legalName: siteConfig.legalName,
+      url: siteConfig.url,
+      telephone: siteConfig.contact.phone,
+      email: siteConfig.contact.email,
+      openingHours: ["Mo-Fr 09:00-18:00"],
+      areaServed: [
+        {
+          "@type": "AdministrativeArea",
+          name: "Worldwide",
+        },
+        ...siteConfig.serviceTowns.map((town) => ({
+          "@type": "City",
+          name: town,
+        })),
+      ],
+      priceRange: "$$",
     },
   ],
 };

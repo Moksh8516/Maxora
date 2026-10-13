@@ -1,10 +1,10 @@
-// app/services/wordpress/page.tsx
+// app/Services/wordpress/page.tsx
 import type { Metadata } from "next";
 import WordpressClient from "./WordpressClient";
 import { JsonLd } from "../../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "WordPress Development Services India | Custom Themes & Speed",
+  title: "Custom WordPress Development",
   description:
     "Expert WordPress development company in India. Custom Gutenberg block themes, WooCommerce stores, speed optimization, and secure plugin engineering.",
   alternates: {

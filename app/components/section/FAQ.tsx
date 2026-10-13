@@ -11,48 +11,26 @@ import {
   Shield,
   Zap,
 } from "lucide-react";
+import { homepageFaqs } from "../../lib/faq-data";
+
+export { homepageFaqs };
+
+const faqIcons = [
+  <Clock key="1" className="w-5 h-5" />,
+  <DollarSign key="2" className="w-5 h-5" />,
+  <Shield key="3" className="w-5 h-5" />,
+  <Zap key="4" className="w-5 h-5" />,
+  <HelpCircle key="5" className="w-5 h-5" />,
+  <Users key="6" className="w-5 h-5" />,
+];
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const faqs = [
-    {
-      question: "What's the typical timeline for a web development project?",
-      answer:
-        "Project timelines vary based on complexity. A simple website takes 4-6 weeks, while complex web applications can take 3-6 months. We provide detailed timelines during our discovery phase.",
-      icon: <Clock className="w-5 h-5" />,
-    },
-    {
-      question: "How much does custom software development cost?",
-      answer:
-        "Each project is scoped individually based on your technical requirements, deliverables, and timeline. We provide clear, milestone-driven estimates after an initial discovery consultation.",
-      icon: <DollarSign className="w-5 h-5" />,
-    },
-    {
-      question: "Do you offer ongoing maintenance and support?",
-      answer:
-        "Yes, we provide comprehensive maintenance plans including security updates, performance monitoring, technical support, and feature enhancements.",
-      icon: <Shield className="w-5 h-5" />,
-    },
-    {
-      question: "What technologies do you specialize in?",
-      answer:
-        "We specialize in modern technologies including Next.js, React, Node.js, Python, React Native, AWS, and various databases. We choose the right stack based on your project requirements.",
-      icon: <Zap className="w-5 h-5" />,
-    },
-    {
-      question: "How do you ensure project quality and success?",
-      answer:
-        "We follow agile methodologies, conduct regular testing, provide progress updates, and involve clients throughout the development process to ensure alignment with expectations.",
-      icon: <HelpCircle className="w-5 h-5" />,
-    },
-    {
-      question: "Can you work with our existing team?",
-      answer:
-        "Absolutely. We often collaborate with in-house teams, providing specialized expertise and integrating seamlessly with your existing workflow and processes.",
-      icon: <Users className="w-5 h-5" />,
-    },
-  ];
+  const faqs = homepageFaqs.map((faq, index) => ({
+    ...faq,
+    icon: faqIcons[index] || <HelpCircle className="w-5 h-5" />,
+  }));
 
   return (
     <section className="py-20 lg:py-28">

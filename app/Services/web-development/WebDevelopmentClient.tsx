@@ -226,7 +226,7 @@ export default function WebDevelopmentClient() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/services"
+                href="/Services"
                 className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift flex items-center justify-center gap-2"
               >
                 All Services
@@ -618,7 +618,7 @@ export default function WebDevelopmentClient() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/services"
+                href="/Services"
                 className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift flex items-center justify-center gap-2"
               >
                 Explore Other Services

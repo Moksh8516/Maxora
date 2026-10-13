@@ -4,14 +4,14 @@ import AiAutomationClient from "./AiAutomationClient";
 import { JsonLd } from "../../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "AI & Automation Services in India | Voice Agents, WhatsApp Bots & Lead Workflows",
+  title: "AI & Automation Services in India",
   description:
-    "Deploy natural AI voice agents, 24/7 intelligent WhatsApp bots, and autonomous lead automation pipelines with Maxora Technology. Cut response times and scale business operations.",
+    "Deploy natural AI voice agents, intelligent WhatsApp bots, and autonomous lead pipelines with Maxora Technology. Cut response times and scale operations.",
   alternates: {
     canonical: "/Services/ai-automation",
   },
   openGraph: {
-    title: "AI & Automation Services | Voice Agents, WhatsApp Bots & Lead Pipelines",
+    title: "AI & Automation Services in India | Maxora Technology",
     description:
       "Automate customer calls, WhatsApp inquiries, lead qualification, and business workflows with custom AI solutions engineered by Maxora Technology.",
     url: "/Services/ai-automation",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI & Automation Services | Maxora Technology",
+    title: "AI & Automation Services in India | Maxora Technology",
     description:
       "Scale business operations with AI voice assistants, WhatsApp automation bots, and autonomous lead pipelines.",
     images: ["/og-image.png"],

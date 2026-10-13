@@ -1,10 +1,10 @@
-// app/services/app-development/page.tsx
+// app/Services/app-development/page.tsx
 import type { Metadata } from "next";
 import AppDevelopmentClient from "./AppDevelopmentClient";
 import { JsonLd } from "../../components/seo/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development Company India | iOS & Android Apps",
+  title: "Mobile App Development Services",
   description:
     "Mobile app development company in India building native and cross-platform apps using Flutter and React Native. Fast, secure, and user-centric mobile apps.",
   alternates: {

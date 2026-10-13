@@ -8,12 +8,8 @@ import {
   Send,
   Phone,
   Mail,
-  Clock,
+  MapPin,
   MessageSquare,
-  Compass,
-  FileCode2,
-  Rocket,
-  ShieldCheck,
 } from "lucide-react";
 import { siteConfig } from "../lib/site-config";
 import { contactPageContent } from "../lib/contact-data";
@@ -31,8 +27,6 @@ interface ContactFormData {
   message?: string;
   _hp?: string;
 }
-
-const stepIcons = [Compass, FileCode2, Rocket, ShieldCheck];
 
 export default function ContactClient() {
   const router = useRouter();
@@ -114,10 +108,10 @@ export default function ContactClient() {
       },
     },
     {
-      icon: Clock,
-      title: "Location & Coverage",
-      details: siteConfig.contact.addressDisplay,
-      sub: "Serving clients worldwide and India",
+      icon: MapPin,
+      title: "Location & Hours",
+      details: `${siteConfig.legalName}, Patiala, Punjab, India`,
+      sub: `Hours: ${siteConfig.contact.hours}. Serving clients worldwide.`,
       color: "from-orange-500 to-red-500",
     },
   ];
@@ -181,6 +175,11 @@ export default function ContactClient() {
           ))}
         </div>
 
+        {/* Service Towns regional note */}
+        <p className="text-center text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+          Based in Patiala, Punjab, India. Serving clients worldwide, with dedicated regional service across {siteConfig.serviceTowns.join(", ")}.
+        </p>
+
         {/* Main Grid: Short Form + What to Expect */}
         <div className="grid lg:grid-cols-12 gap-10 max-w-5xl mx-auto items-start">
           {/* Left: What to Expect & 4 Process Steps */}
@@ -211,10 +210,8 @@ export default function ContactClient() {
                 </h3>
 
                 <div className="space-y-3">
-                  {contactPageContent.processSteps.map((s, idx) => {
-                    const Icon = stepIcons[idx % stepIcons.length];
-                    return (
-                      <div key={s.step} className="flex gap-3 items-start">
+                  {contactPageContent.processSteps.map((s) => (
+                    <div key={s.step} className="flex gap-3 items-start">
                         <span className="text-xs font-mono font-bold text-blue-500 bg-blue-500/10 px-1.5 py-0.5 rounded">
                           {s.step}
                         </span>
@@ -227,8 +224,7 @@ export default function ContactClient() {
                           </p>
                         </div>
                       </div>
-                    );
-                  })}
+                  ))}
                 </div>
               </div>
             </div>
@@ -307,13 +303,17 @@ export default function ContactClient() {
                   </div>
                 </div>
 
-                {/* Business Name & Social Media Profile Link (BOTH REQUIRED) */}
+                {/* Business Name & Social Media Profile Link */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1">
+                    <label
+                      htmlFor="businessNameInput"
+                      className="block text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1"
+                    >
                       Business Name *
                     </label>
                     <input
+                      id="businessNameInput"
                       {...register("businessName", {
                         required: "Please provide your business name",
                       })}
@@ -326,19 +326,18 @@ export default function ContactClient() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1">
-                      Social Media Profile Link *
+                    <label
+                      htmlFor="socialProfileInput"
+                      className="block text-xs font-semibold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1"
+                    >
+                      Social Media Profile Link <span className="text-gray-400 font-normal lowercase">(optional)</span>
                     </label>
                     <input
-                      {...register("socialProfile", {
-                        required: "Please provide your social profile link or handle",
-                      })}
+                      id="socialProfileInput"
+                      {...register("socialProfile")}
                       placeholder="e.g. instagram.com/acme or linkedin.com/company/acme"
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-gray-900/70 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                     />
-                    {errors.socialProfile && (
-                      <p className="text-xs text-red-500 mt-1">{errors.socialProfile.message}</p>
-                    )}
                   </div>
                 </div>
 
