@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { aiVisibilityContent } from "../lib/ai-visibility-data";
 import { getStoredTrackingParams, captureTrackingParams } from "../lib/utm";
+import { trackLeadEvent } from "../lib/analytics";
 import SolutionSelect from "../components/ui/SolutionSelect";
 
 interface VisibilityFormData {
@@ -78,6 +79,12 @@ export default function AiVisibilityCheckClient() {
       if (!res.ok || !json.success) {
         throw new Error(json.message || "Something went wrong. Please try again.");
       }
+
+      trackLeadEvent({
+        form: "ai-visibility-check",
+        businessName: data.businessName,
+      });
+      sessionStorage.setItem("lead_tracked", "true");
 
       router.push("/thank-you");
     } catch (err: unknown) {

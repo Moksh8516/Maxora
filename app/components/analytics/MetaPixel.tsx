@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { captureTrackingParams } from "../../lib/utm";
 
+import { trackPageView } from "../../lib/analytics";
+
 interface MetaPixelProps {
   pixelId?: string;
 }
@@ -24,9 +26,7 @@ export default function MetaPixel({ pixelId }: MetaPixelProps) {
       isFirstRender.current = false;
       return;
     }
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "PageView");
-    }
+    trackPageView(pathname);
   }, [pathname]);
 
   if (!activePixelId) {
@@ -46,7 +46,18 @@ export default function MetaPixel({ pixelId }: MetaPixelProps) {
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '${activePixelId}');
-          fbq('track', 'PageView');
+          try {
+            var urlParams = new URLSearchParams(window.location.search);
+            var testCode = urlParams.get('test_event_code') || sessionStorage.getItem('meta_test_event_code');
+            if (testCode) {
+              sessionStorage.setItem('meta_test_event_code', testCode);
+              fbq('track', 'PageView', {}, { test_event_code: testCode });
+            } else {
+              fbq('track', 'PageView');
+            }
+          } catch(e) {
+            fbq('track', 'PageView');
+          }
         `}
       </Script>
       <noscript>

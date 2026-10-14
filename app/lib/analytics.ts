@@ -10,6 +10,21 @@ declare global {
   }
 }
 
+function getTestEventCode(): string | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const fromUrl = urlParams.get("test_event_code");
+    if (fromUrl) {
+      sessionStorage.setItem("meta_test_event_code", fromUrl);
+      return fromUrl;
+    }
+    return sessionStorage.getItem("meta_test_event_code");
+  } catch {
+    return null;
+  }
+}
+
 export function trackPageView(pathname: string) {
   if (typeof window === "undefined") return;
 
@@ -23,7 +38,12 @@ export function trackPageView(pathname: string) {
 
   // Meta Pixel
   if (window.fbq) {
-    window.fbq("track", "PageView");
+    const testCode = getTestEventCode();
+    if (testCode) {
+      window.fbq("track", "PageView", {}, { test_event_code: testCode });
+    } else {
+      window.fbq("track", "PageView");
+    }
   }
 }
 
@@ -37,7 +57,12 @@ export function trackLeadEvent(parameters: Record<string, string | number> = {})
 
   // Meta Pixel
   if (window.fbq) {
-    window.fbq("track", "Lead", parameters);
+    const testCode = getTestEventCode();
+    if (testCode) {
+      window.fbq("track", "Lead", parameters, { test_event_code: testCode });
+    } else {
+      window.fbq("track", "Lead", parameters);
+    }
   }
 }
 
@@ -51,6 +76,11 @@ export function trackContactEvent(method: "whatsapp" | "phone" | "email" = "what
 
   // Meta Pixel
   if (window.fbq) {
-    window.fbq("track", "Contact", { method });
+    const testCode = getTestEventCode();
+    if (testCode) {
+      window.fbq("track", "Contact", { method }, { test_event_code: testCode });
+    } else {
+      window.fbq("track", "Contact", { method });
+    }
   }
 }

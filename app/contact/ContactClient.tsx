@@ -14,7 +14,7 @@ import {
 import { siteConfig } from "../lib/site-config";
 import { contactPageContent } from "../lib/contact-data";
 import { getStoredTrackingParams, captureTrackingParams } from "../lib/utm";
-import { trackContactEvent } from "../lib/analytics";
+import { trackContactEvent, trackLeadEvent } from "../lib/analytics";
 import SolutionSelect from "../components/ui/SolutionSelect";
 
 interface ContactFormData {
@@ -74,6 +74,13 @@ export default function ContactClient() {
       if (!res.ok || !json.success) {
         throw new Error(json.message || "Failed to submit inquiry. Please try again.");
       }
+
+      trackLeadEvent({
+        form: "contact",
+        service: data.service,
+        businessName: data.businessName,
+      });
+      sessionStorage.setItem("lead_tracked", "true");
 
       router.push("/thank-you");
     } catch (err: unknown) {
