@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  env: {
+    META_PIXEL_ID: process.env.META_PIXEL_ID,
+  },
   async redirects() {
     return [
       {

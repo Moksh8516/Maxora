@@ -114,7 +114,7 @@ export default function RootLayout({
           <div className="relative min-h-screen">
             <div className="relative z-10">
               <GoogleAnalytics />
-              <MetaPixel />
+              <MetaPixel pixelId={process.env.META_PIXEL_ID} />
               <Navbar />
               <main>{children}</main>
               <Footer />
