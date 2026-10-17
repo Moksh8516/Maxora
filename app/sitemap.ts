@@ -7,7 +7,10 @@ const siteUrl = (
   "https://maxoratechnology.com"
 ).replace(/\/$/, "");
 
-const now = new Date().toISOString();
+// Static-page lastModified: set to a known content date rather than using
+// `new Date()` (which would misreport every static page as modified on every
+// build). Update SITE_BUILD_DATE when significant static content changes ship.
+const SITE_BUILD_DATE = "2026-10-08";
 
 const publicRoutes: {
   path: string;
@@ -22,102 +25,102 @@ const publicRoutes: {
   priority: number;
   lastModified: string;
 }[] = [
-    { path: "/", changeFrequency: "weekly", priority: 1.0, lastModified: now },
+    { path: "/", changeFrequency: "weekly", priority: 1.0, lastModified: SITE_BUILD_DATE },
     {
       path: "/ai-visibility-check",
       changeFrequency: "weekly",
       priority: 0.9,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/Services",
       changeFrequency: "weekly",
       priority: 0.9,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/Services/web-development",
       changeFrequency: "monthly",
       priority: 0.85,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/Services/app-development",
       changeFrequency: "monthly",
       priority: 0.85,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/Services/crm-erp",
       changeFrequency: "monthly",
       priority: 0.85,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/Services/ecommerce",
       changeFrequency: "monthly",
       priority: 0.85,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/Services/wordpress",
       changeFrequency: "monthly",
       priority: 0.85,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/Services/seo-aeo",
       changeFrequency: "monthly",
       priority: 0.85,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/Services/ai-automation",
       changeFrequency: "monthly",
       priority: 0.85,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/about",
       changeFrequency: "monthly",
       priority: 0.7,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/blog",
       changeFrequency: "weekly",
       priority: 0.75,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/careers",
       changeFrequency: "monthly",
       priority: 0.6,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/portfolio",
       changeFrequency: "monthly",
       priority: 0.75,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/contact",
       changeFrequency: "monthly",
       priority: 0.8,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/privacy",
       changeFrequency: "yearly",
       priority: 0.3,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
     {
       path: "/terms",
       changeFrequency: "yearly",
       priority: 0.3,
-      lastModified: now,
+      lastModified: SITE_BUILD_DATE,
     },
   ];
 

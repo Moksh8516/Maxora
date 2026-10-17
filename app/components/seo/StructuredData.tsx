@@ -1,12 +1,11 @@
 import React from "react";
+import { siteConfig } from "../../lib/site-config";
 
 const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ||
   process.env.SITE_URL ||
   "https://maxoratechnology.com"
 ).replace(/\/$/, "");
-
-import { siteConfig } from "../../lib/site-config";
 
 export const defaultOrganizationSchema = {
   "@context": "https://schema.org",
@@ -17,6 +16,18 @@ export const defaultOrganizationSchema = {
       name: siteConfig.name,
       legalName: siteConfig.legalName,
       url: siteUrl,
+      ...(siteConfig.udyamRegistration
+        ? {
+            taxID: siteConfig.udyamRegistration,
+            identifier: [
+              {
+                "@type": "PropertyValue",
+                name: "UDYAM Registration",
+                value: siteConfig.udyamRegistration,
+              },
+            ],
+          }
+        : {}),
       logo: {
         "@type": "ImageObject",
         "@id": `${siteUrl}/#logo`,

@@ -31,9 +31,27 @@ export const siteConfig = {
     "Malerkotla",
     "Khanna",
     "Mohali",
+    "Ludhaina",
     "Zirakpur",
     "Chandigarh",
     "Ambala",
+    "Panchkula",
+    "Delhi",
+    "Gurugram",
+    "Noida",
+    "Prayagraj",
+    "Mumbai",
+    "Bangalore",
+    "Kolkata",
+    "Chennai",
+    "Hyderabad",
+    "Ahmedabad",
+    "Surat",
+    "Pune",
+    "Visakhapatnam",
+    "Indore",
+    "Thane",
+    "Bhopal"
   ],
   social: {
     facebook: "https://facebook.com/maxora.technology",
@@ -41,7 +59,6 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/company/maxoratechnology/",
     x: null,
   },
-  // TODO(owner): Add Udyam registration number/text when available
   udyamRegistration: null,
   services: [
     {

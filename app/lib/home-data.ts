@@ -5,7 +5,6 @@ export const whyMaxoraContent = {
   title: "Engineering Built Around Your Requirements",
   subtitle:
     "We collaborate directly with founders and teams to build high-performance software tailored to your specific business requirements.",
-  // TODO(owner): Add Udyam-registration certificate text when provided.
   udyamStatus: null as string | null,
   points: [
     {

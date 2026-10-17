@@ -91,7 +91,7 @@ export default function Services() {
       id: 6,
       title: "Technical SEO & AEO",
       description:
-        "Dominate Google Search and get cited by ChatGPT, Perplexity, and AI Overviews with structured data & Core Web Vitals.",
+        "Strengthen your search visibility and build the technical foundation AI engines require to discover and surface your business across Google and AI answer tools.",
       icon: <Sparkles className="w-6 h-6" />,
       features: ["Core Web Vitals", "Schema JSON-LD", "AI Answer Blocks", "llms.txt Standard"],
       href: "/Services/seo-aeo",

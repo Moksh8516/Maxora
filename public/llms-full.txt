@@ -8,6 +8,7 @@
 - **Phone / WhatsApp**: +91 7719545464
 - **Working Hours**: Monday – Friday, 9:00 AM – 6:00 PM IST
 - **Headquarters / Regional Base**: Punjab, India
+- **Legal Status**: Registered MSME Enterprise (Govt. of India)
 - **Service Scope**: Worldwide (North America, Europe, Australia, Middle East), Pan-India, and Regional Punjab (Patiala, Rajpura, Nabha, Samana, Sirhind-Fatehgarh Sahib, Sangrur, Malerkotla, Khanna, Mohali, Zirakpur, Chandigarh, Ambala)
 - **Core Engineering Philosophy**: Direct collaboration with full-stack engineers, milestone-driven sprints, 100% intellectual property ownership, and zero monthly seat fees.
 
@@ -61,7 +62,7 @@
 - **URL**: https://maxoratechnology.com/Services/seo-aeo
 - **Technologies**: Schema.org JSON-LD, Core Web Vitals Engineering, llms.txt, Machine-Readable Metadata
 - **Scope**:
-  - Formatting content into clear, extractable answer blocks and structured schemas optimized for Google AI Overviews, ChatGPT Search, Perplexity, Claude, and Gemini citations.
+  - Structuring content into clear, extractable answer blocks and schemas to strengthen the technical foundation required for potential citation by Google AI Overviews, ChatGPT Search, Perplexity, Claude, and Gemini.
   - Comprehensive entity graph implementation using JSON-LD (Organization, Service, FAQPage, BreadcrumbList).
   - Authoring and maintaining `llms.txt`, `llms-full.txt`, and `pricing.md` for autonomous AI buying agents.
   - Technical speed audits ensuring Largest Contentful Paint (LCP) under 2.5 seconds and Interaction to Next Paint (INP) under 200ms.

@@ -6,14 +6,14 @@ import { JsonLd } from "../../components/seo/StructuredData";
 export const metadata: Metadata = {
   title: "Technical SEO & AEO Services in India",
   description:
-    "Technical SEO and generative engine optimization in India. We engineer Core Web Vitals, Schema graphs, and content structure for Google and AI answer engines.",
+    "Strengthen your website's search visibility and build the technical foundation AI engines need to discover and surface your business. Core Web Vitals, Schema JSON-LD, and extractable content structuring.",
   alternates: {
     canonical: "/Services/seo-aeo",
   },
   openGraph: {
     title: "Technical SEO & AEO Services in India | Maxora Technology",
     description:
-      "Modern technical SEO, Core Web Vitals engineering, Schema JSON-LD, and generative engine optimization to capture Google and AI search visibility.",
+      "Modern technical SEO, Core Web Vitals engineering, Schema JSON-LD, and generative engine optimization to strengthen search and AI search visibility.",
     url: "/Services/seo-aeo",
     siteName: "Maxora Technology",
     images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Technical SEO & AEO Services in India | Maxora Technology",
     description:
-      "Optimize your website for Google Search and AI answer engines like ChatGPT and Perplexity.",
+      "Optimize your website for Google Search and build technical visibility for AI answer engines like ChatGPT and Perplexity.",
     images: ["/og-image.png"],
   },
 };

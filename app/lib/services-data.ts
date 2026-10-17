@@ -524,10 +524,10 @@ export const servicesData: Record<string, ServiceData> = {
     slug: "seo-aeo",
     metaTitle: "Technical SEO & AEO (AI Engine Optimization) Services India",
     metaDescription:
-      "Improve Google rankings and get cited by AI answer engines (ChatGPT, Perplexity, Google AI Overviews). Technical SEO, Schema markup, Core Web Vitals, and LLM citation optimization in India.",
+      "Strengthen your search visibility and build a technical foundation for AI engine discovery. Technical SEO, Schema markup, Core Web Vitals engineering, and LLM content structuring in India.",
     h1: "Technical SEO & AI Answer Engine Optimization (AEO)",
     subheading:
-      "Get ranked on Google and cited by ChatGPT, Perplexity, and Google AI Overviews with technical architecture, structured data, and extractable content.",
+      "Improve your website's search visibility and build the technical foundation AI engines need to discover, understand, and surface your business across Google, ChatGPT, Perplexity, and AI Overviews.",
     intro:
       "Maxora Technology provides modern Technical SEO and Answer Engine Optimization (AEO/GEO) for ambitious businesses in India and worldwide. The search landscape has fundamentally evolved: traditional SEO ranks your pages on Google, while AEO optimizes your brand to be cited and recommended by AI engines like ChatGPT, Claude, Perplexity, and Google AI Overviews. We build rock-solid technical foundations, sub-second Core Web Vitals, semantic Schema.org JSON-LD, agent-readable files (llms.txt), and extractable content passages that ensure your business captures high-intent traffic across traditional and generative search.",
     whoItsFor: [
