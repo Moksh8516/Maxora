@@ -27,17 +27,17 @@ export default function Hero() {
   }, []);
 
   const features: Feature[] = [
-    { icon: Shield, label: "Reliable Architecture" },
-    { icon: Zap, label: "High Speed & SEO" },
-    { icon: Globe, label: "India & Worldwide" },
-    { icon: Code, label: "Clean Codebase" },
+    { icon: Zap, label: "Fast Page Speeds" },
+    { icon: Shield, label: "Search Ready (SEO)" },
+    { icon: Globe, label: "Direct Developer Contact" },
+    { icon: Code, label: "Weekly Working Demos" },
   ];
 
   const stats: Stat[] = [
-    { value: "Focused", label: "Digital Agency" },
+    { value: "Fast", label: "Turnaround" },
     { value: "Direct", label: "Communication" },
-    { value: "Tailored", label: "Around Your Goals" },
-    { value: "Modern", label: "Tech Stack" },
+    { value: "Custom", label: "Built For Your Needs" },
+    { value: "Modern", label: "Reliable Stack" },
   ];
 
   return (
@@ -70,13 +70,13 @@ export default function Hero() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading tracking-tight mb-6 text-gray-900 dark:text-gray-100 leading-tight">
               Custom Web & App Development for{" "}
               <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
-                Growing Businesses in India
+                Growing Businesses
               </span>
             </h1>
 
             {/* Description */}
             <p className="text-xl text-muted mb-10 max-w-2xl leading-relaxed">
-              Maxora Technology builds high-performance websites, mobile apps, custom CRM/ERP platforms, and eCommerce systems. We help ambitious companies turn practical ideas into scalable digital products.
+              We build fast websites, mobile apps, and custom software that solve everyday business problems. From customer portals to automated workflows, we help your business run smoothly and grow faster.
             </p>
 
             {/* Buttons */}
@@ -85,7 +85,7 @@ export default function Hero() {
                 href="/contact"
                 className="group inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover-lift shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
               >
-                Start Your Project
+                Let&apos;s connect
                 <ArrowRight
                   className="ml-3 group-hover:translate-x-2 transition-transform"
                   size={20}

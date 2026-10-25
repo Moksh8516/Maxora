@@ -1,710 +1,759 @@
+// app/Services/app-development/AppDevelopmentClient.tsx
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
 import {
   Smartphone,
   TabletSmartphone,
   Zap,
   Shield,
-  CheckCircle,
-  Code,
-  Layers,
-  Rocket,
-  BarChart,
-  Users,
-  Clock,
-  ChevronRight,
   ArrowRight,
-  MessageSquare,
-  Palette,
-  ShieldCheck,
-  TrendingUp,
-  Apple,
   Sparkles,
-  Cloud,
+  ChevronRight,
+  Layers,
+  Cpu,
   Wifi,
-  Globe,
-  Cctv,
+  Bell,
+  CreditCard,
+  Lock,
+  CheckCircle2,
+  AlertTriangle,
+  Clock,
+  Apple,
+  MapPin,
+  ShieldCheck,
 } from "lucide-react";
 import { TiVendorAndroid } from "react-icons/ti";
-import Link from "next/link";
+import ServiceFAQ from "@/app/components/section/service/ServiceFAQ";
+import { getServiceBySlug } from "@/content/services";
 
-const serviceData = {
-  id: "app-development",
-  title: "App Development",
-  description: "Native & Cross-platform Mobile Applications",
-  fullDescription:
-    "We create powerful, user-friendly mobile applications for iOS and Android platforms. Our apps are designed to deliver exceptional user experiences, drive engagement, and help businesses connect with their audience on the go.",
-  icon: <Smartphone className="w-6 h-6" />,
-  features: [
-    {
-      title: "Native Performance",
-      description:
-        "Smooth, responsive apps built with platform-specific optimizations",
-      icon: <Zap className="w-5 h-5" />,
-      color: "yellow",
-    },
-    {
-      title: "Cross-Platform Efficiency",
-      description: "Unified codebase for both iOS and Android platforms using React Native & Flutter",
-      icon: <TabletSmartphone className="w-5 h-5" />,
-      color: "purple",
-    },
-    {
-      title: "Offline Capability",
-      description: "Function seamlessly with offline data caching and synchronization",
-      icon: <Wifi className="w-5 h-5" />,
-      color: "blue",
-    },
-    {
-      title: "App Store Ready",
-      description: "Fully compliant with Apple App Store and Google Play guidelines",
-      icon: <Shield className="w-5 h-5" />,
-      color: "green",
-    },
-    {
-      title: "Push Notifications",
-      description: "Engage and retain users with targeted real-time messaging",
-      icon: <Sparkles className="w-5 h-5" />,
-      color: "pink",
-    },
-    {
-      title: "Cloud & Backend Integration",
-      description: "Scalable backend with secure APIs, authentication, and database sync",
-      icon: <Cloud className="w-5 h-5" />,
-      color: "cyan",
-    },
-  ],
-  technologies: [
-    "React Native",
-    "Flutter",
-    "Swift",
-    "Kotlin",
-    "Firebase",
-    "AWS Amplify",
-    "Xcode",
-    "Android Studio",
-    "Redux",
-    "GraphQL",
-    "TypeScript",
-    "Dart",
-  ],
-  platforms: [
-    {
-      name: "iOS",
-      icon: <Apple className="w-8 h-8" />,
-      technologies: ["Swift", "SwiftUI", "UIKit", "Core Data", "TestFlight"],
-    },
-    {
-      name: "Android",
-      icon: <TiVendorAndroid className="w-8 h-8" />,
-      technologies: [
-        "Kotlin",
-        "Jetpack Compose",
-        "Room",
-        "Coroutines",
-        "Google Play Services",
-      ],
-    },
-    {
-      name: "Cross-Platform",
-      icon: <TabletSmartphone className="w-8 h-8" />,
-      technologies: [
-        "React Native",
-        "Flutter",
-        "TypeScript",
-        "Dart",
-        "Capacitor",
-      ],
-    },
-  ],
-  benefits: [
-    {
-      title: "Increased User Engagement",
-      description: "Direct customer touchpoint with home-screen presence",
-      icon: <Users className="w-5 h-5" />,
-      metric: "3x",
-    },
-    {
-      title: "Superior Speed & Smoothness",
-      description: "Optimized 60fps animations and rapid interactive response",
-      icon: <Rocket className="w-5 h-5" />,
-      metric: "60%",
-    },
-    {
-      title: "Higher Conversion Rates",
-      description: "Streamlined checkout and native device feature adoption",
-      icon: <BarChart className="w-5 h-5" />,
-      metric: "40%",
-    },
-    {
-      title: "24/7 Accessibility",
-      description: "Users can interact with your core services anytime, anywhere",
-      icon: <Clock className="w-5 h-5" />,
-      metric: "100%",
-    },
-  ],
-  process: [
-    {
-      step: "01",
-      title: "Strategy & UX Research",
-      description: "Define goals, user personas, and feature roadmaps",
-      icon: <MessageSquare className="w-6 h-6" />,
-    },
-    {
-      step: "02",
-      title: "UI/UX Interactive Design",
-      description: "Create pixel-perfect Figma screens and user journeys",
-      icon: <Palette className="w-6 h-6" />,
-    },
-    {
-      step: "03",
-      title: "Prototype & Architecture",
-      description: "Set up component architecture, state management, and API contracts",
-      icon: <Cctv className="w-6 h-6" />,
-    },
-    {
-      step: "04",
-      title: "App Development",
-      description: "Full-scale mobile engineering with clean, modular code",
-      icon: <Code className="w-6 h-6" />,
-    },
-    {
-      step: "05",
-      title: "Testing & Quality Assurance",
-      description: "Automated and manual testing across various screen resolutions and OS versions",
-      icon: <ShieldCheck className="w-6 h-6" />,
-    },
-    {
-      step: "06",
-      title: "Store Launch & Growth",
-      description: "App Store & Play Store publishing with ongoing maintenance",
-      icon: <TrendingUp className="w-6 h-6" />,
-    },
-  ],
-  caseStudies: [
-    {
-      title: "On-Demand Delivery App",
-      description: "Built a cross-platform mobile app with live GPS tracking and instant notifications",
-      results: [
-        "100k+ active installs",
-        "4.8/5 app store rating",
-        "70% daily active retention",
-      ],
-      platform: "iOS & Android",
-    },
-    {
-      title: "mCommerce Shopping App",
-      description: "Mobile commerce application with biometric login and one-tap checkout",
-      results: [
-        "3x mobile revenue growth",
-        "45% faster checkout completion",
-        "Sub-100ms API response time",
-      ],
-      platform: "React Native",
-    },
-    {
-      title: "Enterprise Field Operations App",
-      description: "Internal operations app with offline syncing and barcode scanning",
-      results: [
-        "50% productivity increase",
-        "Zero data loss in offline mode",
-        "10k+ daily operational logs",
-      ],
-      platform: "Flutter",
-    },
-  ],
-  appTypes: [
-    {
-      type: "Native iOS & Android",
-      description: "Platform-specific codebases for maximum device integration and performance",
-      icon: <Zap className="w-6 h-6" />,
-      bestFor: [
-        "Hardware-intensive apps",
-        "Complex AR/ML features",
-        "Platform-exclusive design paradigms",
-      ],
-    },
-    {
-      type: "Cross-Platform (React Native / Flutter)",
-      description: "Single codebase powering both major app stores with native feel",
-      icon: <TabletSmartphone className="w-6 h-6" />,
-      bestFor: [
-        "Faster time to market",
-        "Cost-effective multi-platform releases",
-        "Consistent UI across platforms",
-      ],
-    },
-    {
-      type: "Progressive Web Apps (PWA)",
-      description: "Web apps installable directly to mobile home screens",
-      icon: <Globe className="w-6 h-6" />,
-      bestFor: ["Instant distribution", "No store approval delay", "Lightweight footprint"],
-    },
-  ],
-};
+const service = getServiceBySlug("app-development")!;
 
 export default function AppDevelopmentClient() {
-  const [activeTab, setActiveTab] = useState("overview");
+  const router = useRouter();
+  const [activeTab, setActiveTab] = useState<"features" | "matrix" | "process" | "deliverables">("features");
+  const [activeAppMockup, setActiveAppMockup] = useState<"fintech" | "delivery">("fintech");
+
+  const stats = [
+    { value: "60 FPS", label: "Fluid Animation Speed", desc: "Native thread performance and zero UI stutter" },
+    { value: "iOS & Android", label: "Dual-Platform Release", desc: "Unified Flutter & React Native codebases" },
+    { value: "Offline-First", label: "Local Data Syncing", desc: "Full functionality without active internet" },
+    { value: "100%", label: "App Store Acceptance", desc: "Zero rejection guarantee with strict guidelines" },
+  ];
+
+  const clientProblems = [
+    {
+      title: "Mobile Web Cannot Replace Native App Engagement",
+      desc: "Mobile browsers lack native push notifications, biometrics, offline storage, and home-screen presence—costing businesses up to 3x higher churn compared to native apps.",
+      icon: <Clock className="w-5 h-5 text-red-500" />,
+    },
+    {
+      title: "Double the Budget Maintaining Two Codebases",
+      desc: "Hiring separate Swift and Kotlin developers doubles engineering payroll, splits design cycles, and creates desynchronized feature releases between iOS and Android.",
+      icon: <AlertTriangle className="w-5 h-5 text-amber-500" />,
+    },
+    {
+      title: "App Store Rejections & Review Guideline Traps",
+      desc: "Apple and Google reject over 30% of first-time submissions due to privacy policy oversights, broken in-app purchases, or improper background location permissions.",
+      icon: <Shield className="w-5 h-5 text-blue-500" />,
+    },
+  ];
+
+  const mobilePillars = [
+    {
+      icon: <Wifi className="w-6 h-6 text-white" />,
+      tag: "Offline-First",
+      title: "Offline-First Architecture & Cloud Sync",
+      description:
+        "Engineered with local SQLite or WatermelonDB caching. Users can create records, browse catalogs, and perform operations completely offline. Data automatically synchronizes with your cloud backend the moment connectivity returns.",
+      problemSolved: "Prevents app crashes and lost user input when customers enter elevators or areas with poor cellular reception.",
+      clientBenefit: "Uninterrupted user experience regardless of network strength.",
+      tech: "SQLite, WatermelonDB, TanStack Query, WebSockets",
+    },
+    {
+      icon: <Bell className="w-6 h-6 text-white" />,
+      tag: "Direct Retention",
+      title: "Targeted Push Notifications & Deeplinking",
+      description:
+        "Configured with Apple Push Notification service (APNs) and Firebase Cloud Messaging (FCM). Send personalized transaction alerts, order status updates, and behavioral re-engagement messages that route users directly to specific in-app screens.",
+      problemSolved: "Stops customer drop-off after installation by re-engaging users at optimal moments.",
+      clientBenefit: "Up to 4x higher daily retention and instant transactional messaging.",
+      tech: "FCM, APNs, OneSignal, Universal Links, App Links",
+    },
+    {
+      icon: <Lock className="w-6 h-6 text-white" />,
+      tag: "Hardware Security",
+      title: "Biometric Auth & Secure Hardware Storage",
+      description:
+        "Seamless login utilizing Apple FaceID, TouchID, and Android BiometricPrompt. Sensitive authentication tokens are stored in hardware-backed secure enclaves (iOS Keychain & Android Keystore) rather than insecure local files.",
+      problemSolved: "Eliminates cumbersome password entry without sacrificing enterprise security.",
+      clientBenefit: "Frictionless 1-second logins with bank-grade credential encryption.",
+      tech: "iOS Keychain, Android Keystore, BiometricPrompt, OAuth2",
+    },
+    {
+      icon: <CreditCard className="w-6 h-6 text-white" />,
+      tag: "Monetization",
+      title: "In-App Purchases & Multi-Tier Subscriptions",
+      description:
+        "Flawless integration of Apple StoreKit 2 and Google Play Billing. Support one-time product unlocks, recurring auto-renewing subscriptions, free trials, and promotional discount codes with automated server-side receipt validation.",
+      problemSolved: "Stops fraud and receipt tampering while maintaining compliance with App Store rules.",
+      clientBenefit: "Predictable recurring app revenue with zero revenue leakage.",
+      tech: "StoreKit 2, Google Play Billing, RevenueCat, Stripe Mobile SDK",
+    },
+  ];
+
+  const decisionMatrix = [
+    {
+      dimension: "Development Cost",
+      crossPlatform: "Single codebase for iOS & Android (40-50% savings)",
+      pureNative: "Requires separate iOS (Swift) & Android (Kotlin) teams",
+      webPWA: "Lowest cost, but lacks native store presence",
+    },
+    {
+      dimension: "Time to Market",
+      crossPlatform: "8 - 12 weeks to launch simultaneously on both stores",
+      pureNative: "16 - 24 weeks developing platforms sequentially",
+      webPWA: "4 - 8 weeks web-only release",
+    },
+    {
+      dimension: "UI & Animation Fluidity",
+      crossPlatform: "Consistently 60 FPS utilizing compiled native bridges",
+      pureNative: "Native 120 FPS ProMotion ideal for 3D games/AR",
+      webPWA: "Limited by mobile browser rendering engine",
+    },
+    {
+      dimension: "Hardware Sensor Access",
+      crossPlatform: "Full access to GPS, Camera, Bluetooth, HealthKit",
+      pureNative: "Immediate zero-day access to new OS sensor APIs",
+      webPWA: "Restricted background execution & sensor access",
+    },
+    {
+      dimension: "App Store & Play Store Presence",
+      crossPlatform: "100% full distribution on Apple App Store & Google Play",
+      pureNative: "100% full distribution on Apple App Store & Google Play",
+      webPWA: "Requires bookmarking from browser, no store discoverability",
+    },
+  ];
+
+  const steps = [
+    {
+      number: "01",
+      title: "Mobile UX Wireframing & Touch Gestures",
+      description:
+        "We map out thumb-friendly user flows, bottom-sheet navigations, and swipe gesture interactions designed specifically for one-handed mobile ergonomics.",
+      clientProvides: "Core user stories and feature prioritization.",
+    },
+    {
+      number: "02",
+      title: "Interactive Figma Mobile Prototype",
+      description:
+        "We build clickable mobile prototypes that you can test on your personal iPhone or Android device before a single line of production code is written.",
+      clientProvides: "Review and prototype feedback directly on your phone.",
+    },
+    {
+      number: "03",
+      title: "Cross-Platform Engineering & API Sync",
+      description:
+        "We code the application using React Native or Flutter, connecting backend REST/GraphQL APIs, offline storage, push notifications, and biometric authentication.",
+      clientProvides: "Backend API access and test environment accounts.",
+    },
+    {
+      number: "04",
+      title: "Device Lab Stress Testing & Profiling",
+      description:
+        "We test memory consumption, battery drain, and network latency across a wide matrix of physical iOS and Android devices, screen sizes, and OS versions.",
+      clientProvides: "Beta tester feedback via TestFlight and Google Play Beta.",
+    },
+    {
+      number: "05",
+      title: "App Store Review & Production Launch",
+      description:
+        "We prepare privacy nutrition labels, generate promotional store screenshots, configure in-app purchases, and manage the submission until officially approved.",
+      clientProvides: "Apple Developer and Google Play Console access.",
+    },
+  ];
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-24">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-50/50 to-transparent dark:from-gray-900/50" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse-glow" />
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-gray-50 via-white to-gray-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-teal-500/10 via-cyan-500/10 to-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center p-4 rounded-2xl glass-effect mb-8 hover-lift">
-              <div className="p-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500">
-                <Smartphone className="w-8 h-8 text-white" />
+            {/* Dual Platform Badge */}
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-teal-50 dark:bg-teal-900/30 border border-teal-200 dark:border-teal-800/50 mb-6">
+              <div className="flex items-center gap-1.5 text-teal-700 dark:text-teal-300 font-semibold text-xs md:text-sm">
+                <Apple className="w-4 h-4" />
+                <span>iOS</span>
+                <span className="text-gray-400">•</span>
+                <TiVendorAndroid className="w-4 h-4 text-emerald-500" />
+                <span>Android</span>
+                <span className="text-gray-400">•</span>
+                <span>Flutter &amp; React Native</span>
               </div>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-heading text-gray-900 dark:text-white mb-6">
-              App <span className="gradient-text">Development</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-gray-900 dark:text-white tracking-tight leading-tight mb-6">
+              Native &amp; Cross-Platform{" "}
+              <span className="bg-gradient-to-r from-teal-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                Mobile Applications
+              </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Native & cross-platform mobile applications that drive user engagement
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+              We engineer high-performance mobile apps for iOS and Android using Flutter, React Native, Swift, and Kotlin. From offline data synchronization and biometric security to frictionless in-app purchases and guaranteed App Store approval.
             </p>
 
-            <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-              We design and build powerful, user-friendly mobile applications for iOS and
-              Android platforms. From MVP validation to enterprise-grade apps, we deliver
-              smooth performance and intuitive experiences.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                href="/contact"
-                className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 hover-lift flex items-center justify-center gap-2"
+                href="/contact?service=App+Development"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-teal-600 via-cyan-500 to-blue-600 text-white rounded-xl font-bold text-base hover:shadow-xl hover:shadow-teal-500/25 transition-all duration-300 flex items-center justify-center gap-2 group"
               >
-                Start Your App Project
+                Discuss Your Mobile App Scope
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/Services"
-                className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift flex items-center justify-center gap-2"
+                href="/portfolio"
+                className="w-full sm:w-auto px-8 py-4 border border-gray-300 dark:border-gray-700 hover:border-teal-500 text-gray-700 dark:text-gray-200 rounded-xl font-semibold text-base hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-all flex items-center justify-center gap-2"
               >
-                All Services
+                View App Portfolio
               </Link>
+            </div>
+
+            {/* Trust statement */}
+            <p className="mt-6 text-xs text-gray-500 dark:text-gray-400 flex items-center justify-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-emerald-500" />
+              100% App Store &amp; Google Play Acceptance Guarantee • Physical Device Tested • Complete Source Code Handover
+            </p>
+          </div>
+
+          {/* Stats Bar */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-16 max-w-5xl mx-auto">
+            {stats.map((stat, idx) => (
+              <div
+                key={idx}
+                className="p-5 md:p-6 rounded-2xl bg-white/80 dark:bg-gray-900/80 border border-gray-200/80 dark:border-gray-800/80 backdrop-blur-md shadow-sm text-center"
+              >
+                <div className="text-2xl md:text-4xl font-extrabold bg-gradient-to-r from-teal-600 to-cyan-500 bg-clip-text text-transparent mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
+                  {stat.label}
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">
+                  {stat.desc}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Dual Smartphone Interactive Showcase */}
+      <section className="py-20 bg-gray-50/50 dark:bg-gray-900/50 border-t border-b border-gray-100 dark:border-gray-900 relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <span className="text-xs font-bold text-teal-600 dark:text-teal-400 tracking-wider uppercase mb-2 block">
+              Mobile User Experience
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-gray-900 dark:text-white mb-4">
+              Designed for Thumbs, Engineered for Speed
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+              Explore our production mobile applications built for real-world user engagement across fintech, on-demand logistics, and mobile commerce.
+            </p>
+
+            {/* Mockup Switcher Buttons */}
+            <div className="flex justify-center gap-3 mt-6">
+              <button
+                onClick={() => setActiveAppMockup("fintech")}
+                className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2 ${
+                  activeAppMockup === "fintech"
+                    ? "bg-teal-600 text-white shadow-md shadow-teal-500/25"
+                    : "bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:text-teal-600"
+                }`}
+              >
+                <CreditCard className="w-4 h-4" />
+                Fintech Mobile Banking
+              </button>
+              <button
+                onClick={() => setActiveAppMockup("delivery")}
+                className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2 ${
+                  activeAppMockup === "delivery"
+                    ? "bg-teal-600 text-white shadow-md shadow-teal-500/25"
+                    : "bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:text-teal-600"
+                }`}
+              >
+                <MapPin className="w-4 h-4" />
+                On-Demand Delivery App
+              </button>
+            </div>
+          </div>
+
+          {/* Interactive Phone Frame Container */}
+          <div className="rounded-3xl border border-gray-200/80 dark:border-gray-800/80 bg-white/90 dark:bg-gray-900/90 p-6 md:p-10 shadow-xl relative overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Device Image */}
+              <div className="relative aspect-[4/5] w-full max-w-sm mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-900 dark:border-gray-800 bg-gray-100 dark:bg-gray-950">
+                {activeAppMockup === "fintech" ? (
+                  <Image
+                    src="/portfolio/mobile-fintech.jpg"
+                    alt="Fintech Mobile App UI by Maxora Technology"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    priority
+                  />
+                ) : (
+                  <Image
+                    src="/portfolio/food-delivery-app.jpg"
+                    alt="On-Demand Delivery Mobile App UI by Maxora Technology"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                )}
+              </div>
+
+              {/* Feature Highlights for Active Mockup */}
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300">
+                  {activeAppMockup === "fintech" ? "Fintech & Digital Wallet" : "On-Demand Delivery & Logistics"}
+                </div>
+
+                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-gray-900 dark:text-white">
+                  {activeAppMockup === "fintech"
+                    ? "Sub-Second Crypto & Fiat Wallet Architecture"
+                    : "Live Driver Telemetry & Geospatial Tracking"}
+                </h3>
+
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                  {activeAppMockup === "fintech"
+                    ? "Equipped with biometric FaceID authentication, hardware-backed key storage, instant card management, and real-time push balance alerts."
+                    : "Featuring background GPS location polling, WebSocket live courier tracking on interactive maps, automated order routing, and one-tap customer calls."}
+                </p>
+
+                <div className="space-y-3 pt-2">
+                  <div className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-200">
+                    <CheckCircle2 className="w-5 h-5 text-teal-600 dark:text-teal-400 shrink-0" />
+                    <span>60 FPS gesture-driven screen transitions and bottom-sheet controls</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-200">
+                    <CheckCircle2 className="w-5 h-5 text-teal-600 dark:text-teal-400 shrink-0" />
+                    <span>Background push notification triggers with customized action buttons</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-200">
+                    <CheckCircle2 className="w-5 h-5 text-teal-600 dark:text-teal-400 shrink-0" />
+                    <span>Full offline persistence so orders and records are never lost</span>
+                  </div>
+                </div>
+
+                <div className="pt-4">
+                  <Link
+                    href="/contact?service=App+Development"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-xl font-semibold text-sm hover:bg-teal-700 transition-colors"
+                  >
+                    Discuss This Architecture <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        {/* Tabs Navigation */}
-        <div className="flex flex-wrap gap-2 mb-12 border-b border-gray-200 dark:border-gray-800 pb-4">
-          {[
-            "overview",
-            "features",
-            "process",
-            "platforms",
-            "benefits",
-            "case-studies",
-          ].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                activeTab === tab
-                  ? "bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-md"
-                  : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
-              }`}
-            >
-              {tab
-                .split("-")
-                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(" ")}
-            </button>
-          ))}
-        </div>
-
-        {/* Overview Tab */}
-        {activeTab === "overview" && (
-          <div className="space-y-16">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-heading text-gray-900 dark:text-white mb-6">
-                Mobile App Engineering by Maxora Technology
-              </h2>
-              <div className="space-y-4">
-                <p className="text-lg text-gray-600 dark:text-gray-300">
-                  At Maxora Technology, we craft tailored mobile applications that
-                  combine sleek design with rock-solid architectural foundations.
-                  Our team leverages modern ecosystems including React Native,
-                  Flutter, Swift, and Kotlin to deliver native-feel experiences on both
-                  Apple iOS and Google Android.
-                </p>
-                <p className="text-lg text-gray-600 dark:text-gray-300">
-                  We collaborate closely throughout the entire lifecycle—from initial
-                  wireframes and clickable prototypes to App Store submission and
-                  continuous post-launch optimization.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {serviceData.appTypes.map((appType, index) => (
-                <div
-                  key={index}
-                  className="p-8 rounded-2xl glass-effect hover-lift"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mb-6 text-white">
-                    {appType.icon}
-                  </div>
-                  <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
-                    {appType.type}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    {appType.description}
-                  </p>
-                  <div className="space-y-2">
-                    <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                      Best for:
-                    </p>
-                    {appType.bestFor.map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500" />
-                        <span className="text-sm text-gray-600 dark:text-gray-300">
-                          {item}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-8 rounded-2xl glass-effect hover-lift">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mb-6 text-white">
-                  <Zap className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
-                  Fluid 60fps Performance
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Engineered with native UI threads, hardware acceleration, and optimized
-                  bundle sizes for instant launch and fluid transitions.
-                </p>
-              </div>
-
-              <div className="p-8 rounded-2xl glass-effect hover-lift">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 flex items-center justify-center mb-6 text-white">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
-                  App Store Compliance
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Built to adhere strictly to Apple Review Guidelines and Google Play
-                  Policies, ensuring reliable approvals and fast release cycles.
-                </p>
-              </div>
-
-              <div className="p-8 rounded-2xl glass-effect hover-lift">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-pink-600 to-rose-500 flex items-center justify-center mb-6 text-white">
-                  <TrendingUp className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
-                  Modular Scalability
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Clean state management and decoupled API layers allow your application
-                  to grow features without instability.
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Features Tab */}
-        {activeTab === "features" && (
-          <div className="space-y-12">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-heading text-gray-900 dark:text-white mb-6">
-                Key <span className="gradient-text">Features</span>
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                Every mobile application we produce integrates essential mobile capabilities
-                designed to boost user retention and organic App Store visibility.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {serviceData.features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="group p-8 rounded-2xl glass-effect hover-lift"
-                >
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-white">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Process Tab */}
-        {activeTab === "process" && (
-          <div className="space-y-12">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-heading text-gray-900 dark:text-white mb-6">
-                Our Mobile Development{" "}
-                <span className="gradient-text">Process</span>
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                A rigorous, stage-gated development model ensuring your mobile app launches
-                on schedule with enterprise-grade quality.
-              </p>
-            </div>
-
-            <div className="relative">
-              <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 via-pink-500 to-indigo-500 md:left-1/2 md:-translate-x-1/2" />
-
-              <div className="space-y-12">
-                {serviceData.process.map((step, index) => (
-                  <div
-                    key={index}
-                    className={`relative flex ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-start gap-8`}
-                  >
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center z-10 text-white">
-                      {step.icon}
-                    </div>
-                    <div className={`flex-grow ${index % 2 === 0 ? "md:text-right" : ""}`}>
-                      <div
-                        className={`p-6 rounded-2xl glass-effect hover-lift max-w-lg ${index % 2 === 0 ? "md:ml-auto" : ""}`}
-                      >
-                        <span className="inline-block px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm font-medium mb-3">
-                          Step {step.step}
-                        </span>
-                        <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-2">
-                          {step.title}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-300">
-                          {step.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Platforms Tab */}
-        {activeTab === "platforms" && (
-          <div className="space-y-12">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-heading text-gray-900 dark:text-white mb-6">
-                Platform <span className="gradient-text">Expertise</span>
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                We develop across iOS, Android, and cross-platform runtimes using modern
-                toolchains to match your target audience and budget.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {serviceData.platforms.map((platform, index) => (
-                <div
-                  key={index}
-                  className="p-8 rounded-2xl glass-effect hover-lift"
-                >
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="p-3 rounded-xl bg-gradient-to-r from-purple-600/10 to-pink-500/10 text-purple-600 dark:text-purple-400">
-                      {platform.icon}
-                    </div>
-                    <h3 className="text-2xl font-heading text-gray-900 dark:text-white">
-                      {platform.name}
-                    </h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {platform.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1.5 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded-lg text-sm font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="pt-6 border-t border-gray-200 dark:border-gray-800">
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {index === 0 && "Ideal for maximum performance, Apple ecosystem integration, and iOS App Store reach"}
-                      {index === 1 && "Optimized for Android device diversity and Google Play Store distribution"}
-                      {index === 2 && "Single codebase with maximum efficiency across both major stores"}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-heading text-gray-900 dark:text-white mb-6">
-                Mobile Technology Stack
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-                {serviceData.technologies.map((tech, index) => (
-                  <div
-                    key={index}
-                    className="group p-6 rounded-2xl glass-effect hover-lift flex flex-col items-center justify-center text-center"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600/10 to-pink-500/10 flex items-center justify-center mb-3 group-hover:from-purple-600/20 group-hover:to-pink-500/20">
-                      <Code className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                    </div>
-                    <span className="font-medium text-gray-900 dark:text-white">
-                      {tech}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Benefits Tab */}
-        {activeTab === "benefits" && (
-          <div className="space-y-12">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-heading text-gray-900 dark:text-white mb-6">
-                Business <span className="gradient-text">Benefits</span>
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                A purpose-built mobile app creates a permanent brand presence on users&apos;
-                devices, lifting lifetime value and customer engagement.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {serviceData.benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="group p-8 rounded-2xl glass-effect hover-lift"
-                >
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center text-white">
-                      {benefit.icon}
-                    </div>
-                    <span className="text-3xl font-bold gradient-text">
-                      {benefit.metric}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    {benefit.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Case Studies Tab */}
-        {activeTab === "case-studies" && (
-          <div className="space-y-12">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl font-heading text-gray-900 dark:text-white mb-6">
-                Mobile Success <span className="gradient-text">Stories</span>
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                See how Maxora Technology turns product ideas into high-ranking,
-                crash-free mobile applications.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {serviceData.caseStudies.map((study, index) => (
-                <div
-                  key={index}
-                  className="group p-8 rounded-2xl glass-effect hover-lift"
-                >
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center text-white">
-                      <CheckCircle className="w-6 h-6" />
-                    </div>
-                    <span className="px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm font-medium">
-                      {study.platform}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-heading text-gray-900 dark:text-white mb-3">
-                    {study.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    {study.description}
-                  </p>
-                  <div className="space-y-2">
-                    {study.results.map((result, resultIndex) => (
-                      <div key={resultIndex} className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500" />
-                        <span className="text-sm text-gray-600 dark:text-gray-300">
-                          {result}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center p-4 rounded-2xl glass-effect mb-8">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center text-white">
-                <MessageSquare className="w-8 h-8" />
-              </div>
-            </div>
-
-            <h2 className="text-3xl md:text-5xl font-heading text-gray-900 dark:text-white mb-6">
-              Ready to Build Your{" "}
-              <span className="gradient-text">Mobile App</span>?
+      {/* The Client's Real Problems Section */}
+      <section className="py-20 bg-white dark:bg-gray-950">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold text-red-600 dark:text-red-400 tracking-wider uppercase mb-2 block">
+              Mobile Friction
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-gray-900 dark:text-white mb-4">
+              Why Half-Baked Mobile Projects Stumble
             </h2>
-
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how Maxora Technology can bring your iOS and Android
-              app concepts to life with speed, reliability, and precision.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 hover-lift flex items-center justify-center gap-2"
-              >
-                Schedule a Consultation
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/Services"
-                className="px-8 py-4 border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors hover-lift flex items-center justify-center gap-2"
-              >
-                Explore Other Services
-              </Link>
-            </div>
-
-            <p className="mt-8 text-sm text-gray-500 dark:text-gray-400">
-              Get a response within 24 hours • No obligation scoping session
+            <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+              Building a successful mobile app requires more than converting a website into a webview. It demands real offline handling, device testing, and store compliance.
             </p>
           </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {clientProblems.map((prob, idx) => (
+              <div
+                key={idx}
+                className="p-8 rounded-3xl bg-gray-50/80 dark:bg-gray-900/60 border border-red-200 dark:border-red-900/30 hover:border-red-400 dark:hover:border-red-800 transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-950/40 border border-red-200 dark:border-red-900/50 flex items-center justify-center mb-6">
+                    {prob.icon}
+                  </div>
+                  <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white mb-3">
+                    {prob.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                    {prob.desc}
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-gray-200/60 dark:border-gray-800/60 text-xs text-red-600 dark:text-red-400 font-medium">
+                  Leading cause of poor ratings and app uninstallations
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Tabs: Core Pillars, Decision Matrix, Process & Deliverables */}
+      <section className="py-20 md:py-28 bg-gray-50/50 dark:bg-gray-900/50 border-t border-b border-gray-100 dark:border-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          {/* Tabs Navigation */}
+          <div className="flex justify-center mb-16">
+            <div className="inline-flex flex-wrap justify-center p-1.5 rounded-2xl bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 gap-1">
+              <button
+                onClick={() => setActiveTab("features")}
+                className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
+                  activeTab === "features"
+                    ? "bg-white dark:bg-gray-800 text-teal-600 dark:text-teal-400 shadow-sm"
+                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                }`}
+              >
+                Engineering Pillars
+              </button>
+              <button
+                onClick={() => setActiveTab("matrix")}
+                className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
+                  activeTab === "matrix"
+                    ? "bg-white dark:bg-gray-800 text-teal-600 dark:text-teal-400 shadow-sm"
+                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                }`}
+              >
+                Platform Matrix
+              </button>
+              <button
+                onClick={() => setActiveTab("process")}
+                className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
+                  activeTab === "process"
+                    ? "bg-white dark:bg-gray-800 text-teal-600 dark:text-teal-400 shadow-sm"
+                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                }`}
+              >
+                5-Stage Lifecycle
+              </button>
+              <button
+                onClick={() => setActiveTab("deliverables")}
+                className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
+                  activeTab === "deliverables"
+                    ? "bg-white dark:bg-gray-800 text-teal-600 dark:text-teal-400 shadow-sm"
+                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                }`}
+              >
+                Scope &amp; Deliverables
+              </button>
+            </div>
+          </div>
+
+          {/* TAB 1: CORE MOBILE PILLARS */}
+          {activeTab === "features" && (
+            <div className="grid md:grid-cols-2 gap-8">
+              {mobilePillars.map((pil, idx) => (
+                <div
+                  key={idx}
+                  className="p-8 rounded-3xl bg-white dark:bg-gray-900/60 border border-gray-200/80 dark:border-gray-800/80 hover:border-teal-500/50 transition-all flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-teal-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-teal-500/20">
+                        {pil.icon}
+                      </div>
+                      <span className="text-xs font-semibold px-3 py-1 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300">
+                        {pil.tag}
+                      </span>
+                    </div>
+
+                    <h3 className="text-2xl font-heading font-bold text-gray-900 dark:text-white mb-3">
+                      {pil.title}
+                    </h3>
+
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
+                      {pil.description}
+                    </p>
+
+                    <div className="p-4 rounded-xl bg-gray-50 dark:bg-gray-800/40 border border-gray-200/60 dark:border-gray-700/60 mb-6 text-xs space-y-2">
+                      <div className="text-red-700 dark:text-red-300">
+                        <strong className="text-red-600 dark:text-red-400">Problem Solved:</strong> {pil.problemSolved}
+                      </div>
+                      <div className="text-emerald-700 dark:text-emerald-300">
+                        <strong className="text-emerald-600 dark:text-emerald-400">Business Benefit:</strong> {pil.clientBenefit}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-gray-200/60 dark:border-gray-800/60 flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+                    <span className="font-mono text-teal-600 dark:text-teal-400">Stack: {pil.tech}</span>
+                    <Link
+                      href="/contact?service=App+Development"
+                      className="text-teal-600 dark:text-teal-400 font-semibold hover:underline flex items-center gap-1"
+                    >
+                      Scope This <ChevronRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* TAB 2: PLATFORM DECISION MATRIX */}
+          {activeTab === "matrix" && (
+            <div className="rounded-3xl border border-gray-200/80 dark:border-gray-800/80 overflow-hidden shadow-sm">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-sm">
+                  <thead className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white uppercase font-bold text-xs border-b border-gray-200 dark:border-gray-800">
+                    <tr>
+                      <th className="py-4 px-6">Evaluation Criteria</th>
+                      <th className="py-4 px-6 text-teal-600 dark:text-teal-400">Maxora Cross-Platform (React Native/Flutter)</th>
+                      <th className="py-4 px-6 text-gray-700 dark:text-gray-300">Pure Native (Swift/Kotlin)</th>
+                      <th className="py-4 px-6 text-gray-500 dark:text-gray-400">Web App (PWA)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 dark:divide-gray-800">
+                    {decisionMatrix.map((row, idx) => (
+                      <tr key={idx} className="bg-white dark:bg-gray-950/60 hover:bg-gray-50/50 dark:hover:bg-gray-900/50">
+                        <td className="py-4 px-6 font-semibold text-gray-900 dark:text-white">
+                          {row.dimension}
+                        </td>
+                        <td className="py-4 px-6 text-teal-700 dark:text-teal-300 font-medium">
+                          ✓ {row.crossPlatform}
+                        </td>
+                        <td className="py-4 px-6 text-gray-700 dark:text-gray-300">
+                          {row.pureNative}
+                        </td>
+                        <td className="py-4 px-6 text-gray-500 dark:text-gray-400">
+                          ✗ {row.webPWA}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* TAB 3: 5-STAGE PROCESS */}
+          {activeTab === "process" && (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {steps.map((st, idx) => (
+                <div
+                  key={idx}
+                  className="p-6 rounded-2xl bg-white dark:bg-gray-900/60 border border-gray-200/80 dark:border-gray-800/80 flex flex-col justify-between"
+                >
+                  <div>
+                    <span className="text-3xl font-extrabold text-teal-600/30 dark:text-teal-400/30 font-mono mb-3 block">
+                      {st.number}
+                    </span>
+                    <h4 className="text-base font-bold text-gray-900 dark:text-white mb-2">
+                      {st.title}
+                    </h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                      {st.description}
+                    </p>
+                  </div>
+                  <div className="pt-3 border-t border-gray-200/60 dark:border-gray-800/60 text-[11px] text-teal-600 dark:text-teal-400">
+                    <strong>Client Provides:</strong> {st.clientProvides}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* TAB 4: DELIVERABLES */}
+          {activeTab === "deliverables" && (
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-8 rounded-3xl bg-white dark:bg-gray-900/60 border border-gray-200/80 dark:border-gray-800/80">
+                <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-teal-600 dark:text-teal-400" />
+                  Standard Deliverables
+                </h3>
+                <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+                  <li className="flex items-start gap-2.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-teal-600 dark:bg-teal-400 mt-2 shrink-0" />
+                    <span>Cross-platform iOS and Android production codebase with 100% IP ownership</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-teal-600 dark:bg-teal-400 mt-2 shrink-0" />
+                    <span>Figma mobile design system with iOS Human Interface &amp; Android Material tokens</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-teal-600 dark:bg-teal-400 mt-2 shrink-0" />
+                    <span>Apple App Store &amp; Google Play Store submission management until approved</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-teal-600 dark:bg-teal-400 mt-2 shrink-0" />
+                    <span>Push notifications, deeplinking, and biometric login integration</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-teal-600 dark:bg-teal-400 mt-2 shrink-0" />
+                    <span>30-day post-launch warranty with crash reporting and bug fixes</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="p-8 rounded-3xl bg-white dark:bg-gray-900/60 border border-gray-200/80 dark:border-gray-800/80">
+                <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                  <Cpu className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
+                  Custom &amp; Hardware Add-Ons
+                </h3>
+                <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+                  <li className="flex items-start gap-2.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-600 dark:bg-cyan-400 mt-2 shrink-0" />
+                    <span>Bluetooth Low Energy (BLE) IoT hardware communication</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-600 dark:bg-cyan-400 mt-2 shrink-0" />
+                    <span>Apple HealthKit and Google Health Connect integrations</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-600 dark:bg-cyan-400 mt-2 shrink-0" />
+                    <span>Custom background audio players or VoIP calling integration</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-600 dark:bg-cyan-400 mt-2 shrink-0" />
+                    <span>Enterprise mobile device management (MDM) private distribution</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Pricing & Scoping Section */}
+      <section className="py-20 bg-white dark:bg-gray-950">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+          <span className="text-xs font-bold text-teal-600 dark:text-teal-400 tracking-wider uppercase mb-2 block">
+            Project Scoping
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-gray-900 dark:text-white mb-4">
+            How Mobile App Budgets Are Determined
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-10 max-w-2xl mx-auto">
+            Mobile development scope varies based on screen volume, third-party hardware access (Bluetooth, Camera, GPS), and whether backend APIs already exist.
+          </p>
+
+          <div className="p-8 rounded-3xl bg-gray-50/80 dark:bg-gray-900/80 border border-gray-200/80 dark:border-gray-800/80 text-left grid md:grid-cols-3 gap-6 shadow-sm">
+            <div>
+              <span className="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase block mb-1">MVP Launch</span>
+              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Core Feature App</h4>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Essential user flows, push notifications, authentication, and store approval to validate product-market fit.</p>
+            </div>
+            <div>
+              <span className="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase block mb-1">Consumer Platform</span>
+              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">In-App Monetization</h4>
+              <p className="text-xs text-gray-600 dark:text-gray-400">In-app subscriptions, interactive social feeds, offline data synchronization, and automated user onboarding.</p>
+            </div>
+            <div>
+              <span className="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase block mb-1">Enterprise Field App</span>
+              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Workforce &amp; Hardware</h4>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Barcode/QR scanning, Bluetooth hardware sync, offline field forms, and role-based staff permissions.</p>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <Link
+              href="/contact?service=App+Development"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-teal-600 via-cyan-500 to-blue-600 text-white rounded-xl font-bold hover:shadow-xl hover:shadow-teal-500/25 transition-all"
+            >
+              Request Custom App Scoping Call
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Frequently Asked Questions */}
+      <ServiceFAQ service={service} />
+
+      {/* Related Services */}
+      <section className="py-16 bg-gray-50/50 dark:bg-gray-900/50 border-t border-gray-100 dark:border-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white text-center mb-8">
+            Complementary Engineering Services
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link
+              href="/Services/web-development"
+              className="p-6 rounded-2xl bg-white dark:bg-gray-900/60 border border-gray-200/80 dark:border-gray-800/80 hover:border-teal-500/50 transition-colors group flex items-center justify-between"
+            >
+              <div>
+                <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                  Custom Web Development
+                </h4>
+                <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                  Connect your mobile apps to high-performance Next.js web applications and admin portals.
+                </p>
+              </div>
+              <ChevronRight className="w-5 h-5 text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href="/Services/ai-automation"
+              className="p-6 rounded-2xl bg-white dark:bg-gray-900/60 border border-gray-200/80 dark:border-gray-800/80 hover:border-teal-500/50 transition-colors group flex items-center justify-between"
+            >
+              <div>
+                <h4 className="font-bold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                  AI Agents &amp; Workflow Automation
+                </h4>
+                <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                  Integrate intelligent AI assistants and automated WhatsApp notifications with your mobile app.
+                </p>
+              </div>
+              <ChevronRight className="w-5 h-5 text-teal-600 dark:text-teal-400 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 border-t border-gray-100 dark:border-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+          <div className="inline-flex p-4 rounded-3xl bg-teal-50 dark:bg-teal-900/30 border border-teal-200 dark:border-teal-800/50 mb-8">
+            <Smartphone className="w-8 h-8 text-teal-600 dark:text-teal-400" />
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-gray-900 dark:text-white mb-6">
+            Ready to Launch on{" "}
+            <span className="bg-gradient-to-r from-teal-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+              iOS &amp; Android
+            </span>
+            ?
+          </h2>
+
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+            From user journey wireframes to App Store certification, our mobile engineering team turns your product vision into a smooth, 60 FPS mobile reality.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button
+              onClick={() => router.push("/contact?service=App+Development")}
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-teal-600 via-cyan-500 to-blue-600 text-white rounded-xl font-bold text-base hover:shadow-xl hover:shadow-teal-500/25 transition-all flex items-center justify-center gap-2 group"
+            >
+              Request Mobile App Scoping Call
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button
+              onClick={() => router.push("/Services")}
+              className="w-full sm:w-auto px-8 py-4 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-semibold text-base hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              Browse All Services
+            </button>
+          </div>
+
+          <p className="mt-8 text-xs text-gray-500 dark:text-gray-400">
+            Guaranteed 24hr response • Requirement-based milestone scoping • Zero third-party lock-in
+          </p>
         </div>
       </section>
     </>

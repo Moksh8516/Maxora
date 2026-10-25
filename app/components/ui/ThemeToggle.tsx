@@ -18,9 +18,10 @@ export function ThemeToggle() {
   const isDark = mounted && resolvedTheme === "dark";
   return (
     <button
+      type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="relative w-12 h-6 rounded-full bg-gray-200 dark:bg-gray-800 transition-colors hover:bg-gray-300 dark:hover:bg-gray-700"
-      aria-label="Toggle theme"
+      className="relative w-12 h-6 rounded-full bg-gray-200 dark:bg-gray-800 transition-colors hover:bg-gray-300 dark:hover:bg-gray-700 cursor-pointer z-20 focus:outline-none focus:ring-2 focus:ring-[#056BFF]"
+      aria-label="Toggle light and dark theme"
       disabled={!mounted}
     >
       <div

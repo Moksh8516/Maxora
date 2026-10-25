@@ -1,3 +1,5 @@
+// app/lib/faq-data.ts
+
 export interface FAQItem {
   question: string;
   answer: string;
@@ -5,33 +7,43 @@ export interface FAQItem {
 
 export const homepageFaqs: FAQItem[] = [
   {
-    question: "What's the typical timeline for a web development project?",
+    question: "What kinds of projects do you build?",
     answer:
-      "Project timelines vary based on complexity. A custom website takes 2-4 weeks, while complex web applications or custom ERPs can take 6-12 weeks. We deliver in agile milestone sprints with transparent staging reviews.",
+      "We design and build custom websites, iOS and Android mobile apps, online eCommerce stores, tailored CRM and ERP business tools, and WhatsApp workflow automations for growing companies.",
   },
   {
-    question: "How much does custom software development cost?",
+    question: "How does your pricing work?",
     answer:
-      "Each project is scoped individually based on your technical requirements, deliverables, and timeline. We provide clear, milestone-driven estimates after an initial discovery consultation with zero recurring per-seat fees.",
+      "We provide clear, fixed-price quotes based on your exact requirements before development starts. You receive an itemized project scope with milestone stages, so you know the full cost with no hidden fees or surprise retainer charges.",
   },
   {
-    question: "Do you offer ongoing maintenance and support?",
+    question: "How long does a project take from start to finish?",
     answer:
-      "Yes, we provide comprehensive maintenance plans including security updates, performance monitoring, technical support, and feature enhancements.",
+      "Project timelines depend on what you need built. High-performance business websites usually take 2 to 4 weeks. Mobile apps and eCommerce stores take 4 to 8 weeks. Custom business management portals take 6 to 12 weeks. We deliver in weekly milestone stages with working demos.",
   },
   {
-    question: "What technologies and integrations do you specialize in?",
+    question: "How do we see progress and provide feedback during development?",
     answer:
-      "We specialize in modern technologies including Next.js, React, Node.js, TypeScript, React Native, Flutter, and PostgreSQL. We integrate payment gateways (Razorpay, Stripe, UPI), CRM webhooks, and WhatsApp Business APIs.",
+      "You speak directly with the engineers building your software. Every week, we share a clickable working demo so you can test features on your phone or laptop and request adjustments before the final launch.",
   },
   {
-    question: "How do you ensure project quality and success?",
+    question: "Can you build a custom CRM or business portal without per-seat fees?",
     answer:
-      "We follow agile methodologies, conduct rigorous testing, ensure sub-2-second Core Web Vitals performance, and guarantee 100% intellectual property and code ownership upon completion.",
+      "Yes. Commercial SaaS tools charge expensive monthly subscription fees for every employee you add. We build custom dashboards tailored to your exact workflow, where your entire team can log in without paying monthly per-user licensing fees.",
   },
   {
-    question: "Can you collaborate with our existing team or regional businesses?",
+    question: "Do you help with domain setup, secure hosting, and launching?",
     answer:
-      "Yes. We collaborate with in-house teams globally via video and phone, and provide direct technical discovery consultations for businesses across the Patiala and Punjab region.",
+      "Yes. We take care of domain configuration, setup on fast and secure cloud servers, and full launch testing across phones, tablets, and desktop browsers so your site or application is ready for customers.",
+  },
+  {
+    question: "What happens after launch? Do you provide maintenance and updates?",
+    answer:
+      "Yes. We offer reliable ongoing maintenance packages to monitor server performance, install security updates, and add new features as your business expands.",
+  },
+  {
+    question: "How do we get started on a project together?",
+    answer:
+      "Simply click Let's connect and tell us about what you want to build. We will review your goals, share practical options, and provide a clear written estimate and timeline.",
   },
 ];

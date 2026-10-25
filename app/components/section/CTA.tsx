@@ -29,21 +29,20 @@ export default function CTA() {
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium mb-8">
                   <Zap className="w-4 h-4" />
-                  Ready to Get Started?
+                  Start a Conversation
                 </div>
 
                 {/* Title */}
                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                  {"Let's Build Something "}
+                  Have a project you want to{" "}
                   <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                    Amazing Together
+                    bring to life?
                   </span>
                 </h2>
 
                 {/* Description */}
                 <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
-                  Schedule a free consultation with our experts and discover how
-                  we can transform your ideas into reality.
+                  Tell us about your business goals and what you want to build. We will discuss your ideas and help you plan the best way forward.
                 </p>
 
                 {/* Action Buttons */}
@@ -52,8 +51,7 @@ export default function CTA() {
                     href="/contact"
                     className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1"
                   >
-                    <Calendar className="w-5 h-5" />
-                    Book a Free Consultation
+                    <span>Let&apos;s connect</span>
                     <Zap className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   </Link>
                   <a

@@ -247,30 +247,30 @@ export default function ServiceListings() {
     },
     {
       id: "crm-erp",
-      title: "Custom CRM/ERP",
-      description: "Tailored business management systems",
+      title: "Custom CRM & ERP",
+      description: "Tailored business management systems without per-seat fees",
       fullDescription:
-        "We develop custom CRM and ERP solutions that streamline your business operations. Our systems automate workflows, improve productivity, and provide valuable insights through analytics.",
+        "We build custom CRM and business management tools designed specifically around your customer inquiries, inventory, and billing workflows. Your entire team can use the portal without paying expensive monthly per-user subscription fees.",
       icon: <Database className="w-6 h-6" />,
       features: [
         {
-          title: "Workflow Automation",
-          description: "Automate repetitive tasks and processes",
+          title: "Lead Pipeline & Inquiries",
+          description: "Centralize customer requests and follow-ups in one view",
           icon: <Zap className="w-5 h-5" />,
         },
         {
-          title: "Analytics & Reports",
-          description: "Comprehensive business intelligence",
+          title: "Orders & Invoicing",
+          description: "Generate bills, track order status, and export reports",
           icon: <Target className="w-5 h-5" />,
         },
         {
-          title: "Integration Ready",
-          description: "Connect with existing tools and systems",
+          title: "WhatsApp Alerts",
+          description: "Instant notifications sent to your team and customers",
           icon: <CheckCircle className="w-5 h-5" />,
         },
         {
-          title: "Scalable Architecture",
-          description: "Grow with your business needs",
+          title: "Role-Based Team Access",
+          description: "Set custom permissions for managers, sales, and staff",
           icon: <Cloud className="w-5 h-5" />,
         },
       ],
@@ -283,10 +283,10 @@ export default function ServiceListings() {
         "AWS",
       ],
       benefits: [
-        "Improved efficiency",
-        "Better data management",
-        "Enhanced collaboration",
-        "Cost reduction",
+        "Centralized business data",
+        "Zero per-user monthly software fees",
+        "Faster customer follow-up",
+        "Exportable Excel and CSV reports",
       ],
       href: "/Services/crm-erp",
       gradient: "from-indigo-600 to-blue-500",
@@ -342,46 +342,45 @@ export default function ServiceListings() {
     {
       id: "ai-automation",
       title: "AI & Automation",
-      description: "AI Voice Assistants, WhatsApp Bots & Lead Workflows",
+      description: "WhatsApp Bots, Voice Agents & Automated Workflows",
       fullDescription:
-        "We engineer intelligent AI voice agents, custom WhatsApp support bots, and autonomous lead pipelines that operate 24/7. Cut operational friction, eliminate missed customer calls, and qualify leads in under 60 seconds with modern LLMs and automated workflows.",
+        "We build official WhatsApp customer support bots, automated lead notifications, and workflow integrations that connect your CRM, spreadsheets, and messaging platforms to save hours of manual data entry every week.",
       icon: <Bot className="w-6 h-6" />,
       features: [
         {
-          title: "AI Voice Assistants",
-          description: "Human-grade phone call handling & scheduling",
-          icon: <PhoneCall className="w-5 h-5" />,
-        },
-        {
-          title: "WhatsApp AI Bots",
-          description: "Official Meta API with 24/7 knowledge RAG",
+          title: "WhatsApp Support Bots",
+          description: "Automate answers to common customer questions 24/7",
           icon: <MessageSquareCode className="w-5 h-5" />,
         },
         {
-          title: "Lead Automation",
-          description: "Instant CRM routing & automated follow-ups",
+          title: "Instant Lead Routing",
+          description: "Send website inquiries directly to WhatsApp and CRM",
           icon: <Workflow className="w-5 h-5" />,
         },
         {
-          title: "Document AI Agents",
-          description: "Automated invoice parsing & contract extraction",
+          title: "Document Parsing",
+          description: "Extract invoice details and order data automatically",
           icon: <Code className="w-5 h-5" />,
+        },
+        {
+          title: "Voice Call Automation",
+          description: "Assist customers and route calls during busy hours",
+          icon: <PhoneCall className="w-5 h-5" />,
         },
       ],
       technologies: [
-        "OpenAI GPT-4o",
-        "Vapi / Retell",
-        "ElevenLabs",
-        "Twilio",
-        "WhatsApp Cloud API",
+        "WhatsApp Business API",
+        "OpenAI",
         "n8n / Make",
-        "pgvector",
+        "Python",
+        "Node.js",
+        "Twilio",
       ],
       benefits: [
-        "<60 second lead response time",
-        "24/7 inbound phone & WhatsApp coverage",
-        "Zero extra headcount scaling stress",
-        "Direct CRM & calendar synchronization",
+        "Instant response to customer inquiries",
+        "Eliminate repetitive manual paperwork",
+        "24/7 lead capture on WhatsApp",
+        "Direct connection to your spreadsheets and CRM",
       ],
       href: "/Services/ai-automation",
       gradient: "from-blue-600 via-cyan-500 to-indigo-600",
@@ -459,7 +458,7 @@ export default function ServiceListings() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Comprehensive digital solutions tailored to your business needs
+            Practical software and digital services tailored to your everyday business needs
           </p>
         </div>
 

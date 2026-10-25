@@ -5,19 +5,20 @@ import Process from "../components/section/Process";
 import FAQ from "../components/section/FAQ";
 import CTA from "../components/section/CTA";
 import { JsonLd } from "../components/seo/StructuredData";
+import { homepageFaqs } from "../lib/faq-data";
 
 export const metadata: Metadata = {
-  title: "Software Engineering & Digital Services",
+  title: "Digital Services & Custom Software Solutions | Maxora Technology",
   description:
-    "Explore Maxora Technology's full suite of enterprise digital solutions: custom web apps, iOS/Android mobile development, AI CRM/ERP, and eCommerce systems.",
+    "Explore our custom digital services: fast websites, iOS and Android mobile apps, custom CRM & ERP systems, eCommerce storefronts, and automated workflows.",
   alternates: {
-    canonical: "/services",
+    canonical: "/Services",
   },
   openGraph: {
-    title: "Software Engineering & Digital Services | Maxora Technology",
+    title: "Digital Services & Custom Software Solutions | Maxora Technology",
     description:
-      "Enterprise-grade custom web applications, mobile apps, AI CRM/ERP systems, and scalable eCommerce platforms built for growing businesses.",
-    url: "/services",
+      "Explore our custom digital services: fast websites, mobile apps, CRM/ERP platforms, and automated workflows built for growing companies.",
+    url: "/Services",
     siteName: "Maxora Technology",
     images: [
       {
@@ -31,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Software Engineering & Digital Services | Maxora Technology",
+    title: "Digital Services & Custom Software Solutions | Maxora Technology",
     description:
-      "Discover our comprehensive digital solutions: web apps, mobile apps, custom CRM/ERP, eCommerce, and WordPress development.",
+      "Custom websites, mobile apps, tailored CRM/ERP systems, and automated workflows built for growing businesses.",
     images: ["/og-image.png"],
   },
 };
@@ -43,11 +44,11 @@ const servicesSchema = {
   "@graph": [
     {
       "@type": "CollectionPage",
-      "@id": "https://maxoratechnology.com/services/#webpage",
-      url: "https://maxoratechnology.com/services",
-      name: "Digital Services & Software Solutions | Maxora Technology",
+      "@id": "https://maxoratechnology.com/Services/#webpage",
+      url: "https://maxoratechnology.com/Services",
+      name: "Digital Services & Custom Software Solutions | Maxora Technology",
       description:
-        "Comprehensive digital services including web development, mobile apps, eCommerce, custom CRM/ERP, and WordPress solutions.",
+        "Comprehensive digital services including web development, mobile apps, eCommerce, custom CRM/ERP, and workflow automations.",
       isPartOf: {
         "@type": "WebSite",
         "@id": "https://maxoratechnology.com/#website",
@@ -60,56 +61,50 @@ const servicesSchema = {
         {
           "@type": "Service",
           name: "Custom Web Development",
-          url: "https://maxoratechnology.com/services/web-development",
-          description: "Modern, high-performance web applications built with Next.js, React, and TypeScript.",
+          url: "https://maxoratechnology.com/Services/web-development",
+          description: "Fast, search-ready web applications built with Next.js, React, and TypeScript.",
         },
         {
           "@type": "Service",
           name: "Mobile App Development",
-          url: "https://maxoratechnology.com/services/app-development",
-          description: "Native iOS & Android mobile applications and cross-platform solutions with React Native and Flutter.",
+          url: "https://maxoratechnology.com/Services/app-development",
+          description: "Reliable iOS and Android mobile applications built with Flutter and React Native.",
         },
         {
           "@type": "Service",
           name: "Custom CRM & ERP Systems",
-          url: "https://maxoratechnology.com/services/crm-erp",
-          description: "AI-enhanced business management systems, workflow automation, and predictive analytics.",
+          url: "https://maxoratechnology.com/Services/crm-erp",
+          description: "Tailored business management dashboards and automated lead pipelines with zero per-seat licensing fees.",
         },
         {
           "@type": "Service",
           name: "eCommerce Development",
-          url: "https://maxoratechnology.com/services/ecommerce",
-          description: "Scalable online stores with custom Next.js, Shopify, and WooCommerce architectures.",
+          url: "https://maxoratechnology.com/Services/ecommerce",
+          description: "Online stores with fast checkout, live inventory tracking, and secure payment processing.",
         },
         {
           "@type": "Service",
           name: "WordPress Development",
-          url: "https://maxoratechnology.com/services/wordpress",
-          description: "Bespoke WordPress theme development, plugins, speed optimization, and security management.",
+          url: "https://maxoratechnology.com/Services/wordpress",
+          description: "Clean Gutenberg block themes, fast loading speeds, and simple content management for non-technical teams.",
         },
         {
           "@type": "Service",
           name: "Technical SEO & AEO Optimization",
-          url: "https://maxoratechnology.com/services/seo-aeo",
-          description: "Full-stack technical SEO, Core Web Vitals, Schema.org entity graphs, and generative AI search optimization.",
+          url: "https://maxoratechnology.com/Services/seo-aeo",
+          description: "Google search optimization, Core Web Vitals performance, and structured data implementation for AI answers.",
         },
         {
           "@type": "Service",
           name: "AI & Automation Services",
-          url: "https://maxoratechnology.com/services/ai-automation",
-          description: "AI voice assistants, intelligent WhatsApp bots, autonomous lead routing pipelines, and custom AI agents.",
-        },
-        {
-          "@type": "Service",
-          name: "Website Development in Patiala",
-          url: "https://maxoratechnology.com/web-development-patiala",
-          description: "Custom websites, e-commerce, and software engineering for businesses in Patiala and surrounding Punjab regions.",
+          url: "https://maxoratechnology.com/Services/ai-automation",
+          description: "Official WhatsApp customer support bots, automated lead notifications, and workflow integrations.",
         },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://maxoratechnology.com/services/#breadcrumb",
+      "@id": "https://maxoratechnology.com/Services/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -121,63 +116,21 @@ const servicesSchema = {
           "@type": "ListItem",
           position: 2,
           name: "Services",
-          item: "https://maxoratechnology.com/services",
+          item: "https://maxoratechnology.com/Services",
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://maxoratechnology.com/services/#faq",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "What's the typical timeline for a web development project?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Project timelines vary based on complexity. A simple website takes 4-6 weeks, while complex web applications can take 3-6 months. We provide detailed timelines during our discovery phase.",
-          },
+      "@id": "https://maxoratechnology.com/Services/#faq",
+      mainEntity: homepageFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
         },
-        {
-          "@type": "Question",
-          name: "How much does custom software development cost?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Each project is scoped individually based on your technical requirements, deliverables, and timeline. We provide clear, milestone-driven estimates after an initial discovery consultation.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do you offer ongoing maintenance and support?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes, we provide comprehensive maintenance plans including security updates, performance monitoring, technical support, and feature enhancements.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What technologies do you specialize in?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "We specialize in modern technologies including Next.js, React, Node.js, Python, React Native, AWS, and various databases. We choose the right stack based on your project requirements.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How do you ensure project quality and success?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "We follow agile methodologies, conduct regular testing, provide progress updates, and involve clients throughout the development process to ensure alignment with expectations.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can you work with our existing team?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Absolutely. We often collaborate with in-house teams, providing specialized expertise and integrating seamlessly with your existing workflow and processes.",
-          },
-        },
-      ],
+      })),
     },
   ],
 };

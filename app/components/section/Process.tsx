@@ -15,41 +15,41 @@ export default function Process() {
   const steps = [
     {
       number: "01",
-      title: "Discovery",
+      title: "Listen & Understand",
       description:
-        "We understand your business goals, target audience, and project requirements through detailed consultations.",
+        "We learn how your business operates, what challenges you are facing, and what success looks like for you.",
       icon: <Search className="w-6 h-6 text-white" />,
       color: "from-blue-500 to-cyan-400",
     },
     {
       number: "02",
-      title: "Planning",
+      title: "Plan & Scope",
       description:
-        "Our team creates a comprehensive project roadmap with timelines, milestones, and resource allocation.",
+        "We outline the deliverables, milestones, and realistic timelines so everyone agrees on the plan before starting.",
       icon: <PenTool className="w-6 h-6 text-white" />,
       color: "from-purple-500 to-pink-400",
     },
     {
       number: "03",
-      title: "Design",
+      title: "Design & Prototype",
       description:
-        "We craft intuitive user interfaces and experiences that align with your brand and user needs.",
-      icon: <MessageSquare className="w-6 h-6  text-white" />,
+        "We craft clean, intuitive screens that look great on phones and computers, making it easy for your customers to navigate.",
+      icon: <MessageSquare className="w-6 h-6 text-white" />,
       color: "from-green-500 to-emerald-400",
     },
     {
       number: "04",
-      title: "Development",
+      title: "Build in Milestones",
       description:
-        "Our developers build robust, scalable solutions using modern technologies and best practices.",
+        "We develop your project in structured weekly stages, sharing working demos so you can test features early.",
       icon: <Code className="w-6 h-6 text-white" />,
       color: "from-orange-500 to-red-400",
     },
     {
       number: "05",
-      title: "Testing",
+      title: "Test Across Devices",
       description:
-        "Rigorous testing ensures your solution is bug-free, secure, and performs optimally across all devices.",
+        "We test thoroughly on phones, tablets, and desktop browsers for fast speed, smooth navigation, and rock-solid reliability.",
       icon: <Settings className="w-6 h-6 text-white" />,
       color: "from-indigo-500 to-blue-400",
     },
@@ -57,7 +57,7 @@ export default function Process() {
       number: "06",
       title: "Launch & Support",
       description:
-        "We deploy your solution and provide ongoing maintenance, updates, and technical support.",
+        "We handle domain and server setup to launch smoothly, and stay available to support your team as your business scales.",
       icon: <Rocket className="w-6 h-6 text-white" />,
       color: "from-teal-500 to-cyan-400",
     },
@@ -75,8 +75,7 @@ export default function Process() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            A proven methodology that ensures project success from concept to
-            deployment
+            A clear, transparent process from your first idea to launch day
           </p>
         </div>
 

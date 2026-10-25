@@ -26,7 +26,7 @@ export default function ServicesHero() {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-sm font-medium mb-8"
           >
             <Sparkles className="w-4 h-4" />
-            Comprehensive Digital Solutions
+            Our Digital Services
           </motion.div>
 
           {/* Title */}
@@ -36,10 +36,10 @@ export default function ServicesHero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6"
           >
-            Full-Stack Software Engineering &{" "}
+            Websites, Mobile Apps &{" "}
             <span className="relative inline-block">
               <span className="relative z-10 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent animate-gradient">
-                Digital Services
+                Custom Software
               </span>
               <div className="absolute -bottom-2 left-0 w-full h-3 bg-gradient-to-r from-blue-500/30 to-cyan-500/30 blur-lg" />
             </span>
@@ -52,7 +52,7 @@ export default function ServicesHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto"
           >
-            Maxora Technology engineers high-performance web applications, cross-platform mobile apps, custom CRM/ERP platforms, and search & AI visibility solutions for ambitious businesses.
+            We design and build fast websites, mobile apps, and custom business tools designed around how your team and customers work. Explore our core services below to see how we help your company grow.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -67,7 +67,7 @@ export default function ServicesHero() {
               className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1"
             >
               <Zap className="w-5 h-5" />
-              <span>Start Your Project</span>
+              <span>Let&apos;s connect</span>
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -87,10 +87,10 @@ export default function ServicesHero() {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto"
           >
             {[
-              { value: "01", label: "Focused Digital Agency" },
-              { value: "Clear", label: "Communication" },
-              { value: "Built", label: "Around Your Goals" },
-              { value: "Growing", label: "With Every Project" },
+              { value: "Fast", label: "Turnaround" },
+              { value: "Direct", label: "Developer Contact" },
+              { value: "Weekly", label: "Working Demos" },
+              { value: "Fixed", label: "Milestone Pricing" },
             ].map((stat, index) => (
               <div key={index} className="text-center p-4">
                 <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">

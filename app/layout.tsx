@@ -7,6 +7,7 @@ import WhatsAppFloat from "./components/ui/WhatsAppFloat";
 import GoogleAnalytics from "./components/analytics/GoogleAnalytics";
 import MetaPixel from "./components/analytics/MetaPixel";
 import StructuredData from "./components/seo/StructuredData";
+import SmoothScrollProvider from "./components/providers/SmoothScrollProvider";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -111,16 +112,18 @@ export default function RootLayout({
           enableSystem
           storageKey="theme-preference"
         >
-          <div className="relative min-h-screen">
-            <div className="relative z-10">
-              <GoogleAnalytics />
-              <MetaPixel pixelId={process.env.META_PIXEL_ID} />
-              <Navbar />
-              <main>{children}</main>
-              <Footer />
-              <WhatsAppFloat />
+          <SmoothScrollProvider>
+            <div className="relative min-h-screen">
+              <div className="relative z-10">
+                <GoogleAnalytics />
+                <MetaPixel pixelId={process.env.META_PIXEL_ID} />
+                <Navbar />
+                <main id="main-content">{children}</main>
+                <Footer />
+                <WhatsAppFloat />
+              </div>
             </div>
-          </div>
+          </SmoothScrollProvider>
         </ThemeProvider>
       </body>
     </html>
