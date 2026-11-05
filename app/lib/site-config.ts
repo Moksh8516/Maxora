@@ -19,6 +19,7 @@ export const siteConfig = {
     hours: "Mon-Fri 9AM-6PM IST",
     supportHours: "Mon-Fri 9AM-6PM IST",
     whatsapp: "+917719545464",
+    whatsappNumber: "917719545464",
     whatsappLink: "https://wa.me/917719545464?text=Hello%20Maxora%20Technology%2C%20I%20would%20like%20to%20discuss%20a%20project.",
   },
   serviceTowns: [

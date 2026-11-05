@@ -41,7 +41,8 @@ export default function HeroInteractiveCard({
   );
   const [comparisonMode, setComparisonMode] = useState<"maxora" | "others">("maxora");
 
-  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(
+  const whatsappNumber = siteConfig.contact.whatsappNumber || "917719545464";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     whatsappPrefilledText
   )}`;
 
