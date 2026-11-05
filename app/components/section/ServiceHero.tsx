@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { ArrowDown, Sparkles, Zap, ChevronRight } from "lucide-react";
 import Link from "next/link";
