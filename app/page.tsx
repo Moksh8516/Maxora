@@ -7,6 +7,8 @@ import FAQ from "./components/section/FAQ";
 import { homepageFaqs } from "./lib/faq-data";
 import { JsonLd } from "./components/seo/StructuredData";
 import { siteConfig } from "./lib/site-config";
+import Process from "./components/section/Process";
+import CTA from "./components/section/CTA";
 
 export const metadata: Metadata = {
   title: "Custom Web & App Development Company | Maxora Technology",
@@ -111,7 +113,8 @@ export default function Home() {
       <Hero />
       <WhyMaxora />
       <Services />
-      <PopularSolutionsStrip />
+      <Process />
+      {/* <PopularSolutionsStrip /> */}
       <FAQ />
     </>
   );
