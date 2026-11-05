@@ -1123,35 +1123,6 @@ export default function ServiceLandingPage({ data }: ServiceLandingPageProps) {
         </div>
       </section>
 
-      {/* 16. STICKY MOBILE CTA BAR (Mobile screen only) */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 p-2.5 bg-white/95 dark:bg-[#050A15]/95 backdrop-blur-md border-t border-gray-200 dark:border-white/10 sm:hidden flex items-center justify-around gap-2">
-        <a
-          href="tel:+917719545464"
-          className="flex-1 py-2.5 px-2 rounded-lg bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white text-xs font-bold text-center inline-flex items-center justify-center gap-1.5"
-        >
-          <Phone className="w-3.5 h-3.5 text-[#056BFF]" />
-          <span>Call</span>
-        </a>
-
-        <a
-          href={getWhatsAppLink(data.hero.whatsappPrefilledText)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 py-2.5 px-2 rounded-lg bg-emerald-600 text-white text-xs font-bold text-center inline-flex items-center justify-center gap-1.5"
-        >
-          <MessageSquare className="w-3.5 h-3.5" />
-          <span>WhatsApp</span>
-        </a>
-
-        <button
-          type="button"
-          onClick={scrollToForm}
-          className="flex-1 py-2.5 px-2 rounded-lg bg-[#056BFF] text-white text-xs font-bold text-center inline-flex items-center justify-center gap-1 cursor-pointer"
-        >
-          <span>Get Quote</span>
-        </button>
-      </div>
-
     </div>
   );
 }
