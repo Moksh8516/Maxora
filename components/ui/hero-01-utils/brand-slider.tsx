@@ -13,18 +13,22 @@ export interface BrandList {
 
 export default function BrandSlider({
   brandList = [],
+  title = "Loved by 1000+ big and small brands around the world",
+  className = "w-full pb-16 pt-4",
 }: {
   brandList: BrandList[];
+  title?: string;
+  className?: string;
 }) {
   return (
-    <section className="w-full pb-16 pt-4">
+    <section className={className}>
       {/* Divider with Center Text */}
-      <div className="max-w-6xl mx-auto px-4 flex items-center gap-4 mb-8">
-        <div className="flex-1 h-px bg-border" />
-        <span className="text-xs font-medium text-muted-foreground whitespace-nowrap">
-          Loved by 1000+ big and small brands around the world
+      <div className="max-w-6xl mx-auto px-4 flex items-center gap-4 mb-6">
+        <div className="flex-1 h-px bg-gray-200 dark:bg-white/10" />
+        <span className="text-xs font-semibold tracking-wider uppercase text-gray-500 dark:text-gray-400 whitespace-nowrap">
+          {title}
         </span>
-        <div className="flex-1 h-px bg-border" />
+        <div className="flex-1 h-px bg-gray-200 dark:bg-white/10" />
       </div>
 
       {/* Marquee Brand Slider */}

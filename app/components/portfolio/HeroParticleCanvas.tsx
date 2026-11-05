@@ -6,10 +6,14 @@ import { useReducedMotion } from "framer-motion";
 
 interface HeroParticleCanvasProps {
   className?: string;
+  theme?: "cyan-blue" | "wine-purple";
+  mode?: "dark" | "light";
 }
 
 export default function HeroParticleCanvas({
   className = "",
+  theme = "cyan-blue",
+  mode,
 }: HeroParticleCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const shouldReduceMotion = useReducedMotion();
@@ -116,14 +120,23 @@ export default function HeroParticleCanvas({
         const directionX = Math.random() * 0.4 - 0.2;
         const directionY = Math.random() * 0.4 - 0.2;
 
-        // Elegant palette: Cyan & Blue in dark; Royal Blue & Slate in light
-        const color = dark
-          ? i % 2 === 0
-            ? "rgba(0, 213, 242, 0.75)"
-            : "rgba(59, 130, 246, 0.65)"
-          : i % 2 === 0
-          ? "rgba(37, 99, 235, 0.45)"
-          : "rgba(6, 182, 212, 0.4)";
+        const effectiveDark = mode !== undefined ? mode === "dark" : dark;
+        
+        // Colors based on theme & dark/light
+        let color: string;
+        if (theme === "wine-purple") {
+          color = i % 2 === 0
+            ? "rgba(168, 85, 247, 0.75)" // Purple-500
+            : "rgba(217, 70, 239, 0.70)"; // Fuchsia-500
+        } else {
+          color = effectiveDark
+            ? i % 2 === 0
+              ? "rgba(0, 213, 242, 0.75)"
+              : "rgba(59, 130, 246, 0.65)"
+            : i % 2 === 0
+            ? "rgba(37, 99, 235, 0.45)"
+            : "rgba(6, 182, 212, 0.4)";
+        }
 
         particles.push(new Particle(x, y, directionX, directionY, size, color));
       }
@@ -143,6 +156,7 @@ export default function HeroParticleCanvas({
     const connect = () => {
       if (!ctx || !canvas) return;
       const dark = isDark();
+      const effectiveDark = mode !== undefined ? mode === "dark" : dark;
       const maxDistance = Math.min((canvas.width / 8) * (canvas.height / 8), 16000);
 
       for (let a = 0; a < particles.length; a++) {
@@ -163,12 +177,16 @@ export default function HeroParticleCanvas({
               }
             }
 
-            if (isNearMouse) {
-              ctx.strokeStyle = dark
+            if (theme === "wine-purple") {
+              ctx.strokeStyle = isNearMouse
+                ? `rgba(240, 171, 252, ${opacityValue * 0.45})`
+                : `rgba(168, 85, 247, ${opacityValue * 0.22})`;
+            } else if (isNearMouse) {
+              ctx.strokeStyle = effectiveDark
                 ? `rgba(255, 255, 255, ${opacityValue * 0.4})`
                 : `rgba(37, 99, 235, ${opacityValue * 0.35})`;
             } else {
-              ctx.strokeStyle = dark
+              ctx.strokeStyle = effectiveDark
                 ? `rgba(0, 213, 242, ${opacityValue * 0.18})`
                 : `rgba(59, 130, 246, ${opacityValue * 0.14})`;
             }

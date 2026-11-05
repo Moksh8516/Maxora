@@ -93,7 +93,15 @@ export async function POST(req: Request) {
 
     const cleanEmail = email ? String(email).trim().toLowerCase() : "";
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!cleanEmail || !emailRegex.test(cleanEmail)) {
+
+    // Main contact form requires email; quick landing quotes allow WhatsApp/phone with optional email
+    const isContactForm = !formType || formType === "contact";
+    if (isContactForm && (!cleanEmail || !emailRegex.test(cleanEmail))) {
+      return NextResponse.json(
+        { success: false, message: "Please provide a valid email address" },
+        { status: 400 },
+      );
+    } else if (cleanEmail && !emailRegex.test(cleanEmail)) {
       return NextResponse.json(
         { success: false, message: "Please provide a valid email address" },
         { status: 400 },
@@ -102,7 +110,7 @@ export async function POST(req: Request) {
 
     const leadData = {
       name: String(name).trim(),
-      email: cleanEmail,
+      email: cleanEmail || "Not provided (WhatsApp Lead)",
       phone: cleanPhone,
       businessName: resolvedBusiness ? String(resolvedBusiness).trim() : undefined,
       socialProfile: resolvedSocial ? String(resolvedSocial).trim() : undefined,

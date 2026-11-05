@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "./lib/blog-data";
+import { getAllLandingPages } from "@/content/landing-pages";
 
 const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ||
@@ -141,5 +142,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticEntries, ...blogEntries];
+  const landingEntries: MetadataRoute.Sitemap = getAllLandingPages().map((page) => ({
+    url: `${siteUrl}/${page.slug}`,
+    lastModified: new Date(SITE_BUILD_DATE),
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  return [...staticEntries, ...blogEntries, ...landingEntries];
 }

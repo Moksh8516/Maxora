@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Hero from "./components/section/Hero";
 import WhyMaxora from "./components/section/WhyMaxora";
 import Services from "./components/section/Services";
+import PopularSolutionsStrip from "./components/section/PopularSolutionsStrip";
 import FAQ from "./components/section/FAQ";
 import { homepageFaqs } from "./lib/faq-data";
 import { JsonLd } from "./components/seo/StructuredData";
@@ -110,6 +111,7 @@ export default function Home() {
       <Hero />
       <WhyMaxora />
       <Services />
+      <PopularSolutionsStrip />
       <FAQ />
     </>
   );
