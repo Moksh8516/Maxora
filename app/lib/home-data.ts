@@ -2,30 +2,30 @@
 
 export const whyMaxoraContent = {
   badge: "Why Choose Maxora",
-  title: "Engineering Built Around Your Requirements",
+  title: "Software & Digital Systems Built Around Your Real Workflow",
   subtitle:
-    "We collaborate directly with founders and teams to build high-performance software tailored to your specific business requirements.",
+    "We collaborate directly with business owners to engineer fast websites, cross-platform apps, and automated tools with zero unnecessary bloat.",
   udyamStatus: null as string | null,
   points: [
     {
-      title: "Requirement-Led Development",
+      title: "Built Around Your Real Workflow",
       description:
-        "Every solution is custom-architected around your operational needs, target audience, and business model.",
+        "Every application is custom-architected around how your business and customers actually operate, not forced into restrictive templates.",
     },
     {
       title: "Direct Technical Collaboration",
       description:
-        "Speak directly with the engineers building your product. Clear scoping, responsive updates, and no middle layers.",
+        "You speak directly with the engineers writing your code. Fast answers, clear technical advice, and zero account manager delays.",
     },
     {
-      title: "Transparent 4-Step Process",
+      title: "Weekly Clickable Working Demos",
       description:
-        "Milestone-driven sprints with weekly staging links, agreed deliverables, and predictable progress tracking.",
+        "We share live staging links and interactive demos throughout development so you can test features well before launch day.",
     },
     {
       title: "Modern, Scalable Tech Stack",
       description:
-        "Engineered with Next.js, React, React Native, and Flutter for high speed, clean code, and reliable uptime.",
+        "Engineered with modern stacks (Next.js, React, TypeScript, Flutter) for instant load times, full intellectual property ownership, and zero vendor lock-in.",
     },
   ],
 };

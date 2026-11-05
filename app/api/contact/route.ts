@@ -137,7 +137,11 @@ export async function POST(req: Request) {
     }
 
     // 3️⃣ Admin notification email
-    await sendAdminLeadEmail(leadData);
+    try {
+      await sendAdminLeadEmail(leadData);
+    } catch (mailError) {
+      console.error("Failed to send admin lead email:", mailError);
+    }
 
     // 4️⃣ Optional Google Sheet Webhook
     const sheetWebhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL;

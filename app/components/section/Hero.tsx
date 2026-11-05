@@ -68,15 +68,15 @@ export default function Hero() {
 
             {/* Static, crawlable H1 */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading tracking-tight mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-              Custom Web & App Development for{" "}
+              Custom Websites, Mobile Apps &{" "}
               <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
-                Growing Businesses
+                AI Automation
               </span>
             </h1>
 
             {/* Description */}
             <p className="text-xl text-muted mb-10 max-w-2xl leading-relaxed">
-              We build fast websites, mobile apps, and custom software that solve everyday business problems. From customer portals to automated workflows, we help your business run smoothly and grow faster.
+              We design and build fast websites, mobile apps, and automated systems tailored to your business workflow. Speak directly with senior developers, test working demos every week, and launch with 100% code ownership.
             </p>
 
             {/* Buttons */}

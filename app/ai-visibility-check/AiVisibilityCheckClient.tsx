@@ -63,7 +63,7 @@ export default function AiVisibilityCheckClient() {
         phone: data.whatsapp,
         businessName: data.businessName,
         socialProfile: data.socialProfile,
-        websiteUrl: data.socialProfile.includes(".") ? data.socialProfile : undefined,
+        websiteUrl: data.socialProfile?.includes(".") ? data.socialProfile : undefined,
         formType: "ai-visibility-check",
         message: `Business: ${data.businessName} | Social/Link: ${data.socialProfile} | Service: ${data.service || "Search & AI Visibility"}`,
         ...tracking,

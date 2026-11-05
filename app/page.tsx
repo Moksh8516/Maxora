@@ -9,9 +9,9 @@ import { JsonLd } from "./components/seo/StructuredData";
 import { siteConfig } from "./lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Custom Web & App Development Company",
+  title: "Custom Web & App Development Company | Maxora Technology",
   description:
-    "Based in Patiala, Punjab, India. Maxora Technology builds custom websites, mobile apps, CRM/ERP systems, and scalable eCommerce platforms for clients worldwide.",
+    "Based in Patiala, Punjab, India. Maxora Technology builds fast custom websites, iOS & Android mobile apps, custom CRM/ERP platforms, and automated workflows for growing businesses worldwide.",
   alternates: {
     canonical: "/",
   },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Custom Web & App Development Company | Maxora Technology",
     description:
-      "Based in Patiala, Punjab, India. Custom web applications, mobile apps, and CRM/ERP systems for growing businesses worldwide.",
+      "Based in Patiala, Punjab, India. Custom web applications, mobile apps, and automated workflows for growing businesses worldwide.",
     images: ["/og-image.png"],
   },
 };
